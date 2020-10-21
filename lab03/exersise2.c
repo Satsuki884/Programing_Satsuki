@@ -13,7 +13,6 @@ int main() {
 
     result = a3*100 + a2*10 + a1;
 
-    printf("%d", result);
     return 0;
 }
 

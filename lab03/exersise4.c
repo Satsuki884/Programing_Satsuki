@@ -19,7 +19,6 @@ int main() {
 
     result = a4 + a3*p + a2*p*p + a1*p*p*p;
 
-    printf("%d", result);
     return 0;
 }
 

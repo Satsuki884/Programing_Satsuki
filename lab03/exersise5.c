@@ -16,8 +16,6 @@ int main() {
     float result = (float) ok;
     result = result/100;
     
-
-    printf("%f", result);
     return 0;
 }
 

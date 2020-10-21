@@ -21,7 +21,6 @@ int main() {
     b *= b; //a^8
     a *= b; //a^2 * a^8 = a^10
 
-    printf("%.f", a);
     return 0;
 }
 

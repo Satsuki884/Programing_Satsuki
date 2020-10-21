@@ -13,8 +13,6 @@ int main() {
     
     result = (a1+a2)*(a2-a1+1)/2;
     
-    printf("%.f+...+%.f = %.1f", a1, a2, result);
-   
     return 0;
 }
 /*
@@ -35,7 +33,7 @@ int main() {
     result = (a1-a2)*(a2-a1)/2;
     
     printf("%.2f", result);
-   
+     //  printf("%.f+...+%.f = %.1f", a1, a2, result);
     return 0;
 }
 */
