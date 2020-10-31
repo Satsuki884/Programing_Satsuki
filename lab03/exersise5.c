@@ -12,6 +12,7 @@ int main() {
 
     between = a1/a2;
     between = between*100;
+    
     int ok = (int) between;
     float result = (float) ok;
     result = result/100;
