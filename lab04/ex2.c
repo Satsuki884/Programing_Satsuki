@@ -6,15 +6,15 @@ int main()
     float a1 = a;
     a1 = (int) a1;
     int a2 = a*1000;
-    a2 = (int)a2;
+   // a2 = (int)a2;
     a2 = a2%1000;
     float result;
     char error;
-    if (a2 == 0){
+    if (a1 == 0){
         error = 'E';
     }
     else {
-        result = a1/a2;
+        result = a2/a1;
         result *= 100;
         result = (int)result;
         result = (float)result;
