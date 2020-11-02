@@ -12,10 +12,13 @@ int main()
     char error;
     if (a2 == 0){
         error = 'E';
-       // char result = (char) error;
     }
     else {
         result = a1/a2;
+        result *= 100;
+        result = (int)result;
+        result = (float)result;
+        result /= 100;
     }
     return 0;
 }

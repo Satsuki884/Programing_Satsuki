@@ -7,7 +7,7 @@ int main()
     if(I == 's')
         s = PI * r * r;
     if(I == 'v')
-        v = (3 * PI * r*r*r )/ 4;
+        v = (4 * PI * r*r*r )/ 3;
     if(I == 'l')
          {
              l = 2 * PI * r;
