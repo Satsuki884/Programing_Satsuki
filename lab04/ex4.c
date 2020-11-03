@@ -1,20 +1,16 @@
 #include <stdio.h>
  
-void main(){
-    float y[8];
-    int x = -5;
-    for(int i=0;x<=2;){
-    if(x=-5 && x<=-1){
-        y[i] = -1/x;
-        i++;
-        x++;}
-    else if(x>=-1 && x<=1){
-        y[i] = x*x;
-        x++;
-        i++;}
-    else if(x>1)
-        y[i] = 1;
-}
+int main(){
+    float y[9];
+    float x = -5;
+    for(int i=0 ; i<9;x++, i++){
+        if(x<=-1)
+            y[i] = -1/x;
+        else if(x>-1 && x<=1)
+            y[i] = x*x;
+        else
+            y[i] = 1;
+    }
     return 0;
 }
 /*#include <stdio.h>
@@ -43,7 +39,7 @@ int main(){
     else if ( x > -1 && x <= 1){
         y = x * x;
     }
-    else if ( x > 1 && x <= 2){
+    else {
         y = 1.0;
     }
     return 0;
