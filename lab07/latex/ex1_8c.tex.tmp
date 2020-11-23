@@ -1,0 +1,36 @@
+\hypertarget{ex1_8c}{}\section{ex1.\+c File Reference}
+\label{ex1_8c}\index{ex1.\+c@{ex1.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+Include dependency graph for ex1.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{ex1_8c_a1ed60bb9ea0d833d7800540274bffcc0}{perfect\+\_\+numbers} (int N)
+\item 
+int \hyperlink{ex1_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+виконання перевірки числа на простоту 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ex1_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{ex1_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{ex1.\+c@{ex1.\+c}!main@{main}}
+\index{main@{main}!ex1.\+c@{ex1.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+головна функція \{задати фунцію, що кожного разу дає нове псевдовипадкове число, оголосити число, виконати перевірку на простість\} \mbox{\Hypertarget{ex1_8c_a1ed60bb9ea0d833d7800540274bffcc0}\label{ex1_8c_a1ed60bb9ea0d833d7800540274bffcc0}} 
+\index{ex1.\+c@{ex1.\+c}!perfect\+\_\+numbers@{perfect\+\_\+numbers}}
+\index{perfect\+\_\+numbers@{perfect\+\_\+numbers}!ex1.\+c@{ex1.\+c}}
+\subsubsection{\texorpdfstring{perfect\+\_\+numbers()}{perfect\_numbers()}}
+{\footnotesize\ttfamily char perfect\+\_\+numbers (\begin{DoxyParamCaption}\item[{int}]{N }\end{DoxyParamCaption})}
+
+перевірка числа на простоту за допогою флагів 
+\begin{DoxyParams}{Parameters}
+{\em N} & наше задане число \\
+\hline
+\end{DoxyParams}
