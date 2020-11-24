@@ -1,6 +1,4 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdbool.h>
+#include <stdarg.h>
 
 /**
  * @file ex3.c реалізація функції, що визначає, скільки серед заданої послідовності чисел таких пар, у котрих перше числе меньше наступного
@@ -8,46 +6,36 @@
 */
 
 /**
- * реалізація функції, що повертає значення кількості пар, що визначає функція, після обробки масиву
- * @param array[] наш масив, у якому задані числа
+ * реалізація варіативної функції, що повертає значення кількості пар, що визначає функція, після обробки масиву
+ * @param N значення, що відповідає за кількість значень викликаної функції
  */
 
-int function(int array[]);
+int function(int N, ...);
 
 /**
-головна функція  {
- *  Послідовність дій:
- * <ul>
- * <li> запис функції, що задає при кожному новому запуску нове значення кожного елементу масиву</li>
- * <li> оголосимо наш масив та число, що буде відповіддю до нашого завдання</li>
- * <li> запис псевдовипадкових чисел до масиву</li>
- * @return  м - значення кількості пар , у котрих перше число менше за наступне
- * </ul>}
+головна функція  { Оголошення змінної та виклик варіативної функції }
+ 
 */
 
 int main(){
-    srand(time(NULL));
-    int array[8];
-    int m;
-    for (int i = 0; i < 8; i++){
-        array[i] = rand()%100;
-    }
-    m = function(array);
+    int result = function(12, 17, 0, -34, 8, 5, 10, -9, 99, 10, 13);
     return 0;
 }
 
-int function(int array[]){
+int function(int N, ...){
     
-    int m = 0;
-    bool flag = false;
-    for (int i = 0; i < 8; i++){
-        if(array[i+1] > array[i] ){
-            flag = true;
+    int a = 0;
+    int result = 0;
+    va_list factor;
+    va_start (factor, N);
+    for (int i = 1; i < N; i++){
+        va_arg(factor, int);
+        if(va_arg(factor, int) > a){
+            result++;
         }
-        if(flag){
-            m++;
-        }
-        flag = false;
+        a = va_arg(factor, int);
+
     }
-    return m;
+    va_end(factor);
+    return (result);
 }
