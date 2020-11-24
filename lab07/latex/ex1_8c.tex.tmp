@@ -14,7 +14,7 @@ int \hyperlink{ex1_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 
 
 \subsection{Detailed Description}
-виконання перевірки числа на простоту 
+виконання перевірки числа на досконалість 
 
 \subsection{Function Documentation}
 \mbox{\Hypertarget{ex1_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{ex1_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
@@ -23,7 +23,7 @@ int \hyperlink{ex1_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 \subsubsection{\texorpdfstring{main()}{main()}}
 {\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-головна функція \{задати фунцію, що кожного разу дає нове псевдовипадкове число, оголосити число, виконати перевірку на простість\} \mbox{\Hypertarget{ex1_8c_a1ed60bb9ea0d833d7800540274bffcc0}\label{ex1_8c_a1ed60bb9ea0d833d7800540274bffcc0}} 
+головна функція \{задати фунцію, що кожного разу дає нове псевдовипадкове число, оголосити число, виконати перевірку на досконалість\} \mbox{\Hypertarget{ex1_8c_a1ed60bb9ea0d833d7800540274bffcc0}\label{ex1_8c_a1ed60bb9ea0d833d7800540274bffcc0}} 
 \index{ex1.\+c@{ex1.\+c}!perfect\+\_\+numbers@{perfect\+\_\+numbers}}
 \index{perfect\+\_\+numbers@{perfect\+\_\+numbers}!ex1.\+c@{ex1.\+c}}
 \subsubsection{\texorpdfstring{perfect\+\_\+numbers()}{perfect\_numbers()}}
