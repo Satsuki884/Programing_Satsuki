@@ -8,7 +8,6 @@
 int Count_words(char str[]); 
 
 int main() {
-    int SIZE = 50;
     char str[] = "Ivanov,Sidorov,Ivanov,Ivanchenko,Sidorov,Mihalchuk";
     char el[] = ",";
     int count_words = Count_words(str);
@@ -23,8 +22,6 @@ int main() {
     for (int i = 0; i < count_words; ++i) {
         for (int j = i + 1; j < count_words; ++j) {
             if (!strcmp(words[j], words[i])) {
-               // printf("%s ", *(words+j));
-                //printf("%s \n", *(words+count_words - 1));
                 words[j] = words[--count_words];
                 --j;
 
@@ -58,5 +55,4 @@ int Count_words(char str[]){
             flag = false;
     }
     return count_word;
-
 }
