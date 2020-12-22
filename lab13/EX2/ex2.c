@@ -23,15 +23,16 @@ int main() {
     for (int i = 0; i < count_words; ++i) {
         for (int j = i + 1; j < count_words; ++j) {
             if (!strcmp(words[j], words[i])) {
+               // printf("%s ", *(words+j));
+                //printf("%s \n", *(words+count_words - 1));
                 words[j] = words[--count_words];
                 --j;
+
             }
         }
     }
     for (int i = 0; i < count_words; ++i) {
-        for (int j = i + 1; j < count_words; ++j) {
             printf("%s ", *(words+i));
-        }
     }
     return 0;
 }
