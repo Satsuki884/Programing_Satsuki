@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/maestro/Programing_Satsuki/lab14/ex1.c
+stdio.h
+-
+sys/types.h
+-
+dirent.h
+-
+string.h
+-
+stdlib.h
+-
+stdint.h
+-
+inttypes.h
+-
+stdio.h
+-
+stdlib.h
+-
+stdint.h
+-
+inttypes.h
+-
+
