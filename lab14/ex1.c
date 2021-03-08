@@ -1,29 +1,13 @@
-#include <stdio.h>
-#include <sys/types.h>
+/*#include <stdio.h>
 #include <dirent.h>
 #include <string.h>
-#include <stdlib.h>
-#include <stdint.h> // для int64_t
-#include <inttypes.h> // для правильного вывода int64_t в printf
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h> // для int64_t
-#include <inttypes.h> // для правильного вывода int64_t в printf
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
 
-int64_t getFileSize(const char* file_name){
-    int64_t _file_size = 0;
-    FILE* fd = fopen(file_name, "rb");
-    if(fd == NULL){
-        _file_size = -1;
-    }
-    else{
-        fseek(fd, 0, SEEK_END);
-        _file_size = ftello(fd);
-        fclose(fd);
-    }
-    return _file_size;
-}
+#include <stdlib.h>
+
 
 void directoria(char *name)
 {
@@ -44,22 +28,22 @@ void directoria(char *name)
                 strcpy(smth_name, name);
                 strcat (smth_name, "/");
                 strcat (smth_name, entry -> d_name);
-                printf("%s [%d]\n",
-                       entry->d_name, entry->d_type);
+                printf("%s 5\n", entry->d_name);
 
                 directoria(smth_name);
             }
 
             printf("%s [%d]\n",
                entry->d_name, entry->d_type);
+
         }
     }
     closedir(dir);
 }
-int main() {
-    char* name = "/home/maestro/Programing_Satsuki/lab14";
 
-    directoria(name);
-    int64_t file_size = getFileSize(FILE_PATH);
-    printf("File size: %" PRId64 "\n", file_size);
+int main() {
+    char* directory_name = "/home/maestro/Programing_Satsuki/lab14";
+
+    directoria(directory_name);
 }
+*/
