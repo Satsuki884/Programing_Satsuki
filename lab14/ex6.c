@@ -1,42 +1,77 @@
-/*#include <stdio.h>
 #include <string.h>
-#include <errno.h>
-#include <dirent.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdio.h>
+#define max_length_in_file 128
+int Count_words(char str[]);
 
+int main() {
+    FILE *file_in;
+    char *file_name = (char*)malloc(sizeof(char) * 20);
+    printf("Введите файл из которого будет считатся список фамилий в виде файл.расширение: ");
+    scanf("%s", file_name);
+    file_in = fopen(file_name, "r");
+    char str[max_length_in_file];
+    fgets(str, max_length_in_file, file_in);
+    fclose(file_in);
+    str[strcspn(str, "\n")] = 0;
 
-#define DIRNAME "."
-#define OFNAME  "out.log"
-
-int main(void)
-{
-    FILE *ofp;
-    DIR *dp;
-    struct dirent *dent;
-
-    if( (dp = opendir(DIRNAME)) == NULL) {
-
-        fprintf(stderr, "opendir: %s: %s\n", DIRNAME, strerror(errno));
-        return 1;
+    char el[] = ",";
+    int count_words = Count_words(str);
+    char** words = (char**)malloc(sizeof(char*) * count_words);
+    char* temp = strtok(  str, el );
+    int i = 0;
+    while (temp != NULL){
+        *(words+i) = temp;
+        i++;
+        temp = strtok(NULL, el);
     }
-    if( (ofp = fopen(OFNAME, "w")) == NULL) {
-        fprintf(stderr, "fopen: %s: %s\n", OFNAME, strerror(errno));
-        return 1;
-    }
+    for (int i = 0; i < count_words; ++i) {
+        for (int j = i + 1; j < count_words; ++j) {
+            if (!strcmp(words[j], words[i])) {
+                words[j] = words[--count_words];
+                --j;
 
-// построчно считываем имена файлов из каталога
-    while(dent = readdir(dp))
-
-
-// проверка, что имя каталога не равно «.» и «..»
-        if(strcmp(".", dent->d_name) && strcmp("..", dent->d_name)) {
-            closedir(dp);
-        }
-        else{
-            while ( (dent = readdir(dp)) != NULL) {
-                printf("%s [%d]\n",
-                       dent->d_name, dent->d_type);
             }
         }
-    fclose(ofp);
+    }
+
+    FILE *file_out;
+    char* file_name2= (char*)malloc(sizeof(char) * 20);
+    printf("Введите файл куда будет считываться исправленный список фамилий в виде файл.расширение: ");
+    scanf("%s", file_name2);
+    file_out = fopen(file_name2, "w");
+    for (int c = 0; c < count_words; c++) {
+        printf( "%s", *(words+c));
+        fprintf(file_out, "%s", *(words+c));
+        if(c < count_words-1) {
+            printf(", ");
+            fprintf(file_out, ", ");
+        }
+    }
+    fclose(file_out);
     return 0;
-}*/
+}
+
+int Count_words(char str[]){
+    char* start = &str[0];
+    bool flag = true;
+    bool space = true;
+    int count_word = 0;
+    while (flag){
+        start++;
+        if (*start == ' ' || *start == '.' || *start == ',' || *start == '!' || *start == '?' || *start == ',' || *start == '\0'){
+            space = true;
+            while (space){
+                if (!(*start == ' ' || *start == '.' || *start == ',' || *start == '!' || *start == '?' || *start == ',') || *start == '\0')
+                    space = false;
+                else
+                    start++;
+            }
+            count_word++;
+        }
+        if (*start == '\0')
+            flag = false;
+    }
+    return count_word;
+}
