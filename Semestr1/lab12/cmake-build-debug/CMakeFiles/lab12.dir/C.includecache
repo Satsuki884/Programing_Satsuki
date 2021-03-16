@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/maestro/Programing_Satsuki/lab12/src/ex4.c
+stdlib.h
+-
+time.h
+-
+stdbool.h
+-
+stdio.h
+-
+
+/home/maestro/Programing_Satsuki/lab12/src/get.c
+stdlib.h
+-
+time.h
+-
+stdbool.h
+-
+stdio.h
+-
+
+/home/maestro/Programing_Satsuki/lab12/src/i.c
+stdlib.h
+-
+stdio.h
+-
+string.h
+-
+

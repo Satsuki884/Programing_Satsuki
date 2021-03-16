@@ -1,0 +1,3 @@
+/home/maestro/Programing_Satsuki/lab12/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/maestro/Programing_Satsuki/lab12/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/maestro/Programing_Satsuki/lab12/cmake-build-debug/CMakeFiles/lab12.dir

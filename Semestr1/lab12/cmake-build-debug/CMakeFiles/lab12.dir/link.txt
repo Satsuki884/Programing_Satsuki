@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/lab12.dir/src/lab.cpp.o  -o lab12 
