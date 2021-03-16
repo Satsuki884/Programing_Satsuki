@@ -76,28 +76,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/maestro/Programing_Satsuki/lab14/ex1.c">
-			<Option target="lab14"/>
-		</Unit>
 		<Unit filename="/home/maestro/Programing_Satsuki/lab14/ex2.c">
-			<Option target="lab14"/>
-		</Unit>
-		<Unit filename="/home/maestro/Programing_Satsuki/lab14/ex3.c">
-			<Option target="lab14"/>
-		</Unit>
-		<Unit filename="/home/maestro/Programing_Satsuki/lab14/ex4.c">
 			<Option target="lab14"/>
 		</Unit>
 		<Unit filename="/home/maestro/Programing_Satsuki/lab14/ex5.c">
 			<Option target="lab14"/>
 		</Unit>
 		<Unit filename="/home/maestro/Programing_Satsuki/lab14/ex6.c">
-			<Option target="lab14"/>
-		</Unit>
-		<Unit filename="/home/maestro/Programing_Satsuki/lab14/ex7.c">
-			<Option target="lab14"/>
-		</Unit>
-		<Unit filename="/home/maestro/Programing_Satsuki/lab14/ex8.c">
 			<Option target="lab14"/>
 		</Unit>
 		<Unit filename="/home/maestro/Programing_Satsuki/lab14/CMakeLists.txt">

@@ -6,13 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/maestro/Programing_Satsuki/lab14/ex6.c
+/home/maestro/Programing_Satsuki/lab14/ex2.c
+stdio.h
+-
 string.h
 -
-stdlib.h
--
-stdbool.h
--
+
+/home/maestro/Programing_Satsuki/lab14/ex5.c
 stdio.h
+-
+dirent.h
+-
+string.h
 -
 

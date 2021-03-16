@@ -143,33 +143,6 @@ lab14/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab14.dir/build.make CMakeFiles/lab14.dir/build
 .PHONY : lab14/fast
 
-ex1.o: ex1.c.o
-
-.PHONY : ex1.o
-
-# target to build an object file
-ex1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab14.dir/build.make CMakeFiles/lab14.dir/ex1.c.o
-.PHONY : ex1.c.o
-
-ex1.i: ex1.c.i
-
-.PHONY : ex1.i
-
-# target to preprocess a source file
-ex1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab14.dir/build.make CMakeFiles/lab14.dir/ex1.c.i
-.PHONY : ex1.c.i
-
-ex1.s: ex1.c.s
-
-.PHONY : ex1.s
-
-# target to generate assembly for a file
-ex1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab14.dir/build.make CMakeFiles/lab14.dir/ex1.c.s
-.PHONY : ex1.c.s
-
 ex2.o: ex2.c.o
 
 .PHONY : ex2.o
@@ -196,60 +169,6 @@ ex2.s: ex2.c.s
 ex2.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab14.dir/build.make CMakeFiles/lab14.dir/ex2.c.s
 .PHONY : ex2.c.s
-
-ex3.o: ex3.c.o
-
-.PHONY : ex3.o
-
-# target to build an object file
-ex3.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab14.dir/build.make CMakeFiles/lab14.dir/ex3.c.o
-.PHONY : ex3.c.o
-
-ex3.i: ex3.c.i
-
-.PHONY : ex3.i
-
-# target to preprocess a source file
-ex3.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab14.dir/build.make CMakeFiles/lab14.dir/ex3.c.i
-.PHONY : ex3.c.i
-
-ex3.s: ex3.c.s
-
-.PHONY : ex3.s
-
-# target to generate assembly for a file
-ex3.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab14.dir/build.make CMakeFiles/lab14.dir/ex3.c.s
-.PHONY : ex3.c.s
-
-ex4.o: ex4.c.o
-
-.PHONY : ex4.o
-
-# target to build an object file
-ex4.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab14.dir/build.make CMakeFiles/lab14.dir/ex4.c.o
-.PHONY : ex4.c.o
-
-ex4.i: ex4.c.i
-
-.PHONY : ex4.i
-
-# target to preprocess a source file
-ex4.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab14.dir/build.make CMakeFiles/lab14.dir/ex4.c.i
-.PHONY : ex4.c.i
-
-ex4.s: ex4.c.s
-
-.PHONY : ex4.s
-
-# target to generate assembly for a file
-ex4.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab14.dir/build.make CMakeFiles/lab14.dir/ex4.c.s
-.PHONY : ex4.c.s
 
 ex5.o: ex5.c.o
 
@@ -305,60 +224,6 @@ ex6.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab14.dir/build.make CMakeFiles/lab14.dir/ex6.c.s
 .PHONY : ex6.c.s
 
-ex7.o: ex7.c.o
-
-.PHONY : ex7.o
-
-# target to build an object file
-ex7.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab14.dir/build.make CMakeFiles/lab14.dir/ex7.c.o
-.PHONY : ex7.c.o
-
-ex7.i: ex7.c.i
-
-.PHONY : ex7.i
-
-# target to preprocess a source file
-ex7.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab14.dir/build.make CMakeFiles/lab14.dir/ex7.c.i
-.PHONY : ex7.c.i
-
-ex7.s: ex7.c.s
-
-.PHONY : ex7.s
-
-# target to generate assembly for a file
-ex7.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab14.dir/build.make CMakeFiles/lab14.dir/ex7.c.s
-.PHONY : ex7.c.s
-
-ex8.o: ex8.c.o
-
-.PHONY : ex8.o
-
-# target to build an object file
-ex8.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab14.dir/build.make CMakeFiles/lab14.dir/ex8.c.o
-.PHONY : ex8.c.o
-
-ex8.i: ex8.c.i
-
-.PHONY : ex8.i
-
-# target to preprocess a source file
-ex8.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab14.dir/build.make CMakeFiles/lab14.dir/ex8.c.i
-.PHONY : ex8.c.i
-
-ex8.s: ex8.c.s
-
-.PHONY : ex8.s
-
-# target to generate assembly for a file
-ex8.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab14.dir/build.make CMakeFiles/lab14.dir/ex8.c.s
-.PHONY : ex8.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -368,30 +233,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... lab14"
-	@echo "... ex1.o"
-	@echo "... ex1.i"
-	@echo "... ex1.s"
 	@echo "... ex2.o"
 	@echo "... ex2.i"
 	@echo "... ex2.s"
-	@echo "... ex3.o"
-	@echo "... ex3.i"
-	@echo "... ex3.s"
-	@echo "... ex4.o"
-	@echo "... ex4.i"
-	@echo "... ex4.s"
 	@echo "... ex5.o"
 	@echo "... ex5.i"
 	@echo "... ex5.s"
 	@echo "... ex6.o"
 	@echo "... ex6.i"
 	@echo "... ex6.s"
-	@echo "... ex7.o"
-	@echo "... ex7.i"
-	@echo "... ex7.s"
-	@echo "... ex8.o"
-	@echo "... ex8.i"
-	@echo "... ex8.s"
 .PHONY : help
 
 

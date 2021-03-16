@@ -18,7 +18,7 @@ void print_space(int coint){
     printf("|---");
 }
 
-int directoria(char *name, int coint){
+float directoria(char *name, int coint){
     DIR *dir;
     struct dirent *entry;
     char smth_name[255];
@@ -26,9 +26,9 @@ int directoria(char *name, int coint){
     if (!dir) {
         perror("diropen");;
     }
-    int size;
+    float size;
     FILE *fp;
-    int total_size = 0;
+    float total_size = 0;
     while ( (entry = readdir(dir)) != NULL) {
         if(strcmp(entry -> d_name, ".") !=0 && strcmp(entry -> d_name, "..") !=0) {
             if (entry->d_type == DT_DIR) {
@@ -47,13 +47,13 @@ int directoria(char *name, int coint){
                 total_size += size;
                 fclose(fp);
                 print_space(coint);
-                printf("%s %d \n", entry->d_name, size);
+                printf("%s %5.2f \n", entry->d_name, size/1000);
             }
         }
     }
     closedir(dir);
     print_space(coint);
-    printf("Total size: %d\n", total_size);
+    printf("Total size: %5.2f\n", total_size/1000);
     return total_size;
 }
 

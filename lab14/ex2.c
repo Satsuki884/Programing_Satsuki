@@ -1,17 +1,16 @@
-#include <stdlib.h>
+/*#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
 #define N 3
 
 int main(){
-    printf("Лабораторна робота №12.\nТема: Взаємодія з користувачем шляхом механізму вводу/виведення.\nРоботу виконала студентка групи КІТ-120а Клименко Станіслава Олександрівна");
+    printf("Лабораторна робота №12.\nТема: Взаємодія з користувачем шляхом механізму вводу/виведення.\nРоботу виконала студентка групи КІТ-120а Клименко Станіслава Олександрівна\n");
     int **arr =(float**)malloc(sizeof(int*)*N);
     for(int i=0;i<N;i++){
         *(arr+i) = (int *)malloc(sizeof(int) *N);
     }
     puts("Your value: ");
-    printf("%d\n", N);
     char str[] = "Write the all elements of the matrix: \n";
     fwrite(&str, strlen(str) + 1, sizeof(char), stdout);
     char buf[20];
@@ -50,4 +49,4 @@ int main(){
         }
     }
     return 0;
-}
+}*/

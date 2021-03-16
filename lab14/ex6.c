@@ -1,4 +1,4 @@
-#include <string.h>
+/*#include <string.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -74,4 +74,4 @@ int Count_words(char str[]){
             flag = false;
     }
     return count_word;
-}
+}*/
