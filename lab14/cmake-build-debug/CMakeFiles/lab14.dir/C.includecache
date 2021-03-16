@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/maestro/Programing_Satsuki/lab14/ex2.c
-stdio.h
--
-string.h
--
-
 /home/maestro/Programing_Satsuki/lab14/ex5.c
 stdio.h
 -

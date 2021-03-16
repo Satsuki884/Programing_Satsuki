@@ -23,21 +23,21 @@
 
 - Блок-схема алгоритму функції:
 
-  ![enter image description here](asses/lab14_main(1).png)
+   ![enter image description here](asses/lab14_main(1).png)
 
-Рисунок 1 — блок-схема програми(main)
+Рисунок 1 — блок-схема програми (main)
 
-![enter image description here](asses/lab14_directoria.png)
+   ![enter image description here](asses/lab14_directoria.png)
 
-Рисунок 2 — блок-схема програми(directoria)
+Рисунок 2 — блок-схема програми (directoria)
 
-![enter image description here](asses/lab14_size.png)
+   ![enter image description here](asses/lab14_size.png)
 
-Рисунок 3 — блок-схема програми(size_file)
+Рисунок 3 — блок-схема програми (size_file)
 
-![enter image description here](asses/lab14_space.png)
+   ![enter image description here](asses/lab14_space.png)
 
-Рисунок 4 — блок-схема програми(print_space)
+Рисунок 4 — блок-схема програми (print_space)
 
 - Важливі елементи програми.
     * Знаходження розміру файлу для подальшого знаходження розміру дерикторії``size_file``.
