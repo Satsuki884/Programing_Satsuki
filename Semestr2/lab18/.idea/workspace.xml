@@ -11,60 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41f8bd77-f8a4-4bf7-86b2-6420313b5a61" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../lab13/.idea/lab132.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02/dist/main.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../lab02/dist/main.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab02/dist/test.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../lab02/dist/test.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab04/ex4" beforeDir="false" afterPath="$PROJECT_DIR$/../lab04/ex4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab04/ex5.c" beforeDir="false" afterPath="$PROJECT_DIR$/../lab04/ex5.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab05/ex2.c" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05/ex2.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab05/ex4.c" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05/ex4.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab05/ex5.c" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05/ex5.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab06/dist/ex1.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../lab06/dist/ex1.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab06/dist/ex2.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../lab06/dist/ex2.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab06/dist/ex3.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../lab06/dist/ex3.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab06/dist/ex4.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../lab06/dist/ex4.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab06/dist/ex5.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../lab06/dist/ex5.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab06/dist/ex6.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../lab06/dist/ex6.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab06/src/ex2" beforeDir="false" afterPath="$PROJECT_DIR$/../lab06/src/ex2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab07/ex1.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab07/ex2.c" beforeDir="false" afterPath="$PROJECT_DIR$/../lab07/ex2.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab07/ex3.c" beforeDir="false" afterPath="$PROJECT_DIR$/../lab07/ex3.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab10/doc/asses/lab07_ex1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../lab10/doc/asses/lab07_ex1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab10/doc/asses/lab07_ex2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../lab10/doc/asses/lab07_ex2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab10/doc/asses/lab07_ex3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../lab10/doc/asses/lab07_ex3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab11/ex4.c" beforeDir="false" afterPath="$PROJECT_DIR$/../lab11/ex4.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab13/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab13/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab13/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab13/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab13/EX1/ex1.c" beforeDir="false" afterPath="$PROJECT_DIR$/../lab13/EX1/ex1.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab13/EX2/ex2" beforeDir="false" afterPath="$PROJECT_DIR$/../lab13/EX2/ex2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab13/EX2/ex2.c" beforeDir="false" afterPath="$PROJECT_DIR$/../lab13/EX2/ex2.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab13/EX3/ex3" beforeDir="false" afterPath="$PROJECT_DIR$/../lab13/EX3/ex3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab13/EX3/ex3.c" beforeDir="false" afterPath="$PROJECT_DIR$/../lab13/EX3/ex3.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab13/EX3/ex3.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab13/EX3/ex3m" beforeDir="false" afterPath="$PROJECT_DIR$/../lab13/EX3/ex3m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab13/EX3/ex3m.c" beforeDir="false" afterPath="$PROJECT_DIR$/../lab13/EX3/ex3m.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab13/EX4/ex4" beforeDir="false" afterPath="$PROJECT_DIR$/../lab13/EX4/ex4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab13/EX4/ex4.c" beforeDir="false" afterPath="$PROJECT_DIR$/../lab13/EX4/ex4.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab14/cmake-build-debug/CMakeFiles/lab14.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../lab14/cmake-build-debug/CMakeFiles/lab14.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab14/cmake-build-debug/CMakeFiles/lab14.dir/ex5.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../lab14/cmake-build-debug/CMakeFiles/lab14.dir/ex5.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab14/cmake-build-debug/CMakeFiles/lab14.dir/ex6.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../lab14/cmake-build-debug/CMakeFiles/lab14.dir/ex6.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab14/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../lab14/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab14/cmake-build-debug/lab14" beforeDir="false" afterPath="$PROJECT_DIR$/../lab14/cmake-build-debug/lab14" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab14/ex1.c" beforeDir="false" afterPath="$PROJECT_DIR$/../lab14/ex1.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab14/ex5.c" beforeDir="false" afterPath="$PROJECT_DIR$/../lab14/ex5.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab14/ex6.c" beforeDir="false" afterPath="$PROJECT_DIR$/../lab14/ex6.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab15/1.c" beforeDir="false" afterPath="$PROJECT_DIR$/../lab15/1.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab15/2.c" beforeDir="false" afterPath="$PROJECT_DIR$/../lab15/2.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab15/4.c" beforeDir="false" afterPath="$PROJECT_DIR$/../lab15/4.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab15/5.c" beforeDir="false" afterPath="$PROJECT_DIR$/../lab15/5.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab15/cmake-build-debug/CMakeFiles/lab15.dir/1.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../lab15/cmake-build-debug/CMakeFiles/lab15.dir/1.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab15/cmake-build-debug/CMakeFiles/lab15.dir/2.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../lab15/cmake-build-debug/CMakeFiles/lab15.dir/2.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab15/cmake-build-debug/CMakeFiles/lab15.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../lab15/cmake-build-debug/CMakeFiles/lab15.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab15/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../lab15/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab15/cmake-build-debug/lab15" beforeDir="false" afterPath="$PROJECT_DIR$/../lab15/cmake-build-debug/lab15" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/lab18.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/lab18.iml" afterDir="false" />
-    </list>
+    <list default="true" id="41f8bd77-f8a4-4bf7-86b2-6420313b5a61" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +22,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="1n4DUT96JFRGd2OdeGyOkCkDtkv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -88,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab014" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab15/7.c" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -96,9 +43,19 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="lab18" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="lab18" TARGET_NAME="lab18" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="lab18" RUN_TARGET_NAME="lab18">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -115,6 +72,7 @@
       <workItem from="1615233323087" duration="599000" />
       <workItem from="1615271733225" duration="1203000" />
       <workItem from="1615666987109" duration="599000" />
+      <workItem from="1616699534136" duration="8717000" />
     </task>
     <servers />
   </component>

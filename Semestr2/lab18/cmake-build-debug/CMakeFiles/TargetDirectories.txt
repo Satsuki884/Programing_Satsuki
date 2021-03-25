@@ -1,3 +1,3 @@
-/home/maestro/Programing_Satsuki/lab18/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/maestro/Programing_Satsuki/lab18/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/maestro/Programing_Satsuki/lab18/cmake-build-debug/CMakeFiles/lab18.dir
+/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/CMakeFiles/lab18.dir

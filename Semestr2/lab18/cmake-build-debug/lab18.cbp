@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/maestro/Programing_Satsuki/lab18/cmake-build-debug"/>
+				<Option working_dir="/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/maestro/Programing_Satsuki/lab18/cmake-build-debug"/>
+				<Option working_dir="/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/maestro/Programing_Satsuki/lab18/cmake-build-debug"/>
+				<Option working_dir="/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="lab18">
-				<Option output="/home/maestro/Programing_Satsuki/lab18/cmake-build-debug/lab18" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/maestro/Programing_Satsuki/lab18/cmake-build-debug"/>
+				<Option output="/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/lab18" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -50,15 +50,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab18"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab18"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="lab18/fast">
-				<Option output="/home/maestro/Programing_Satsuki/lab18/cmake-build-debug/lab18" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/maestro/Programing_Satsuki/lab18/cmake-build-debug"/>
+				<Option output="/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/lab18" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -69,32 +69,32 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab18/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab18/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/maestro/Programing_Satsuki/lab18/ex1.c">
+		<Unit filename="/home/maestro/Programing_Satsuki/Semestr2/lab18/ex1.c">
 			<Option target="lab18"/>
 		</Unit>
-		<Unit filename="/home/maestro/Programing_Satsuki/lab18/ex2.c">
+		<Unit filename="/home/maestro/Programing_Satsuki/Semestr2/lab18/ex2.c">
 			<Option target="lab18"/>
 		</Unit>
-		<Unit filename="/home/maestro/Programing_Satsuki/lab18/ex3.c">
+		<Unit filename="/home/maestro/Programing_Satsuki/Semestr2/lab18/ex3.c">
 			<Option target="lab18"/>
 		</Unit>
-		<Unit filename="/home/maestro/Programing_Satsuki/lab18/ex4.c">
+		<Unit filename="/home/maestro/Programing_Satsuki/Semestr2/lab18/ex4.c">
 			<Option target="lab18"/>
 		</Unit>
-		<Unit filename="/home/maestro/Programing_Satsuki/lab18/ex5.c">
+		<Unit filename="/home/maestro/Programing_Satsuki/Semestr2/lab18/ex5.c">
 			<Option target="lab18"/>
 		</Unit>
-		<Unit filename="/home/maestro/Programing_Satsuki/lab18/ex6.c">
+		<Unit filename="/home/maestro/Programing_Satsuki/Semestr2/lab18/ex6.c">
 			<Option target="lab18"/>
 		</Unit>
-		<Unit filename="/home/maestro/Programing_Satsuki/lab18/CMakeLists.txt">
+		<Unit filename="/home/maestro/Programing_Satsuki/Semestr2/lab18/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
