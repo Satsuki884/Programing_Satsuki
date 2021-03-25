@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/maestro/Programing_Satsuki/lab15/1.c" "/home/maestro/Programing_Satsuki/lab15/cmake-build-debug/CMakeFiles/lab15.dir/1.c.o"
-  "/home/maestro/Programing_Satsuki/lab15/2.c" "/home/maestro/Programing_Satsuki/lab15/cmake-build-debug/CMakeFiles/lab15.dir/2.c.o"
-  "/home/maestro/Programing_Satsuki/lab15/3.c" "/home/maestro/Programing_Satsuki/lab15/cmake-build-debug/CMakeFiles/lab15.dir/3.c.o"
-  "/home/maestro/Programing_Satsuki/lab15/4.c" "/home/maestro/Programing_Satsuki/lab15/cmake-build-debug/CMakeFiles/lab15.dir/4.c.o"
-  "/home/maestro/Programing_Satsuki/lab15/5.c" "/home/maestro/Programing_Satsuki/lab15/cmake-build-debug/CMakeFiles/lab15.dir/5.c.o"
-  "/home/maestro/Programing_Satsuki/lab15/6.c" "/home/maestro/Programing_Satsuki/lab15/cmake-build-debug/CMakeFiles/lab15.dir/6.c.o"
-  "/home/maestro/Programing_Satsuki/lab15/7.c" "/home/maestro/Programing_Satsuki/lab15/cmake-build-debug/CMakeFiles/lab15.dir/7.c.o"
-  "/home/maestro/Programing_Satsuki/lab15/8.c" "/home/maestro/Programing_Satsuki/lab15/cmake-build-debug/CMakeFiles/lab15.dir/8.c.o"
+  "/home/maestro/Programing_Satsuki/Semestr2/lab15/1.c" "/home/maestro/Programing_Satsuki/Semestr2/lab15/cmake-build-debug/CMakeFiles/lab15.dir/1.c.o"
+  "/home/maestro/Programing_Satsuki/Semestr2/lab15/2.c" "/home/maestro/Programing_Satsuki/Semestr2/lab15/cmake-build-debug/CMakeFiles/lab15.dir/2.c.o"
+  "/home/maestro/Programing_Satsuki/Semestr2/lab15/3.c" "/home/maestro/Programing_Satsuki/Semestr2/lab15/cmake-build-debug/CMakeFiles/lab15.dir/3.c.o"
+  "/home/maestro/Programing_Satsuki/Semestr2/lab15/4.c" "/home/maestro/Programing_Satsuki/Semestr2/lab15/cmake-build-debug/CMakeFiles/lab15.dir/4.c.o"
+  "/home/maestro/Programing_Satsuki/Semestr2/lab15/5.c" "/home/maestro/Programing_Satsuki/Semestr2/lab15/cmake-build-debug/CMakeFiles/lab15.dir/5.c.o"
+  "/home/maestro/Programing_Satsuki/Semestr2/lab15/6.c" "/home/maestro/Programing_Satsuki/Semestr2/lab15/cmake-build-debug/CMakeFiles/lab15.dir/6.c.o"
+  "/home/maestro/Programing_Satsuki/Semestr2/lab15/7.c" "/home/maestro/Programing_Satsuki/Semestr2/lab15/cmake-build-debug/CMakeFiles/lab15.dir/7.c.o"
+  "/home/maestro/Programing_Satsuki/Semestr2/lab15/8.c" "/home/maestro/Programing_Satsuki/Semestr2/lab15/cmake-build-debug/CMakeFiles/lab15.dir/8.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
