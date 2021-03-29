@@ -1,6 +1,15 @@
 //#include "lib6.h"
 //
-//
+//struct array{
+//    int order;
+//    int number;
+//};
+//struct array create(char name){
+//    struct array myFreq;
+//    myFreq.order = 0;
+//    myFreq.number = 0;
+//    return myFreq;
+//}
 //
 //
 //int main() {
