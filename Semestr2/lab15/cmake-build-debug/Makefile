@@ -143,141 +143,6 @@ lab15/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/build
 .PHONY : lab15/fast
 
-1.o: 1.c.o
-
-.PHONY : 1.o
-
-# target to build an object file
-1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/1.c.o
-.PHONY : 1.c.o
-
-1.i: 1.c.i
-
-.PHONY : 1.i
-
-# target to preprocess a source file
-1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/1.c.i
-.PHONY : 1.c.i
-
-1.s: 1.c.s
-
-.PHONY : 1.s
-
-# target to generate assembly for a file
-1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/1.c.s
-.PHONY : 1.c.s
-
-2.o: 2.c.o
-
-.PHONY : 2.o
-
-# target to build an object file
-2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/2.c.o
-.PHONY : 2.c.o
-
-2.i: 2.c.i
-
-.PHONY : 2.i
-
-# target to preprocess a source file
-2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/2.c.i
-.PHONY : 2.c.i
-
-2.s: 2.c.s
-
-.PHONY : 2.s
-
-# target to generate assembly for a file
-2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/2.c.s
-.PHONY : 2.c.s
-
-3.o: 3.c.o
-
-.PHONY : 3.o
-
-# target to build an object file
-3.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/3.c.o
-.PHONY : 3.c.o
-
-3.i: 3.c.i
-
-.PHONY : 3.i
-
-# target to preprocess a source file
-3.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/3.c.i
-.PHONY : 3.c.i
-
-3.s: 3.c.s
-
-.PHONY : 3.s
-
-# target to generate assembly for a file
-3.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/3.c.s
-.PHONY : 3.c.s
-
-4.o: 4.c.o
-
-.PHONY : 4.o
-
-# target to build an object file
-4.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/4.c.o
-.PHONY : 4.c.o
-
-4.i: 4.c.i
-
-.PHONY : 4.i
-
-# target to preprocess a source file
-4.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/4.c.i
-.PHONY : 4.c.i
-
-4.s: 4.c.s
-
-.PHONY : 4.s
-
-# target to generate assembly for a file
-4.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/4.c.s
-.PHONY : 4.c.s
-
-5.o: 5.c.o
-
-.PHONY : 5.o
-
-# target to build an object file
-5.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/5.c.o
-.PHONY : 5.c.o
-
-5.i: 5.c.i
-
-.PHONY : 5.i
-
-# target to preprocess a source file
-5.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/5.c.i
-.PHONY : 5.c.i
-
-5.s: 5.c.s
-
-.PHONY : 5.s
-
-# target to generate assembly for a file
-5.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/5.c.s
-.PHONY : 5.c.s
-
 6.o: 6.c.o
 
 .PHONY : 6.o
@@ -332,32 +197,113 @@ lab15/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/7.c.s
 .PHONY : 7.c.s
 
-8.o: 8.c.o
+lib6.o: lib6.c.o
 
-.PHONY : 8.o
+.PHONY : lib6.o
 
 # target to build an object file
-8.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/8.c.o
-.PHONY : 8.c.o
+lib6.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/lib6.c.o
+.PHONY : lib6.c.o
 
-8.i: 8.c.i
+lib6.i: lib6.c.i
 
-.PHONY : 8.i
+.PHONY : lib6.i
 
 # target to preprocess a source file
-8.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/8.c.i
-.PHONY : 8.c.i
+lib6.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/lib6.c.i
+.PHONY : lib6.c.i
 
-8.s: 8.c.s
+lib6.s: lib6.c.s
 
-.PHONY : 8.s
+.PHONY : lib6.s
 
 # target to generate assembly for a file
-8.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/8.c.s
-.PHONY : 8.c.s
+lib6.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/lib6.c.s
+.PHONY : lib6.c.s
+
+lib7.o: lib7.c.o
+
+.PHONY : lib7.o
+
+# target to build an object file
+lib7.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/lib7.c.o
+.PHONY : lib7.c.o
+
+lib7.i: lib7.c.i
+
+.PHONY : lib7.i
+
+# target to preprocess a source file
+lib7.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/lib7.c.i
+.PHONY : lib7.c.i
+
+lib7.s: lib7.c.s
+
+.PHONY : lib7.s
+
+# target to generate assembly for a file
+lib7.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/lib7.c.s
+.PHONY : lib7.c.s
+
+test6.o: test6.c.o
+
+.PHONY : test6.o
+
+# target to build an object file
+test6.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/test6.c.o
+.PHONY : test6.c.o
+
+test6.i: test6.c.i
+
+.PHONY : test6.i
+
+# target to preprocess a source file
+test6.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/test6.c.i
+.PHONY : test6.c.i
+
+test6.s: test6.c.s
+
+.PHONY : test6.s
+
+# target to generate assembly for a file
+test6.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/test6.c.s
+.PHONY : test6.c.s
+
+test7.o: test7.c.o
+
+.PHONY : test7.o
+
+# target to build an object file
+test7.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/test7.c.o
+.PHONY : test7.c.o
+
+test7.i: test7.c.i
+
+.PHONY : test7.i
+
+# target to preprocess a source file
+test7.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/test7.c.i
+.PHONY : test7.c.i
+
+test7.s: test7.c.s
+
+.PHONY : test7.s
+
+# target to generate assembly for a file
+test7.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab15.dir/build.make CMakeFiles/lab15.dir/test7.c.s
+.PHONY : test7.c.s
 
 # Help Target
 help:
@@ -368,30 +314,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... lab15"
-	@echo "... 1.o"
-	@echo "... 1.i"
-	@echo "... 1.s"
-	@echo "... 2.o"
-	@echo "... 2.i"
-	@echo "... 2.s"
-	@echo "... 3.o"
-	@echo "... 3.i"
-	@echo "... 3.s"
-	@echo "... 4.o"
-	@echo "... 4.i"
-	@echo "... 4.s"
-	@echo "... 5.o"
-	@echo "... 5.i"
-	@echo "... 5.s"
 	@echo "... 6.o"
 	@echo "... 6.i"
 	@echo "... 6.s"
 	@echo "... 7.o"
 	@echo "... 7.i"
 	@echo "... 7.s"
-	@echo "... 8.o"
-	@echo "... 8.i"
-	@echo "... 8.s"
+	@echo "... lib6.o"
+	@echo "... lib6.i"
+	@echo "... lib6.s"
+	@echo "... lib7.o"
+	@echo "... lib7.i"
+	@echo "... lib7.s"
+	@echo "... test6.o"
+	@echo "... test6.i"
+	@echo "... test6.s"
+	@echo "... test7.o"
+	@echo "... test7.i"
+	@echo "... test7.s"
 .PHONY : help
 
 

@@ -1,12 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/lab15.dir/1.c.o"
-  "CMakeFiles/lab15.dir/2.c.o"
-  "CMakeFiles/lab15.dir/3.c.o"
-  "CMakeFiles/lab15.dir/4.c.o"
-  "CMakeFiles/lab15.dir/5.c.o"
   "CMakeFiles/lab15.dir/6.c.o"
   "CMakeFiles/lab15.dir/7.c.o"
-  "CMakeFiles/lab15.dir/8.c.o"
+  "CMakeFiles/lab15.dir/lib6.c.o"
+  "CMakeFiles/lab15.dir/lib7.c.o"
+  "CMakeFiles/lab15.dir/test6.c.o"
+  "CMakeFiles/lab15.dir/test7.c.o"
   "lab15"
   "lab15.pdb"
 )
