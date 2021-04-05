@@ -6,6 +6,9 @@ set(CMAKE_C_STANDARD 11)
 include_directories(.)
 
 add_executable(lab19
-        1.c
-        lib1.c
-        lib1.h)
+        main.c
+        list.c
+        list.h
+        data.c
+        data.h
+        test.c)

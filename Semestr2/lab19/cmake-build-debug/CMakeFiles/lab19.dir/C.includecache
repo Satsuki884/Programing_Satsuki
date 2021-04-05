@@ -6,11 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/maestro/Programing_Satsuki/Semestr2/lab19/1.c
-lib1.h
-/home/maestro/Programing_Satsuki/Semestr2/lab19/lib1.h
-
-/home/maestro/Programing_Satsuki/Semestr2/lab19/lib1.h
+/home/maestro/Programing_Satsuki/Semestr2/lab19/test.c
 stdio.h
 -
 stdlib.h

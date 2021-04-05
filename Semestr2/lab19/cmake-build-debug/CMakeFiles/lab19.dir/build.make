@@ -77,45 +77,75 @@ include CMakeFiles/lab19.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/lab19.dir/flags.make
 
-CMakeFiles/lab19.dir/1.c.o: CMakeFiles/lab19.dir/flags.make
-CMakeFiles/lab19.dir/1.c.o: ../1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maestro/Programing_Satsuki/Semestr2/lab19/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/lab19.dir/1.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lab19.dir/1.c.o   -c /home/maestro/Programing_Satsuki/Semestr2/lab19/1.c
+CMakeFiles/lab19.dir/main.c.o: CMakeFiles/lab19.dir/flags.make
+CMakeFiles/lab19.dir/main.c.o: ../main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maestro/Programing_Satsuki/Semestr2/lab19/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/lab19.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lab19.dir/main.c.o   -c /home/maestro/Programing_Satsuki/Semestr2/lab19/main.c
 
-CMakeFiles/lab19.dir/1.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lab19.dir/1.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/maestro/Programing_Satsuki/Semestr2/lab19/1.c > CMakeFiles/lab19.dir/1.c.i
+CMakeFiles/lab19.dir/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lab19.dir/main.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/maestro/Programing_Satsuki/Semestr2/lab19/main.c > CMakeFiles/lab19.dir/main.c.i
 
-CMakeFiles/lab19.dir/1.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab19.dir/1.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/maestro/Programing_Satsuki/Semestr2/lab19/1.c -o CMakeFiles/lab19.dir/1.c.s
+CMakeFiles/lab19.dir/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab19.dir/main.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/maestro/Programing_Satsuki/Semestr2/lab19/main.c -o CMakeFiles/lab19.dir/main.c.s
 
-CMakeFiles/lab19.dir/lib1.c.o: CMakeFiles/lab19.dir/flags.make
-CMakeFiles/lab19.dir/lib1.c.o: ../lib1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maestro/Programing_Satsuki/Semestr2/lab19/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/lab19.dir/lib1.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lab19.dir/lib1.c.o   -c /home/maestro/Programing_Satsuki/Semestr2/lab19/lib1.c
+CMakeFiles/lab19.dir/list.c.o: CMakeFiles/lab19.dir/flags.make
+CMakeFiles/lab19.dir/list.c.o: ../list.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maestro/Programing_Satsuki/Semestr2/lab19/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/lab19.dir/list.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lab19.dir/list.c.o   -c /home/maestro/Programing_Satsuki/Semestr2/lab19/list.c
 
-CMakeFiles/lab19.dir/lib1.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lab19.dir/lib1.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/maestro/Programing_Satsuki/Semestr2/lab19/lib1.c > CMakeFiles/lab19.dir/lib1.c.i
+CMakeFiles/lab19.dir/list.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lab19.dir/list.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/maestro/Programing_Satsuki/Semestr2/lab19/list.c > CMakeFiles/lab19.dir/list.c.i
 
-CMakeFiles/lab19.dir/lib1.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab19.dir/lib1.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/maestro/Programing_Satsuki/Semestr2/lab19/lib1.c -o CMakeFiles/lab19.dir/lib1.c.s
+CMakeFiles/lab19.dir/list.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab19.dir/list.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/maestro/Programing_Satsuki/Semestr2/lab19/list.c -o CMakeFiles/lab19.dir/list.c.s
+
+CMakeFiles/lab19.dir/data.c.o: CMakeFiles/lab19.dir/flags.make
+CMakeFiles/lab19.dir/data.c.o: ../data.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maestro/Programing_Satsuki/Semestr2/lab19/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/lab19.dir/data.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lab19.dir/data.c.o   -c /home/maestro/Programing_Satsuki/Semestr2/lab19/data.c
+
+CMakeFiles/lab19.dir/data.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lab19.dir/data.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/maestro/Programing_Satsuki/Semestr2/lab19/data.c > CMakeFiles/lab19.dir/data.c.i
+
+CMakeFiles/lab19.dir/data.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab19.dir/data.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/maestro/Programing_Satsuki/Semestr2/lab19/data.c -o CMakeFiles/lab19.dir/data.c.s
+
+CMakeFiles/lab19.dir/test.c.o: CMakeFiles/lab19.dir/flags.make
+CMakeFiles/lab19.dir/test.c.o: ../test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maestro/Programing_Satsuki/Semestr2/lab19/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/lab19.dir/test.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lab19.dir/test.c.o   -c /home/maestro/Programing_Satsuki/Semestr2/lab19/test.c
+
+CMakeFiles/lab19.dir/test.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lab19.dir/test.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/maestro/Programing_Satsuki/Semestr2/lab19/test.c > CMakeFiles/lab19.dir/test.c.i
+
+CMakeFiles/lab19.dir/test.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab19.dir/test.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/maestro/Programing_Satsuki/Semestr2/lab19/test.c -o CMakeFiles/lab19.dir/test.c.s
 
 # Object files for target lab19
 lab19_OBJECTS = \
-"CMakeFiles/lab19.dir/1.c.o" \
-"CMakeFiles/lab19.dir/lib1.c.o"
+"CMakeFiles/lab19.dir/main.c.o" \
+"CMakeFiles/lab19.dir/list.c.o" \
+"CMakeFiles/lab19.dir/data.c.o" \
+"CMakeFiles/lab19.dir/test.c.o"
 
 # External object files for target lab19
 lab19_EXTERNAL_OBJECTS =
 
-lab19: CMakeFiles/lab19.dir/1.c.o
-lab19: CMakeFiles/lab19.dir/lib1.c.o
+lab19: CMakeFiles/lab19.dir/main.c.o
+lab19: CMakeFiles/lab19.dir/list.c.o
+lab19: CMakeFiles/lab19.dir/data.c.o
+lab19: CMakeFiles/lab19.dir/test.c.o
 lab19: CMakeFiles/lab19.dir/build.make
 lab19: CMakeFiles/lab19.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/maestro/Programing_Satsuki/Semestr2/lab19/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable lab19"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/maestro/Programing_Satsuki/Semestr2/lab19/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable lab19"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lab19.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

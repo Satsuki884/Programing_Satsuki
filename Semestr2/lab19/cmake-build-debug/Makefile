@@ -143,59 +143,113 @@ lab19/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab19.dir/build.make CMakeFiles/lab19.dir/build
 .PHONY : lab19/fast
 
-1.o: 1.c.o
+data.o: data.c.o
 
-.PHONY : 1.o
-
-# target to build an object file
-1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab19.dir/build.make CMakeFiles/lab19.dir/1.c.o
-.PHONY : 1.c.o
-
-1.i: 1.c.i
-
-.PHONY : 1.i
-
-# target to preprocess a source file
-1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab19.dir/build.make CMakeFiles/lab19.dir/1.c.i
-.PHONY : 1.c.i
-
-1.s: 1.c.s
-
-.PHONY : 1.s
-
-# target to generate assembly for a file
-1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab19.dir/build.make CMakeFiles/lab19.dir/1.c.s
-.PHONY : 1.c.s
-
-lib1.o: lib1.c.o
-
-.PHONY : lib1.o
+.PHONY : data.o
 
 # target to build an object file
-lib1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab19.dir/build.make CMakeFiles/lab19.dir/lib1.c.o
-.PHONY : lib1.c.o
+data.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab19.dir/build.make CMakeFiles/lab19.dir/data.c.o
+.PHONY : data.c.o
 
-lib1.i: lib1.c.i
+data.i: data.c.i
 
-.PHONY : lib1.i
+.PHONY : data.i
 
 # target to preprocess a source file
-lib1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab19.dir/build.make CMakeFiles/lab19.dir/lib1.c.i
-.PHONY : lib1.c.i
+data.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab19.dir/build.make CMakeFiles/lab19.dir/data.c.i
+.PHONY : data.c.i
 
-lib1.s: lib1.c.s
+data.s: data.c.s
 
-.PHONY : lib1.s
+.PHONY : data.s
 
 # target to generate assembly for a file
-lib1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab19.dir/build.make CMakeFiles/lab19.dir/lib1.c.s
-.PHONY : lib1.c.s
+data.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab19.dir/build.make CMakeFiles/lab19.dir/data.c.s
+.PHONY : data.c.s
+
+list.o: list.c.o
+
+.PHONY : list.o
+
+# target to build an object file
+list.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab19.dir/build.make CMakeFiles/lab19.dir/list.c.o
+.PHONY : list.c.o
+
+list.i: list.c.i
+
+.PHONY : list.i
+
+# target to preprocess a source file
+list.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab19.dir/build.make CMakeFiles/lab19.dir/list.c.i
+.PHONY : list.c.i
+
+list.s: list.c.s
+
+.PHONY : list.s
+
+# target to generate assembly for a file
+list.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab19.dir/build.make CMakeFiles/lab19.dir/list.c.s
+.PHONY : list.c.s
+
+main.o: main.c.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab19.dir/build.make CMakeFiles/lab19.dir/main.c.o
+.PHONY : main.c.o
+
+main.i: main.c.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab19.dir/build.make CMakeFiles/lab19.dir/main.c.i
+.PHONY : main.c.i
+
+main.s: main.c.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab19.dir/build.make CMakeFiles/lab19.dir/main.c.s
+.PHONY : main.c.s
+
+test.o: test.c.o
+
+.PHONY : test.o
+
+# target to build an object file
+test.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab19.dir/build.make CMakeFiles/lab19.dir/test.c.o
+.PHONY : test.c.o
+
+test.i: test.c.i
+
+.PHONY : test.i
+
+# target to preprocess a source file
+test.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab19.dir/build.make CMakeFiles/lab19.dir/test.c.i
+.PHONY : test.c.i
+
+test.s: test.c.s
+
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab19.dir/build.make CMakeFiles/lab19.dir/test.c.s
+.PHONY : test.c.s
 
 # Help Target
 help:
@@ -206,12 +260,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... lab19"
-	@echo "... 1.o"
-	@echo "... 1.i"
-	@echo "... 1.s"
-	@echo "... lib1.o"
-	@echo "... lib1.i"
-	@echo "... lib1.s"
+	@echo "... data.o"
+	@echo "... data.i"
+	@echo "... data.s"
+	@echo "... list.o"
+	@echo "... list.i"
+	@echo "... list.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 
