@@ -1,8 +1,8 @@
 #include "lib7.h"
 
-void testing_fill_array(struct shoes *array){
+void testing_fill_array_а(struct shoes *array){
     struct shoes arr[] = {
-            {false, "Tanjun", 2690, "Nike", 40, 25  }
+            {true, "Wearajjday", 2730, "Nike", 47, 26  }
     };
     if (array->ortopedic != arr->ortopedic){
         printf("Тест провален. Ожидаемое значение %d не равно %d\n",array->ortopedic, arr->ortopedic);

@@ -22,7 +22,7 @@ void print_array (struct shoes *array, int a);
 
 void fill_array(struct shoes * a, struct shoes *d);
 
-void testing_fill_array(struct shoes *array);
+void testing_fill_array_а(struct shoes *array);
 
 void test_sort(struct shoes *a, int j);
 

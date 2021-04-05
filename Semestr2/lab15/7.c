@@ -22,6 +22,7 @@ int main(){
             j++;
         }
     }
+    testing_fill_array_а(array);
     sort(array, m);
     print_array(array, m);
     test_sort(array, m);
