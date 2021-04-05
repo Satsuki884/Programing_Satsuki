@@ -7,6 +7,5 @@ add_executable(lab18
         ex1.c
         ex2.c
         ex3.c
-        ex4.c
-        ex5.c
-        ex6.c)
+        test1.c
+        test3.c)

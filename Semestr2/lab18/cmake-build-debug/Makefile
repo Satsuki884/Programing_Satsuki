@@ -224,86 +224,59 @@ ex3.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab18.dir/build.make CMakeFiles/lab18.dir/ex3.c.s
 .PHONY : ex3.c.s
 
-ex4.o: ex4.c.o
+test1.o: test1.c.o
 
-.PHONY : ex4.o
-
-# target to build an object file
-ex4.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab18.dir/build.make CMakeFiles/lab18.dir/ex4.c.o
-.PHONY : ex4.c.o
-
-ex4.i: ex4.c.i
-
-.PHONY : ex4.i
-
-# target to preprocess a source file
-ex4.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab18.dir/build.make CMakeFiles/lab18.dir/ex4.c.i
-.PHONY : ex4.c.i
-
-ex4.s: ex4.c.s
-
-.PHONY : ex4.s
-
-# target to generate assembly for a file
-ex4.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab18.dir/build.make CMakeFiles/lab18.dir/ex4.c.s
-.PHONY : ex4.c.s
-
-ex5.o: ex5.c.o
-
-.PHONY : ex5.o
+.PHONY : test1.o
 
 # target to build an object file
-ex5.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab18.dir/build.make CMakeFiles/lab18.dir/ex5.c.o
-.PHONY : ex5.c.o
+test1.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab18.dir/build.make CMakeFiles/lab18.dir/test1.c.o
+.PHONY : test1.c.o
 
-ex5.i: ex5.c.i
+test1.i: test1.c.i
 
-.PHONY : ex5.i
+.PHONY : test1.i
 
 # target to preprocess a source file
-ex5.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab18.dir/build.make CMakeFiles/lab18.dir/ex5.c.i
-.PHONY : ex5.c.i
+test1.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab18.dir/build.make CMakeFiles/lab18.dir/test1.c.i
+.PHONY : test1.c.i
 
-ex5.s: ex5.c.s
+test1.s: test1.c.s
 
-.PHONY : ex5.s
+.PHONY : test1.s
 
 # target to generate assembly for a file
-ex5.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab18.dir/build.make CMakeFiles/lab18.dir/ex5.c.s
-.PHONY : ex5.c.s
+test1.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab18.dir/build.make CMakeFiles/lab18.dir/test1.c.s
+.PHONY : test1.c.s
 
-ex6.o: ex6.c.o
+test3.o: test3.c.o
 
-.PHONY : ex6.o
+.PHONY : test3.o
 
 # target to build an object file
-ex6.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab18.dir/build.make CMakeFiles/lab18.dir/ex6.c.o
-.PHONY : ex6.c.o
+test3.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab18.dir/build.make CMakeFiles/lab18.dir/test3.c.o
+.PHONY : test3.c.o
 
-ex6.i: ex6.c.i
+test3.i: test3.c.i
 
-.PHONY : ex6.i
+.PHONY : test3.i
 
 # target to preprocess a source file
-ex6.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab18.dir/build.make CMakeFiles/lab18.dir/ex6.c.i
-.PHONY : ex6.c.i
+test3.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab18.dir/build.make CMakeFiles/lab18.dir/test3.c.i
+.PHONY : test3.c.i
 
-ex6.s: ex6.c.s
+test3.s: test3.c.s
 
-.PHONY : ex6.s
+.PHONY : test3.s
 
 # target to generate assembly for a file
-ex6.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab18.dir/build.make CMakeFiles/lab18.dir/ex6.c.s
-.PHONY : ex6.c.s
+test3.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab18.dir/build.make CMakeFiles/lab18.dir/test3.c.s
+.PHONY : test3.c.s
 
 # Help Target
 help:
@@ -323,15 +296,12 @@ help:
 	@echo "... ex3.o"
 	@echo "... ex3.i"
 	@echo "... ex3.s"
-	@echo "... ex4.o"
-	@echo "... ex4.i"
-	@echo "... ex4.s"
-	@echo "... ex5.o"
-	@echo "... ex5.i"
-	@echo "... ex5.s"
-	@echo "... ex6.o"
-	@echo "... ex6.i"
-	@echo "... ex6.s"
+	@echo "... test1.o"
+	@echo "... test1.i"
+	@echo "... test1.s"
+	@echo "... test3.o"
+	@echo "... test3.i"
+	@echo "... test3.s"
 .PHONY : help
 
 

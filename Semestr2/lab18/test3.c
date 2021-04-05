@@ -61,6 +61,17 @@
 //    }
 //}
 //
+//void test_sort(struct shoes *a, int j){
+//
+//    int max =0;
+//    bool error = false;
+//    for(int i = 0; i < j; i++){
+//        if(max>a[i].size_shoes.size) error = true;
+//        max = a[i].size_shoes.size;
+//    }
+//    if (!error) printf("Тест пройден успешно\n");
+//    else printf("Тест провален.\n");
+//}
 //int main(){
 //    struct shoes arr[4] = {
 //            {true, "Tanjun", 2690, "Nike", 31, 18  },
@@ -74,7 +85,7 @@
 //    struct shoes a = {true, "Gav", 3000, "Puma", 41, 28};
 //
 //    for(j = 0; j < 4; j++ ){
-//            fill_array(&ar[j], &arr[j]);
+//        fill_array(&ar[j], &arr[j]);
 //    }
 //    fill_array(&ar[j], &a);
 //    printf("\n");
@@ -87,13 +98,14 @@
 //    }
 //    j=0;
 //    for(int i = 0; i < 5; i++ ){
-//                if(ar[i].usd > 0){
-//                    fill_array(&arra[j], &ar[i]);
-//                    j++;
-//                }
-//            }
+//        if(ar[i].usd > 0){
+//            fill_array(&arra[j], &ar[i]);
+//            j++;
+//        }
+//    }
 //    print_array(arra, j);
 //    printf("\n");
 //    sort(arra, j);
 //    print_array(arra, j);
+//    test_sort(arra, j);
 //}

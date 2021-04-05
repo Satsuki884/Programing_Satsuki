@@ -5,7 +5,7 @@
       <config projectName="lab18" targetName="lab18" />
     </generated>
   </component>
-  <component name="CMakeSettings">
+  <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
     </configurations>
@@ -35,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab15/7.c" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab19" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -43,11 +43,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="lab18" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="lab18" TARGET_NAME="lab18" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="lab18" RUN_TARGET_NAME="lab18">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -72,7 +67,13 @@
       <workItem from="1615233323087" duration="599000" />
       <workItem from="1615271733225" duration="1203000" />
       <workItem from="1615666987109" duration="599000" />
-      <workItem from="1616699534136" duration="8717000" />
+      <workItem from="1616699534136" duration="11555000" />
+      <workItem from="1617464127099" duration="417000" />
+      <workItem from="1617533530453" duration="298000" />
+      <workItem from="1617540505913" duration="3353000" />
+      <workItem from="1617563863304" duration="5282000" />
+      <workItem from="1617577155031" duration="1490000" />
+      <workItem from="1617601425088" duration="688000" />
     </task>
     <servers />
   </component>

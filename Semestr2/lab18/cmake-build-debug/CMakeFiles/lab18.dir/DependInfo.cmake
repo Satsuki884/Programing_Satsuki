@@ -7,9 +7,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/maestro/Programing_Satsuki/Semestr2/lab18/ex1.c" "/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/CMakeFiles/lab18.dir/ex1.c.o"
   "/home/maestro/Programing_Satsuki/Semestr2/lab18/ex2.c" "/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/CMakeFiles/lab18.dir/ex2.c.o"
   "/home/maestro/Programing_Satsuki/Semestr2/lab18/ex3.c" "/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/CMakeFiles/lab18.dir/ex3.c.o"
-  "/home/maestro/Programing_Satsuki/Semestr2/lab18/ex4.c" "/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/CMakeFiles/lab18.dir/ex4.c.o"
-  "/home/maestro/Programing_Satsuki/Semestr2/lab18/ex5.c" "/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/CMakeFiles/lab18.dir/ex5.c.o"
-  "/home/maestro/Programing_Satsuki/Semestr2/lab18/ex6.c" "/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/CMakeFiles/lab18.dir/ex6.c.o"
+  "/home/maestro/Programing_Satsuki/Semestr2/lab18/test1.c" "/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/CMakeFiles/lab18.dir/test1.c.o"
+  "/home/maestro/Programing_Satsuki/Semestr2/lab18/test3.c" "/home/maestro/Programing_Satsuki/Semestr2/lab18/cmake-build-debug/CMakeFiles/lab18.dir/test3.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

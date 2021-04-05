@@ -2,9 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/lab18.dir/ex1.c.o"
   "CMakeFiles/lab18.dir/ex2.c.o"
   "CMakeFiles/lab18.dir/ex3.c.o"
-  "CMakeFiles/lab18.dir/ex4.c.o"
-  "CMakeFiles/lab18.dir/ex5.c.o"
-  "CMakeFiles/lab18.dir/ex6.c.o"
+  "CMakeFiles/lab18.dir/test1.c.o"
+  "CMakeFiles/lab18.dir/test3.c.o"
   "lab18"
   "lab18.pdb"
 )

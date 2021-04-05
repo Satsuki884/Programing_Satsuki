@@ -7,9 +7,7 @@ CMakeFiles/lab18.dir/ex2.c.o: ../ex2.c
 
 CMakeFiles/lab18.dir/ex3.c.o: ../ex3.c
 
-CMakeFiles/lab18.dir/ex4.c.o: ../ex4.c
+CMakeFiles/lab18.dir/test1.c.o: ../test1.c
 
-CMakeFiles/lab18.dir/ex5.c.o: ../ex5.c
-
-CMakeFiles/lab18.dir/ex6.c.o: ../ex6.c
+CMakeFiles/lab18.dir/test3.c.o: ../test3.c
 
