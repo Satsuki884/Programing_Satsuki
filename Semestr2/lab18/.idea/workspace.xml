@@ -35,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab19" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab15" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -43,14 +43,14 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="lab18" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="lab18" TARGET_NAME="lab18" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="lab18" RUN_TARGET_NAME="lab18">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="lab18" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="lab18" TARGET_NAME="lab18" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="lab18" RUN_TARGET_NAME="lab18">
       <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -73,7 +73,8 @@
       <workItem from="1617540505913" duration="3353000" />
       <workItem from="1617563863304" duration="5282000" />
       <workItem from="1617577155031" duration="1490000" />
-      <workItem from="1617601425088" duration="688000" />
+      <workItem from="1617601425088" duration="1109000" />
+      <workItem from="1617604083806" duration="4025000" />
     </task>
     <servers />
   </component>

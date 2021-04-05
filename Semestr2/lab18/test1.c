@@ -51,9 +51,6 @@ int main(){
     printf("Введите 'a' для вставки одного рядка в другой, и 'b' для удаления из рядка всех символов в заданном диапазоне :\n");
     scanf("%c", &a);
     int pos, pos1, pos2;
-    char *p= malloc(2 * sizeof(char));
-    char *p1= malloc(2 * sizeof(char));
-    char *p2= malloc(2 * sizeof(char));
     switch (a){
         case 'a':
             pos = 2;
