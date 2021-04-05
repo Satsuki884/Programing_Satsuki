@@ -1,4 +1,7 @@
-#include "lib1.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdbool.h>
 
 struct size{
     int size;
@@ -60,6 +63,7 @@ void list_add_begin(struct List *ls, bool a, char b[], int c, char d[], int e, i
         ls->tail = node;
     ls->head = node;
 }
+
 void list_insert(struct List *ls, int index, bool a, char b[], int c, char d[], int e, int f)
 {
     if (index <= 0) {
@@ -82,6 +86,7 @@ void list_insert(struct List *ls, int index, bool a, char b[], int c, char d[], 
     node->prev->next = node;
     node->next->prev = node;
 }
+
 int list_remove(struct List *ls, int index)
 {
     if (index < 0)
@@ -107,7 +112,7 @@ int list_remove(struct List *ls, int index)
         index--;
     }
     if(!p) return 0;
-        p->prev->next = p->next;
+    p->prev->next = p->next;
 
     if (p->next)
         p->next->prev = p->prev;
@@ -146,6 +151,7 @@ void list_show(struct List *ls, int reverse) {
 
     }
 }
+
 struct List *list_new()
 {
     struct List *ls = malloc(sizeof(struct List));
@@ -162,6 +168,7 @@ int compare_size(struct shoes* a, struct shoes* b) {
     else
         return -1;
 }
+
 int compare_length(struct shoes* a, struct shoes* b) {
     if (a->size_shoes.length == b->size_shoes.length)
         return 0;
@@ -170,6 +177,7 @@ int compare_length(struct shoes* a, struct shoes* b) {
     else
         return -1;
 }
+
 int compare_usd(struct shoes* a, struct shoes* b) {
     if (a->usd == b->usd)
         return 0;
@@ -225,7 +233,7 @@ void sort(struct List *ls, int(*compare)(struct shoes*, struct shoes*))
             ls->tail->prev->next = ls->tail;
         }
         else {
-            struct Node *t = max->next;
+            struct shoes *t = max->next;
             max->next = set->next;
             set->next = t;
             max->next->prev = max;
@@ -247,9 +255,7 @@ int main(){
             {false, "Response Trail X", 2590, "Adidas", 36, 22 },
             {false, "Ignite Flash Evoknit", 2990, "Puma", 37, 24},
     };
-//    struct shoes *node = arr;
     struct List *ls = list_new();
-//    struct List *ls = arr;
     bool ortopedic = 1;
     char model_name[30] = {"Gaw"};
     int usd = 3000;
