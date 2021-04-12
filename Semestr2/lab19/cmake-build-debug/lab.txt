@@ -1,0 +1,4 @@
+1 Ignite 2990 Puma 37 24
+1 Wearajjday 2730 Nike 40 26
+0 Tanjun 2690 Nike 31 25
+0 Response 2590 Adidas 46 22
