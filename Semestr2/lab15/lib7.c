@@ -41,3 +41,33 @@ void sort(struct shoes *a, int j){
         }
     }
 }
+
+void Read_From_File(struct shoes arr[]){
+    FILE* myfile = fopen("/home/maestro/lab19.txt", "r");
+    if (myfile != NULL) {
+        printf("\nFile opened for reading!!!\n");
+        for (int i = 0; i < 4; i++) {
+            fscanf(myfile, "%d", &arr[i].ortopedic);
+            fscanf(myfile, "%s", arr[i].brand_model);
+            fscanf(myfile, "%d", &arr[i].usd);
+            fscanf(myfile, "%s", arr[i].model_name);
+            fscanf(myfile, "%d", &arr[i].size_shoes.size);
+            fscanf(myfile, "%d", &arr[i].size_shoes.length);
+            printf("%d %s %d %s %d %d \n", arr[i].ortopedic, arr[i].model_name, arr[i].usd, arr[i].brand_model, arr[i].size_shoes.size, arr[i].size_shoes.length);
+        }
+    }
+    else {
+        printf("File cannot be reading");
+    }
+}
+
+void Save_In_File(struct shoes *a, int j){
+    FILE *file_out;
+    char file_name2[] = {"lab.txt"};
+    file_out = fopen(file_name2, "w");
+    for (int i = 0; i < j; i++) {
+        fprintf(file_out, "%d %s %d %s %d %d\n", a[i].ortopedic, a[i].brand_model, a[i].usd,
+                a[i].model_name, a[i].size_shoes.size, a[i].size_shoes.length);
+    }
+    fclose(file_out);
+}
