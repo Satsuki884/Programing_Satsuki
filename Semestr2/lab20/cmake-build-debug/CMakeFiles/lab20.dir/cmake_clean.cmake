@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/lab20.dir/1.c.o"
-  "CMakeFiles/lab20.dir/3.c.o"
   "CMakeFiles/lab20.dir/test.c.o"
   "lab20"
   "lab20.pdb"

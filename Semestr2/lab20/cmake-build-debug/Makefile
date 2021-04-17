@@ -142,60 +142,6 @@ lab20/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab20.dir/build.make CMakeFiles/lab20.dir/build
 .PHONY : lab20/fast
 
-1.o: 1.c.o
-
-.PHONY : 1.o
-
-# target to build an object file
-1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab20.dir/build.make CMakeFiles/lab20.dir/1.c.o
-.PHONY : 1.c.o
-
-1.i: 1.c.i
-
-.PHONY : 1.i
-
-# target to preprocess a source file
-1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab20.dir/build.make CMakeFiles/lab20.dir/1.c.i
-.PHONY : 1.c.i
-
-1.s: 1.c.s
-
-.PHONY : 1.s
-
-# target to generate assembly for a file
-1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab20.dir/build.make CMakeFiles/lab20.dir/1.c.s
-.PHONY : 1.c.s
-
-3.o: 3.c.o
-
-.PHONY : 3.o
-
-# target to build an object file
-3.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab20.dir/build.make CMakeFiles/lab20.dir/3.c.o
-.PHONY : 3.c.o
-
-3.i: 3.c.i
-
-.PHONY : 3.i
-
-# target to preprocess a source file
-3.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab20.dir/build.make CMakeFiles/lab20.dir/3.c.i
-.PHONY : 3.c.i
-
-3.s: 3.c.s
-
-.PHONY : 3.s
-
-# target to generate assembly for a file
-3.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab20.dir/build.make CMakeFiles/lab20.dir/3.c.s
-.PHONY : 3.c.s
-
 test.o: test.c.o
 
 .PHONY : test.o
@@ -232,12 +178,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... lab20"
-	@echo "... 1.o"
-	@echo "... 1.i"
-	@echo "... 1.s"
-	@echo "... 3.o"
-	@echo "... 3.i"
-	@echo "... 3.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"

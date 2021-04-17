@@ -8,6 +8,9 @@
 #include <syslog.h>
 #pragma warning (disable: 4996)
 #define log_info(L, ...) printf( "\33[1:33m[INFO]\33[0m /usr/bin/ld: %s:%d " L  "\n", __FILE__, __LINE__, ##__VA_ARGS__) //yellow
+//#define log_info(M, ...) fprintf(stderr, "[INFO] (%s:%d) " M "\n",__FILE__, __LINE__, ##__VA_ARGS__)
+//#define log_info(L, ...) printf( "\033[22;34m[INFO]\033[0m /usr/bin/ld: %s:\033[22;34m%d\033[0m " L  "\n", __FILE__, __LINE__, ##__VA_ARGS__)  // blue
+//#define log_info(L, ...) printf( "\33[0:31m[INFO]\33[0m /usr/bin/ld: %s:%d " L  "\n", __FILE__, __LINE__, ##__VA_ARGS__) // red
 struct size {
     int size;
     int length;
@@ -234,7 +237,7 @@ void sort(struct List* ls, int(*compare)(struct shoes*, struct shoes*))
     }
 }
 void Read_From_File(struct List* ls) {
-    FILE* myfile = fopen("/home/maestro/lab19.txt", "r");
+    FILE* myfile = fopen("/home/maestro/Programing_Satsuki/Semestr2/lab20/lab19.txt", "r");
     if (myfile != NULL) {
         printf("\nFile opened for reading!!!\n");
         for (struct shoes* i = ls->head; i!=NULL; i = i->next) {
@@ -262,14 +265,6 @@ void Save_In_File(struct List *ls) {
                 node->model_name, node->size_shoes.size, node->size_shoes.length);
     }
     fclose(file_out);
-}
-void FreeList(struct List *list){
-    while (list->head) {
-        struct shoes *p = list->head;
-        list->head = p->next;
-        free(p);
-    }
-    free(list);
 }
 void test_add_end(struct List *ls,  bool a, char b[], int c, char d[], int e, int f){
     log_info("Test function: %s" , __FUNCTION__ );
@@ -386,13 +381,6 @@ void test_sort_length(struct List *ls){
     if (!error) printf("Тест пройден успешно\n");
     else printf("Тест провален.\n");
 }
-//#define log_info(M, ...) fprintf(stderr, "[INFO] (%s:%d) " M "\n",\
-		        __FILE__, __LINE__, ##__VA_ARGS__)
-#define ANSI_COLOR_YELLOW  "\x1b[33m"
-
-//#define log_info(L, ...) printf( "\033[22;34m[INFO]\033[0m /usr/bin/ld: %s:\033[22;34m%d\033[0m " L  "\n", __FILE__, __LINE__, ##__VA_ARGS__)  // blue
-//#define log_info(L, ...) printf( "\33[0:31m[INFO]\33[0m /usr/bin/ld: %s:%d " L  "\n", __FILE__, __LINE__, ##__VA_ARGS__) // red
-//#define log_info(L, ...) printf( "\33[1:33m[INFO]\33[0m /usr/bin/ld: %s:%d " L  "\n", __FILE__, __LINE__, ##__VA_ARGS__) //yellow
 int main() {
 
     srand(time(NULL));
@@ -538,5 +526,4 @@ int main() {
                 printf("Затрачено времени на выполнение программы: %d\n", search_time2);
                 free(ls);
         }
-    FreeList(ls);
 }
