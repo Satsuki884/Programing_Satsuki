@@ -1,3 +1,11 @@
+/**
+ * @file data.c
+ * @brief Файл з описом функцій для оперування структурою
+ *
+ * @author Klimenko Stanislava
+ * @date 19-apr-2021
+ * @version 1.0
+ */
 #include "lib.h"
 
 void list_show(struct List* ls, int reverse) {

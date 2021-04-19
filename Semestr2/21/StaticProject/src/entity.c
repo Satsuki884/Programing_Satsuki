@@ -1,3 +1,11 @@
+/**
+ * @file list.c
+ * @brief Файл з описом розроблених функцій
+ *
+ * @author Klimenko Stanislava
+ * @date 19-apr-2021
+ * @version 1.0
+ */
 #include "entity.h"
 
 struct shoes* list_new_node(bool a, char b[], int c, char d[], int e, int f)
