@@ -237,7 +237,7 @@ void sort(struct List* ls, int(*compare)(struct shoes*, struct shoes*))
     }
 }
 void Read_From_File(struct List* ls) {
-    FILE* myfile = fopen("/home/maestro/Programing_Satsuki/Semestr2/lab20/lab19.txt", "r");
+    FILE* myfile = fopen("/home/maestro/lab19.txt", "r");
     if (myfile != NULL) {
         printf("\nFile opened for reading!!!\n");
         for (struct shoes* i = ls->head; i!=NULL; i = i->next) {
@@ -266,8 +266,8 @@ void Save_In_File(struct List *ls) {
     }
     fclose(file_out);
 }
-void test_add_end(struct List *ls,  bool a, char b[], int c, char d[], int e, int f){
-    log_info("Test function: %s" , __FUNCTION__ );
+void test_add_end(struct List *ls, int r, bool a, char b[], int c, char d[], int e, int f){
+    if(r==0) log_info("Test function: %s" , __FUNCTION__ );
     if (ls->tail->ortopedic != a){
         printf("Тест провален. Ожидаемое значение %d не равно %d\n",ls->tail->ortopedic, a);
     } else if (strcmp(ls->tail->model_name, b) != 0){
@@ -284,8 +284,8 @@ void test_add_end(struct List *ls,  bool a, char b[], int c, char d[], int e, in
         printf("Тест пройден успешно\n");
     }
 }
-void test_add_begin(struct List *ls, bool a, char b[], int c, char d[], int e, int f){
-    log_info("Test function: %s" , __FUNCTION__ );
+void test_add_begin(struct List *ls, int r, bool a, char b[], int c, char d[], int e, int f){
+    if(r == 0)log_info("Test function: %s" , __FUNCTION__ );
     if (ls->head->ortopedic != a){
         printf("Тест провален. Ожидаемое значение %d не равно %d\n",ls->head->ortopedic, a);
     } else if (strcmp(ls->head->model_name, b) != 0){
@@ -302,8 +302,8 @@ void test_add_begin(struct List *ls, bool a, char b[], int c, char d[], int e, i
         printf("Тест пройден успешно\n");
     }
 }
-void test_insert(struct List *ls,int index, bool a, char b[], int c, char d[], int e, int f){
-    log_info("Test function: %s" , __FUNCTION__ );
+void test_insert(struct List *ls,int index, int r, bool a, char b[], int c, char d[], int e, int f){
+    if(r == 0)log_info("Test function: %s" , __FUNCTION__ );
     struct shoes *p = ls->head;
 
     if(index>0) {
@@ -336,14 +336,14 @@ int count_list(struct List *ls){
     }
     return count;
 }
-void test_remove(struct List *ls, int a) {
-    log_info("Test function: %s" , __FUNCTION__ );
+void test_remove(struct List *ls, int r, int a) {
+    if(r == 0)log_info("Test function: %s" , __FUNCTION__ );
     int n = count_list(ls);
     if (n == a) printf("Тест пройден успешно\n");
     else printf("Тест провален.\n");
 }
-void test_sort_usd(struct List *ls){
-    log_info("Test function: %s" , __FUNCTION__ );
+void test_sort_usd(struct List *ls, int r){
+    if(r == 0)log_info("Test function: %s" , __FUNCTION__ );
     struct shoes *p = ls->head;
     int max =0;
     bool error = false;
@@ -355,8 +355,8 @@ void test_sort_usd(struct List *ls){
     if (!error) printf("Тест пройден успешно\n");
     else printf("Тест провален.\n");
 }
-void test_sort_size(struct List *ls){
-    log_info("Test function: %s" , __FUNCTION__ );
+void test_sort_size(struct List *ls, int r){
+    if(r == 0)log_info("Test function: %s" , __FUNCTION__ );
     struct shoes *p = ls->head;
     int max =0;
     bool error = false;
@@ -368,8 +368,8 @@ void test_sort_size(struct List *ls){
     if (!error) printf("Тест пройден успешно\n");
     else printf("Тест провален.\n");
 }
-void test_sort_length(struct List *ls){
-    log_info("Test function: %s" , __FUNCTION__ );
+void test_sort_length(struct List *ls, int r){
+    if(r == 0)log_info("Test function: %s" , __FUNCTION__ );
     struct shoes *p = ls->head;
     int max =0;
     bool error = false;
@@ -433,11 +433,11 @@ int main() {
                 list_show(ls, 0);
                 end_time2 = clock(); // конечное время
                 search_time2 = end_time2 - begin;
-                printf("Затрачено времени на выполнение программы: %d\n", search_time2);
-                test_add_end(ls, ortopedic, model_name, usd, brand_model, size, length);
+                if(flag == 0)printf("Затрачено времени на выполнение программы: %d\n", search_time2);
+                test_add_end(ls, flag, ortopedic, model_name, usd, brand_model, size, length);
                 end_time = clock(); // конечное время
                 search_time = end_time - begin2;
-                printf("Затрачено времени на выполнение теста: %d\n", search_time);
+                if(flag == 0)printf("Затрачено времени на выполнение теста: %d\n", search_time);
                 Save_In_File(ls);
                 free(ls);
                 break;
@@ -446,11 +446,11 @@ int main() {
                 list_show(ls, 0);
                 end_time2 = clock(); // конечное время
                 search_time2 = end_time2 - begin;
-                printf("Затрачено времени на выполнение программы: %d\n", search_time2);
-                test_add_begin(ls, ortopedic, model_name, usd, brand_model, size, length);
+                if(flag == 0)printf("Затрачено времени на выполнение программы: %d\n", search_time2);
+                test_add_begin(ls, flag, ortopedic, model_name, usd, brand_model, size, length);
                 end_time = clock(); // конечное время
                 search_time = end_time - begin2;
-                printf("Затрачено времени на выполнение теста: %d\n", search_time);
+                if(flag == 0)printf("Затрачено времени на выполнение теста: %d\n", search_time);
                 Save_In_File(ls);
                 free(ls);
                 break;
@@ -459,11 +459,11 @@ int main() {
                 list_show(ls, 0);
                 end_time2 = clock(); // конечное время
                 search_time2 = end_time2 - begin;
-                printf("Затрачено времени на выполнение программы: %d\n", search_time2);
-                test_insert(ls,2, ortopedic, model_name, usd, brand_model, size, length);
+                if(flag == 0)printf("Затрачено времени на выполнение программы: %d\n", search_time2);
+                test_insert(ls,2, flag, ortopedic, model_name, usd, brand_model, size, length);
                 end_time = clock(); // конечное время
                 search_time = end_time - begin2;
-                printf("Затрачено времени на выполнение теста: %d\n", search_time);
+                if(flag == 0)printf("Затрачено времени на выполнение теста: %d\n", search_time);
                 Save_In_File(ls);
                 free(ls);
                 break;
@@ -473,11 +473,11 @@ int main() {
                 list_show(ls, 0);
                 end_time2 = clock(); // конечное время
                 search_time2 = end_time2 - begin;
-                printf("Затрачено времени на выполнение программы: %d\n", search_time2);
-                test_remove(ls, k-1);
+                if(flag == 0)printf("Затрачено времени на выполнение программы: %d\n", search_time2);
+                test_remove(ls, flag, k-1);
                 end_time = clock(); // конечное время
                 search_time = end_time - begin2;
-                printf("Затрачено времени на выполнение теста: %d\n", search_time);
+                if(flag == 0)printf("Затрачено времени на выполнение теста: %d\n", search_time);
                 Save_In_File(ls);
                 free(ls);
                 break;
@@ -486,11 +486,11 @@ int main() {
                 list_show(ls, 0);
                 end_time2 = clock(); // конечное время
                 search_time2 = end_time2 - begin;
-                printf("Затрачено времени на выполнение программы: %d\n", search_time2);
-                test_sort_size(ls);
+                if(flag == 0)printf("Затрачено времени на выполнение программы: %d\n", search_time2);
+                test_sort_size(ls, flag);
                 end_time = clock(); // конечное время
                 search_time = end_time - begin2;
-                printf("Затрачено времени на выполнение теста: %d\n", search_time);
+                if(flag == 0)printf("Затрачено времени на выполнение теста: %d\n", search_time);
                 free(ls);
                 break;
             case 'l':
@@ -498,11 +498,11 @@ int main() {
                 list_show(ls, 0);
                 end_time2 = clock(); // конечное время
                 search_time2 = end_time2 - begin;
-                printf("Затрачено времени на выполнение программы: %d\n", search_time2);
-                test_sort_length(ls);
+                if(flag == 0)printf("Затрачено времени на выполнение программы: %d\n", search_time2);
+                test_sort_length(ls, flag);
                 end_time = clock(); // конечное время
                 search_time = end_time - begin2;
-                printf("Затрачено времени на выполнение теста: %d\n", search_time);
+                if(flag == 0) printf("Затрачено времени на выполнение теста: %d\n", search_time);
                 Save_In_File(ls);
                 free(ls);
                 break;
@@ -511,11 +511,11 @@ int main() {
                 list_show(ls, 0);
                 end_time2 = clock(); // конечное время
                 search_time2 = end_time2 - begin;
-                printf("Затрачено времени на выполнение программы: %d\n", search_time2);
-                test_sort_usd(ls);
+                if(flag == 0)printf("Затрачено времени на выполнение программы: %d\n", search_time2);
+                test_sort_usd(ls, flag);
                 end_time = clock(); // конечное время
                 search_time = end_time - begin2;
-                printf("Затрачено времени на выполнение теста: %d\n", search_time);
+                if(flag == 0)printf("Затрачено времени на выполнение теста: %d\n", search_time);
                 Save_In_File(ls);
                 free(ls);
                 break;

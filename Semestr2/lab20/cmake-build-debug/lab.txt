@@ -1,5 +1,5 @@
 1 Nike 3000 Gaw 35 20
 0 Tanjun 2690 Nike 31 25
 1 Wearajjday 2730 Nike 40 26
-0 Response 2590 Adidas 36 22
-0 Ignite 2990 Puma 37 24
+0 Response 2590 Adidas 46 22
+1 Ignite 2990 Puma::Rara. 37 24
