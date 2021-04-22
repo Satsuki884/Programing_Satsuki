@@ -22,7 +22,8 @@
  * @date 19-apr-2021
  * @version 1.0
  */
-#include "entity.h"
+#include "../liblist.h"
+
 /**
  * Головна функція.
  *

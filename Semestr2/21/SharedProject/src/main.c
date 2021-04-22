@@ -23,7 +23,7 @@
  * @version 1.0
  */
 
-#include "list.h"
+#include "../liblist.h"
 
 /**
  * Головна функція.
