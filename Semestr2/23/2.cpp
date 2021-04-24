@@ -1,18 +1,7 @@
 #include <string>
-#include <cstdio>
 #include <iostream>
-#include <cstdlib>
-#include <cstring>
-#include <locale.h>
-#include <stdbool.h>
-#include <time.h>
-#include <errno.h>
-#include <syslog.h>
-#include <regex.h>
-#include <fstream>
 #pragma warning (disable: 4996)
-#define log_info(L, ...) printf( "\33[1:33m[INFO]\33[0m /usr/bin/ld: %s:%d " L  "\n", FILE, LINE, ##__VA_ARGS__) //yellow
-//using namespace std;
+using namespace std;
 class ShoesBase
 {
 public:
@@ -33,8 +22,8 @@ private:
     bool m_is_ortopedic;
     std::string m_model_name;
     int m_price_usd;
-    insole m_insole_size;
     Brand m_brand;
+    insole m_insole_size;
 public:
     ShoesBase()
             : m_is_ortopedic(false)
@@ -46,42 +35,127 @@ public:
             : m_is_ortopedic(other.m_is_ortopedic)
             , m_model_name(other.m_model_name)
             , m_price_usd(other.m_price_usd)
-            , m_insole_size(other.m_insole_size)
             , m_brand(other.m_brand)
+            , m_insole_size(other.m_insole_size)
     {}
     ShoesBase(bool is_ortopedic, const std::string& model_name, int price_usd, const insole& insole_size, Brand brand)
             : m_is_ortopedic(is_ortopedic)
             , m_model_name(model_name)
             , m_price_usd(price_usd)
-            , m_insole_size(insole_size)
             , m_brand(brand)
+            , m_insole_size(insole_size)
     {}
 
-    bool GetIsOrtopedic() const
-    {
+    bool GetIsOrtopedic() const{
         return m_is_ortopedic;
     }
 
-    const std::string& GetModelName() const
-    {
+    const std::string& GetModelName() const{
         return m_model_name;
     }
 
-    int GetPriceUSD() const
-    {
+    int GetPriceUSD() const{
         return m_price_usd;
     }
 
-    const insole& GetInsoleSize() const
-    {
-        return m_insole_size;
+    int GetInsoleLength() const{
+        return m_insole_size.length;
+    }
+    int GetInsoleSize() const{
+        return m_insole_size.size;
     }
 
-    Brand GetBrand() const
-    {
+    Brand GetBrand() const{
         return m_brand;
     }
+
 };
+
+class ArrayShoes{
+private:
+    int Size_array;
+    ShoesBase* Shoes;// = new ShoesBase[Size_array];
+public:
+    ArrayShoes(int Size_array)
+            : Shoes(new ShoesBase[Size_array])
+            , Size_array(Size_array)
+    {}
+    ~ArrayShoes(){
+        delete [] Shoes;
+    }
+
+    void createArrayShoes(){
+        Shoes[0] = ShoesBase(true, "Ingnite", 2990,ShoesBase::insole{37, 24}, ShoesBase::Brand::puma);
+        Shoes[1]=  ShoesBase(false, "Response", 2590,ShoesBase::insole{46, 22}, ShoesBase::Brand::adidas);
+        Shoes[2]=  ShoesBase(true, "Wearajjday", 2730,ShoesBase::insole{40, 26}, ShoesBase::Brand::rebook);
+        Shoes[3]=  ShoesBase(false, "Tanjun", 2690, ShoesBase::insole{31, 25}, ShoesBase::Brand::nike);
+
+    };
+
+    void show_array(){
+        for(int i =0; i<Size_array; i++){
+            //\33[1:33m[INFO]\33[0m
+            cout << "\33[1:33mShoes #" << i+1 << ":\33[0m";
+            cout<< "\n\tModel name: "<<this->Shoes[i].GetModelName()<<endl;
+            cout<< "\tBrand name: ";
+            if (this->Shoes[i].GetBrand() == ShoesBase::Brand::nike)
+                cout << "Nike"<<endl;
+            else if (this->Shoes[i].GetBrand() == ShoesBase::Brand::rebook)
+                cout << "Rebook"<<endl;
+            else if (this->Shoes[i].GetBrand() == ShoesBase::Brand::adidas)
+                cout << "Adidas"<<endl;
+            else if (this->Shoes[i].GetBrand() == ShoesBase::Brand::puma)
+                cout << "Puma"<<endl;
+            else cout << "No brand"<<endl;
+            cout<< "\tOrtopedic: "<<(this->Shoes[i].GetIsOrtopedic() ? "Yes" : "No" )<<endl;
+            cout<< "\tUSD: "<<this->Shoes[i].GetPriceUSD()<<endl;
+            cout<< "\tSize: "<<this->Shoes[i].GetInsoleSize()<<endl;
+            cout<< "\tLength: "<<this->Shoes[i].GetInsoleLength()<<endl;
+            cout<< "\n-----------------------------------\n\n";
+        }
+    }
+
+    void add_object(ShoesBase & new_element){
+        int a= -1;
+        for(int i=0; i <Size_array; i++){
+            if(this->Shoes[i].GetPriceUSD() == 0) {
+                a=i;
+                break;
+            }
+        }
+        if(a < 0){
+            ShoesBase *Shoes_new = new ShoesBase[Size_array+1];
+            for(int i=0; i< Size_array; i++){
+                Shoes_new[i]= Shoes[i];
+            }
+            Shoes = Shoes_new;
+            a = Size_array;
+            Size_array++;
+        }
+        Shoes[a] = new_element;
+        show_array();
+    }
+
+    ShoesBase Get_object(int index){
+        return Shoes[index];
+    }
+
+    void delete_element(int index){
+        if(index <0) index =0;
+        else if(index>=Size_array) index = Size_array-1;
+        ShoesBase *Shoes_new = new ShoesBase[Size_array-1];
+        for(int i =0; i <index; i++ ){
+            Shoes_new[i]= Shoes[i];
+        }
+        for(int i =index+1; i <Size_array; i++ ){
+            Shoes_new[i-1]= Shoes[i];
+        }
+        Shoes = Shoes_new;
+        Size_array--;
+        show_array();
+    }
+};
+
 
 //class Sneakers : public ShoesBase
 //{
@@ -126,29 +200,33 @@ public:
 //};
 
 int main() {
-int SIZE =4;
-    ShoesBase *array = new ShoesBase[SIZE];
-    bool ortopedic = 1;
-    char model_name[30] = { "Gaw" };
+    bool ortopedic = true;
+    std::string model_name = { "Gaw" };
     int usd = 3000;
-    char brand_model[10] = { "Nike" };
-//    ShoesBase::insole* arr[]={
-//            ShoesBase::insole(35,20);
-//    };
-
     int size = 35;
     int length = 20;
-    ShoesBase(ortopedic, model_name, usd, ShoesBase::insole{size, length},brand_model);
-    char a;
-    printf("Введіть\n'c'  для добавления елемента по индексу,\n'd' для удаления эелемента по индексу,\n");
-    scanf(" %c", &a);
-    int k =0;
-    switch (a) {
-        case 'c':
-            break;
-        case 'd':
-            break;
-        default:
-            printf("Неправильный ввод.\n");
-    }
+    ArrayShoes* arr = new ArrayShoes(4);
+    ShoesBase* new_element = new ShoesBase(ortopedic, model_name, usd, ShoesBase::insole{size, length}, ShoesBase::Brand::nike);
+    arr->createArrayShoes();
+    arr->add_object(*new_element);
+    int index =2;
+    cout << "\33[1:33mПоиск элемента по индексу: \33[0m" << index <<endl;
+    cout << "\33[1:33mShoes #" << index+1 << ":\33[0m";
+    cout<< "\n\tModel name: "<<arr->Get_object(index).GetModelName()<<endl;
+    cout<< "\tBrand name: ";
+    if (arr->Get_object(index).GetBrand() == ShoesBase::Brand::nike)
+        cout << "Nike"<<endl;
+    else if (arr->Get_object(index).GetBrand() == ShoesBase::Brand::rebook)
+        cout << "Rebook"<<endl;
+    else if (arr->Get_object(index).GetBrand() == ShoesBase::Brand::adidas)
+        cout << "Adidas"<<endl;
+    else if (arr->Get_object(index).GetBrand() == ShoesBase::Brand::puma)
+        cout << "Puma"<<endl;
+    else cout << "No brand"<<endl;
+    cout<< "\tOrtopedic: "<<(arr->Get_object(index).GetIsOrtopedic() ? "Yes" : "No" )<<endl;
+    cout<< "\tUSD: "<<arr->Get_object(index).GetPriceUSD()<<endl;
+    cout<< "\tSize: "<<arr->Get_object(index).GetInsoleSize()<<endl;
+    cout<< "\tLength: "<<arr->Get_object(index).GetInsoleLength()<<"\n"<<endl;
+    cout << "\33[1:33mУдаление элемента по индексу: \33[0m" << index <<endl;
+    arr->delete_element(index);
 }
