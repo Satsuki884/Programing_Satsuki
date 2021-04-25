@@ -1,7 +1,10 @@
 #include <string>
 #include <iostream>
 #pragma warning (disable: 4996)
-using namespace std;
+using std::string;
+using std::cin;
+using std::cout;
+using std::endl;
 class ShoesBase
 {
 public:
@@ -29,22 +32,24 @@ public:
             : m_is_ortopedic(false)
             , m_price_usd(0)
             , m_brand(Brand::no_brand)
-    {}
-
+    { /*cout<<"Вызвался конструктор "<<this<<endl;*/}
     ShoesBase(const ShoesBase& other)
             : m_is_ortopedic(other.m_is_ortopedic)
             , m_model_name(other.m_model_name)
             , m_price_usd(other.m_price_usd)
             , m_brand(other.m_brand)
             , m_insole_size(other.m_insole_size)
-    {}
+    {/*cout<<"Вызвался конструктор "<<this<<endl;*/}
     ShoesBase(bool is_ortopedic, const std::string& model_name, int price_usd, const insole& insole_size, Brand brand)
             : m_is_ortopedic(is_ortopedic)
             , m_model_name(model_name)
             , m_price_usd(price_usd)
             , m_brand(brand)
             , m_insole_size(insole_size)
-    {}
+    {/*cout<<"Вызвался конструктор "<<this<<endl;*/}
+    ~ShoesBase()
+    { /*cout<<"Вызвался деструктор "<<this<<endl;*/}
+
 
     bool GetIsOrtopedic() const{
         return m_is_ortopedic;
@@ -80,9 +85,6 @@ public:
             : Shoes(new ShoesBase[Size_array])
             , Size_array(Size_array)
     {}
-    ~ArrayShoes(){
-        delete [] Shoes;
-    }
 
     void createArrayShoes(){
         Shoes[0] = ShoesBase(true, "Ingnite", 2990,ShoesBase::insole{37, 24}, ShoesBase::Brand::puma);
@@ -135,10 +137,30 @@ public:
         Shoes[a] = new_element;
         show_array();
     }
-
     ShoesBase Get_object(int index){
         return Shoes[index];
     }
+    void test_insert(ShoesBase & new_element) {
+        int n = size_array();
+        int a= Size_array;
+        auto *Test = new ShoesBase[1];
+        Test[0] = ShoesBase(true, "Gaw", 3000,ShoesBase::insole{35, 20}, ShoesBase::Brand::puma);
+        if (n == a){
+            if(Test->GetIsOrtopedic() != new_element.GetIsOrtopedic()){
+                cout<<"Тест провален1.\n"<<endl;
+            }else if (Test->GetPriceUSD() != new_element.GetPriceUSD()){
+                cout<<("Тест провален3.\n")<<endl;
+            }else if (Test->GetModelName() != new_element.GetModelName()){
+                cout<<("Тест провален4.\n")<<endl;
+            }else if (Test->GetInsoleSize() != new_element.GetInsoleSize()){
+                cout<<("Тест провален5.\n")<<endl;
+            }else if (Test->GetInsoleLength() != new_element.GetInsoleLength()){
+                cout<<("Тест провален6.\n")<<endl;
+            } else cout<<("Тест пройден успешно.\n")<<endl;
+        }
+        else cout<<("Тест провален7.\n")<<endl;
+    }
+
 
     void delete_element(int index){
         if(index <0) index =0;
@@ -153,6 +175,15 @@ public:
         Shoes = Shoes_new;
         Size_array--;
         show_array();
+    }
+    int size_array(){
+        return Size_array;
+    }
+    void test_remove() {
+        int n = size_array();
+        int a= Size_array;
+        if (n == a) cout<<("Тест пройден успешно.\n")<<endl;
+        else cout<<("Тест провален5.\n")<<endl;
     }
 };
 
@@ -209,6 +240,7 @@ int main() {
     ShoesBase* new_element = new ShoesBase(ortopedic, model_name, usd, ShoesBase::insole{size, length}, ShoesBase::Brand::nike);
     arr->createArrayShoes();
     arr->add_object(*new_element);
+    arr->test_insert(*new_element);
     int index =2;
     cout << "\33[1:33mПоиск элемента по индексу: \33[0m" << index <<endl;
     cout << "\33[1:33mShoes #" << index+1 << ":\33[0m";
@@ -229,4 +261,5 @@ int main() {
     cout<< "\tLength: "<<arr->Get_object(index).GetInsoleLength()<<"\n"<<endl;
     cout << "\33[1:33mУдаление элемента по индексу: \33[0m" << index <<endl;
     arr->delete_element(index);
+    arr->test_remove();
 }

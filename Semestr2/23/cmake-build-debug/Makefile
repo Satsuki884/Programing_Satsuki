@@ -142,33 +142,6 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/23.dir/build.make CMakeFiles/23.dir/build
 .PHONY : 23/fast
 
-1.o: 1.cpp.o
-
-.PHONY : 1.o
-
-# target to build an object file
-1.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/23.dir/build.make CMakeFiles/23.dir/1.cpp.o
-.PHONY : 1.cpp.o
-
-1.i: 1.cpp.i
-
-.PHONY : 1.i
-
-# target to preprocess a source file
-1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/23.dir/build.make CMakeFiles/23.dir/1.cpp.i
-.PHONY : 1.cpp.i
-
-1.s: 1.cpp.s
-
-.PHONY : 1.s
-
-# target to generate assembly for a file
-1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/23.dir/build.make CMakeFiles/23.dir/1.cpp.s
-.PHONY : 1.cpp.s
-
 2.o: 2.cpp.o
 
 .PHONY : 2.o
@@ -205,9 +178,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... 23"
-	@echo "... 1.o"
-	@echo "... 1.i"
-	@echo "... 1.s"
 	@echo "... 2.o"
 	@echo "... 2.i"
 	@echo "... 2.s"

@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/23.dir/1.cpp.o CMakeFiles/23.dir/2.cpp.o -o 23 
+/usr/bin/c++ -g CMakeFiles/23.dir/2.cpp.o -o 23 
