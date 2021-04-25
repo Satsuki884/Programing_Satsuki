@@ -187,49 +187,6 @@ public:
     }
 };
 
-
-//class Sneakers : public ShoesBase
-//{
-//public:
-//    enum class Purpose
-//    {
-//        undef,
-//        sport,
-//        casual,
-//    };
-//private:
-//    bool m_is_running;
-//    Purpose m_purpose;
-//public:
-//    Sneakers()
-//            : ShoesBase()
-//            , m_is_running(false)
-//            , m_purpose(Purpose::undef)
-//    {}
-//
-//    Sneakers(bool is_ortopedic, const std::string& model_name, int price_usd, const insole& insole_size, Brand brand, bool is_running, Purpose purpose)
-//            : ShoesBase(is_ortopedic, model_name, price_usd, insole_size, brand)
-//            , m_is_running(is_running)
-//            , m_purpose(purpose)
-//    {}
-//
-//    Sneakers(const ShoesBase& other, bool m_is_running, Purpose m_purpose)
-//            : ShoesBase(other)
-//            , m_is_running(m_is_running)
-//            , m_purpose(m_purpose)
-//    {}
-//
-//    bool GetIsRunning() const
-//    {
-//        return m_is_running;
-//    }
-//
-//    Purpose GetPurpose() const
-//    {
-//        return m_purpose;
-//    }
-//};
-
 int main() {
     bool ortopedic = true;
     std::string model_name = { "Gaw" };
