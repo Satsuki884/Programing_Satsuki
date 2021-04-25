@@ -3,3 +3,5 @@
 
 CMakeFiles/24.dir/1.cpp.o: ../1.cpp
 
+CMakeFiles/24.dir/2.cpp.o: ../2.cpp
+

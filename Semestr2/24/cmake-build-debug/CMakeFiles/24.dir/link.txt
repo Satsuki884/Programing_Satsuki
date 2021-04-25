@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/24.dir/1.cpp.o -o 24 
+/usr/bin/c++ -g CMakeFiles/24.dir/1.cpp.o CMakeFiles/24.dir/2.cpp.o -o 24 

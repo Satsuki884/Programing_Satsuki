@@ -36,22 +36,25 @@ public:
             : m_is_ortopedic(false)
             , m_price_usd(0)
             , m_brand(Brand::no_brand)
-    {}
-
+    { /*cout<<"Вызвался конструктор "<<this<<endl;*/}
     ShoesBase(const ShoesBase& other)
             : m_is_ortopedic(other.m_is_ortopedic)
             , m_model_name(other.m_model_name)
             , m_price_usd(other.m_price_usd)
             , m_brand(other.m_brand)
             , m_insole_size(other.m_insole_size)
-    {}
+    {/*cout<<"Вызвался конструктор "<<this<<endl;*/}
     ShoesBase(bool is_ortopedic, const std::string& model_name, int price_usd, const insole& insole_size, Brand brand)
             : m_is_ortopedic(is_ortopedic)
             , m_model_name(model_name)
             , m_price_usd(price_usd)
             , m_brand(brand)
             , m_insole_size(insole_size)
-    {}
+    {/*cout<<"Вызвался конструктор "<<this<<endl;*/}
+    ~ShoesBase()
+    {
+//        cout<<"Вызвался деструктор "<<this<<endl;
+    }
 
     bool GetIsOrtopedic() const{
         return m_is_ortopedic;
@@ -101,23 +104,50 @@ public:
     ArrayShoes(int Size_array)
             : Shoes(new ShoesBase[Size_array])
             , Size_array(Size_array)
-    {}
+    {
+//        cout<<"Вызвался конструктор "<<this<<endl;
+    }
     ~ArrayShoes(){
-        delete [] Shoes;
+        delete[] this->Shoes;
+//        cout<<"Вызвался деструктор "<<this<<endl;
     }
     void ReadFromFile() {
         std::ifstream file("Saerch.txt");
         std::string line;
         std::stringstream ss;
+        int i =0;
+        std::string ortopedic;
+        std::string model_name;
+        std::string brand_name;
+        ShoesBase::Brand brand;
+        std::string usd;
+        std::string size;
+        std::string length;
         if (file.is_open()) {
             printf("\nFile opened for reading!!!\n\n");
             while (getline(file, line)) {
-                fscanf(myfile, "%d", &i->ortopedic);
-                fscanf(myfile, " %s", i->model_name);
-                fscanf(myfile, "%d", &i->usd);
-                fscanf(myfile, " %s", i->brand_model);
-                fscanf(myfile, "%d", &i->size_shoes.size);
-                fscanf(myfile, "%d", &i->size_shoes.length);
+                if(!line.empty()){
+                    cout<<"Записываем строку в Shoes["<<i<<"]"<<endl;
+                    ss<<line;
+                    getline(ss, model_name, ' ');
+                    getline(ss, brand_name, ' ');
+                    if (brand_name =="Nike")
+                        brand = ShoesBase::Brand::nike;
+                    else if (brand_name =="Rebook")
+                        brand = ShoesBase::Brand::rebook;
+                    else if (brand_name =="Adidas")
+                        brand = ShoesBase::Brand::adidas;
+                    else if (brand_name =="Puma")
+                        brand = ShoesBase::Brand::puma;
+                    else brand = ShoesBase::Brand::no_brand;
+                    getline(ss, ortopedic, ' ');
+                    getline(ss, usd, ' ');
+                    getline(ss, size, ' ');
+                    getline(ss, length, ' ');
+                    ss.clear();
+                    Shoes[i] = ShoesBase(ortopedic=="Yes", model_name, std::stoi(usd), ShoesBase::insole{std::stoi(size), std::stoi(length)}, brand);
+                }
+                i++;
             }
         }
         file.close();
@@ -128,7 +158,7 @@ public:
 //        Shoes[2]=  ShoesBase(true, "Wearajjday", 2730,ShoesBase::insole{40, 26}, ShoesBase::Brand::rebook);
 //        Shoes[3]=  ShoesBase(false, "Tanjun", 2690, ShoesBase::insole{31, 25}, ShoesBase::Brand::nike);
     ReadFromFile();
-
+show_array();
     };
 
     void show_array(){
@@ -167,12 +197,33 @@ public:
             for(int i=0; i< Size_array; i++){
                 Shoes_new[i]= Shoes[i];
             }
-            Shoes = Shoes_new;
+            delete[] Shoes;
+            Shoes= Shoes_new;
             a = Size_array;
             Size_array++;
         }
         Shoes[a] = new_element;
-        show_array();
+        //show_array();
+    }
+    void test_insert(ShoesBase & new_element) {
+        int n = size_array();
+        int a= Size_array;
+        auto *Test = new ShoesBase[1];
+        Test[0] = ShoesBase(true, "Gaw", 3000,ShoesBase::insole{35, 20}, ShoesBase::Brand::puma);
+        if (n == a){
+            if(Test->GetIsOrtopedic() != new_element.GetIsOrtopedic()){
+                cout<<"Тест провален1.\n"<<endl;
+            }else if (Test->GetPriceUSD() != new_element.GetPriceUSD()){
+                cout<<("Тест провален3.\n")<<endl;
+            }else if (Test->GetModelName() != new_element.GetModelName()){
+                cout<<("Тест провален4.\n")<<endl;
+            }else if (Test->GetInsoleSize() != new_element.GetInsoleSize()){
+                cout<<("Тест провален5.\n")<<endl;
+            }else if (Test->GetInsoleLength() != new_element.GetInsoleLength()){
+                cout<<("Тест провален6.\n")<<endl;
+            } else cout<<("Тест пройден успешно.\n")<<endl;
+        }
+        else cout<<("Тест провален7.\n")<<endl;
     }
 
 //    string toString(int index){
@@ -217,9 +268,20 @@ public:
         for(int i =index+1; i <Size_array; i++ ){
             Shoes_new[i-1]= Shoes[i];
         }
+        delete[] Shoes;
         Shoes = Shoes_new;
         Size_array--;
-        show_array();
+//        show_array();
+
+    }
+    int size_array(){
+        return Size_array;
+    }
+    void test_remove() {
+        int n = size_array();
+        int a= Size_array;
+        if (n == a) cout<<("Тест пройден успешно.\n")<<endl;
+        else cout<<("Тест провален5.\n")<<endl;
     }
 
     void SaveInFile(std::ofstream &file){
@@ -229,49 +291,6 @@ public:
     }
 
 };
-
-
-//class Sneakers : public ShoesBase
-//{
-//public:
-//    enum class Purpose
-//    {
-//        undef,
-//        sport,
-//        casual,
-//    };
-//private:
-//    bool m_is_running;
-//    Purpose m_purpose;
-//public:
-//    Sneakers()
-//            : ShoesBase()
-//            , m_is_running(false)
-//            , m_purpose(Purpose::undef)
-//    {}
-//
-//    Sneakers(bool is_ortopedic, const std::string& model_name, int price_usd, const insole& insole_size, Brand brand, bool is_running, Purpose purpose)
-//            : ShoesBase(is_ortopedic, model_name, price_usd, insole_size, brand)
-//            , m_is_running(is_running)
-//            , m_purpose(purpose)
-//    {}
-//
-//    Sneakers(const ShoesBase& other, bool m_is_running, Purpose m_purpose)
-//            : ShoesBase(other)
-//            , m_is_running(m_is_running)
-//            , m_purpose(m_purpose)
-//    {}
-//
-//    bool GetIsRunning() const
-//    {
-//        return m_is_running;
-//    }
-//
-//    Purpose GetPurpose() const
-//    {
-//        return m_purpose;
-//    }
-//};
 
 int main() {
     bool ortopedic = true;
@@ -291,6 +310,8 @@ int main() {
     arr->createArrayShoes();
     arr->SaveInFile(outf);
     arr->add_object(*new_element);
+    arr->show_array();
+    arr->test_insert(*new_element);
     arr->SaveInFile(outf2);
     int index =2;
     cout << "\33[1:33mПоиск элемента по индексу: \33[0m" << index <<endl;
@@ -298,8 +319,12 @@ int main() {
     cout<<"\n"<< arr->Get_object(index).toString()<<endl;
     cout << "\33[1:33mУдаление элемента по индексу: \33[0m" << index <<endl;
     arr->delete_element(index);
+    arr->show_array();
+    arr->test_remove();
     arr->SaveInFile(outf3);
     outf.close();
     outf2.close();
     outf3.close();
+    delete new_element;
+    delete[] arr;
 }

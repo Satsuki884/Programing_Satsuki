@@ -169,6 +169,33 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/24.dir/build.make CMakeFiles/24.dir/1.cpp.s
 .PHONY : 1.cpp.s
 
+2.o: 2.cpp.o
+
+.PHONY : 2.o
+
+# target to build an object file
+2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/24.dir/build.make CMakeFiles/24.dir/2.cpp.o
+.PHONY : 2.cpp.o
+
+2.i: 2.cpp.i
+
+.PHONY : 2.i
+
+# target to preprocess a source file
+2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/24.dir/build.make CMakeFiles/24.dir/2.cpp.i
+.PHONY : 2.cpp.i
+
+2.s: 2.cpp.s
+
+.PHONY : 2.s
+
+# target to generate assembly for a file
+2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/24.dir/build.make CMakeFiles/24.dir/2.cpp.s
+.PHONY : 2.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -181,6 +208,9 @@ help:
 	@echo "... 1.o"
 	@echo "... 1.i"
 	@echo "... 1.s"
+	@echo "... 2.o"
+	@echo "... 2.i"
+	@echo "... 2.s"
 .PHONY : help
 
 
