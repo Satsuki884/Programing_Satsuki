@@ -1,5 +1,4 @@
-#include "ShareProject/list.h"
-
+#include "lib.h"
 struct shoes* list_new_node(bool a, char b[], int c, char d[], int e, int f)
 {
     struct shoes* node = (struct shoes*)malloc(sizeof(struct shoes));
@@ -295,3 +294,109 @@ void test_sort_length(struct List *ls){
     if (!error) printf("Тест пройден успешно\n");
     else printf("Тест провален.\n");
 }
+void list_show(struct List* ls, int reverse) {
+    if (!reverse) {
+        for (struct shoes* node = ls->head; node != NULL; node = node->next) {
+            printf("Ortopedic: %d\n", node->ortopedic);
+            printf("Model: ");
+            //            for(int i = 0; i < 30; i++){
+            printf("%s\t", node->model_name);
+            printf("\nUSD: %d\t\n", node->usd);
+            printf("Brand: ");
+            printf("%s\t", node->brand_model);
+            printf("\nSize: %d\t\nLength: %d\t\n", node->size_shoes.size, node->size_shoes.length);
+            printf("---------------------------\n");
+        }
+    }
+    else {
+        for (struct shoes* node = ls->tail; node != NULL; node = node->prev) {
+            printf("Ortopedic: %d\n", node->ortopedic);
+            printf("Model: ");
+            printf("%s\t", node->model_name);
+            printf("\nUSD: %d\t\n", node->usd);
+            printf("Brand: ");
+            printf("%s\t", node->brand_model);
+            printf("\nSize: %d\t\nLength: %d\t\n", node->size_shoes.size, node->size_shoes.length);
+            printf("---------------------------\n");
+        }
+        printf("\n");
+
+    }
+}
+int reg_func(char * string1){
+    regex_t regex;
+    char *reg = "^[А-ЯЁA-Z0-9][-a-zA-Z0-9а-яёА-ЯЁ.,;!?: ]*$";
+    int return_value = regcomp(&regex,reg,0);
+    return_value = regexec(&regex, string1, 0, NULL, 0);
+    return return_value;
+}
+int reg(char * string){
+    regex_t regex;
+    char *reg = "[а-яА-Яa-zA-Z.]+";
+    int return_value = regcomp(&regex,reg,0);
+    return_value = regexec(&regex, string, 0, NULL, 0);
+    return return_value;
+}
+int Read_From_File(struct List* ls) {
+    FILE* myfile = fopen("/home/maestro/lab19.txt", "r");
+    if (myfile != NULL) {
+        printf("\nFile opened for reading!!!\n\n");
+        for (struct shoes* i = ls->head; i!=NULL; i = i->next) {
+            fscanf(myfile, "%d", &i->ortopedic);
+            fscanf(myfile, " %s", i->model_name);
+            int a = reg_func(i->model_name);
+            int b = reg(i->model_name);
+            if (a == 0) {
+                printf("Pattern found.\n");
+                if(b==0){
+                    printf("Reading from file: %s\n", i->model_name);
+                }
+            }
+            else if (a == REG_NOMATCH) {
+                printf("Pattern not found.\n");
+                return 1;
+            } else {
+                printf("An error occured.\n");
+                return 1;
+            }
+            fscanf(myfile, "%d", &i->usd);
+            fscanf(myfile, " %s", i->brand_model);
+            a = reg_func(i->brand_model);
+            b = reg(i->brand_model);
+            if (a == 0) {
+                printf("Pattern found.\n");
+                if(b==0){
+                    printf("Reading from file: %s\n", i->brand_model);
+                }
+            }
+            else if (a == REG_NOMATCH) {
+                printf("Pattern not found.\n");
+                return 1;
+            } else {
+                printf("An error occured.\n");
+                return 1;
+            }
+            fscanf(myfile, "%d", &i->size_shoes.size);
+            fscanf(myfile, "%d", &i->size_shoes.length);
+            printf("Reading from func file: %d %s %d %s %d %d \n\n", i->ortopedic, i->model_name, i->usd, i->brand_model, i->size_shoes.size, i->size_shoes.length);
+
+        }
+    }
+    else {
+        printf("File cannot be reading");
+        return 1;
+    }
+    fclose(myfile);
+    return 0;
+}
+void Save_In_File(struct List *ls) {
+    FILE *file_out;
+    char file_name2[] = {"lab.txt"};
+    file_out = fopen(file_name2, "w");
+    for (struct shoes* node = ls->tail; node != NULL; node = node->prev) {
+        fprintf(file_out, "%d %s %d %s %d %d\n", node->ortopedic, node->brand_model, node->usd,
+                node->model_name, node->size_shoes.size, node->size_shoes.length);
+    }
+    fclose(file_out);
+}
+

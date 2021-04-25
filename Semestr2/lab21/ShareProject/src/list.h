@@ -1,7 +1,7 @@
 #ifndef LAB21_ENTITY_H
 #define LAB21_ENTITY_H
 
-#include "StaticProject/lib.h"
+#include "lib.h"
 #define log_info(L, ...) printf( "\33[1:33m[INFO]\33[0m /usr/bin/ld: %s:%d " L  "\n", __FILE__, __LINE__, ##__VA_ARGS__) //yellow
 
 struct shoes* list_new_node(bool a, char b[], int c, char d[], int e, int f);

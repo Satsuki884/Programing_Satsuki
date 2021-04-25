@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -9,7 +8,6 @@ struct size {
     int size;
     int length;
 };
-
 struct shoes {
     int ortopedic;
     char model_name[30];
@@ -23,7 +21,6 @@ struct List {
     struct shoes* head;
     struct shoes* tail;
 };
-
 struct shoes* list_new_node(bool a, char b[], int c, char d[], int e, int f)
 {
     struct shoes* node = (struct shoes*)malloc(sizeof(struct shoes));
@@ -41,7 +38,6 @@ struct shoes* list_new_node(bool a, char b[], int c, char d[], int e, int f)
     node->prev = NULL;
     return node;
 }
-
 void list_add_end(struct List* ls, bool a, char b[], int c, char d[], int e, int f)
 {
     struct shoes* node = list_new_node(a, b, c, d, e, f);
@@ -53,7 +49,6 @@ void list_add_end(struct List* ls, bool a, char b[], int c, char d[], int e, int
         ls->head = node;
     ls->tail = node;
 }
-
 void list_add_begin(struct List* ls, bool a, char b[], int c, char d[], int e, int f)
 {
     struct shoes* node = list_new_node(a, b, c, d, e, f);
@@ -65,7 +60,6 @@ void list_add_begin(struct List* ls, bool a, char b[], int c, char d[], int e, i
         ls->tail = node;
     ls->head = node;
 }
-
 void list_insert(struct List* ls, int index, bool a, char b[], int c, char d[], int e, int f)
 {
     if (index <= 0) {
@@ -88,7 +82,6 @@ void list_insert(struct List* ls, int index, bool a, char b[], int c, char d[], 
     node->prev->next = node;
     node->next->prev = node;
 }
-
 int list_remove(struct List* ls, int index)
 {
     if (index < 0)
@@ -123,7 +116,6 @@ int list_remove(struct List* ls, int index)
     free(p);
     return 1;
 }
-
 void list_show(struct List* ls, int reverse) {
     if (!reverse) {
         for (struct shoes* node = ls->head; node != NULL; node = node->next) {
@@ -153,15 +145,6 @@ void list_show(struct List* ls, int reverse) {
 
     }
 }
-
-//struct List* list_new()
-//{
-//    struct List* ls = (struct List*)malloc(sizeof(struct List));
-//    ls->head = NULL;
-//    ls->tail = NULL;
-//    return ls;
-//}
-
 int compare_size(struct shoes* a, struct shoes* b) {
     if (a->size_shoes.size == b->size_shoes.size)
         return 0;
@@ -170,7 +153,6 @@ int compare_size(struct shoes* a, struct shoes* b) {
     else
         return -1;
 }
-
 int compare_length(struct shoes* a, struct shoes* b) {
     if (a->size_shoes.length == b->size_shoes.length)
         return 0;
@@ -179,7 +161,6 @@ int compare_length(struct shoes* a, struct shoes* b) {
     else
         return -1;
 }
-
 int compare_usd(struct shoes* a, struct shoes* b) {
     if (a->usd == b->usd)
         return 0;
@@ -188,7 +169,6 @@ int compare_usd(struct shoes* a, struct shoes* b) {
     else
         return -1;
 }
-
 void sort(struct List* ls, int(*compare)(struct shoes*, struct shoes*))
 {
     struct shoes* set = ls->tail;
@@ -249,7 +229,6 @@ void sort(struct List* ls, int(*compare)(struct shoes*, struct shoes*))
         set = max->prev;
     }
 }
-
 void Read_From_File(struct List* ls) {
     FILE* myfile = fopen("/home/maestro/lab19.txt", "r");
     if (myfile != NULL) {
@@ -270,7 +249,6 @@ void Read_From_File(struct List* ls) {
     }
     fclose(myfile);
 }
-
 void Save_In_File(struct List *ls) {
     FILE *file_out;
     char file_name2[] = {"lab.txt"};
@@ -281,7 +259,6 @@ void Save_In_File(struct List *ls) {
     }
     fclose(file_out);
 }
-
 void FreeList(struct List *list){
     while (list->head) {
         struct shoes *p = list->head;
@@ -421,6 +398,7 @@ int main() {
     char a;
     printf("Введіть\n'a' для добавления елемента в конец,\n'b'  для добавления елемента в конец,\n'c'  для добавления елемента по индексу,\n'd' для удаления эелемента по индексу,\n's' для сортировке по размеру ноги,\n'l' для сортировке по длине устилки,\n'u' для сортировки по цене:\n");
     scanf("%c", &a);
+    int k =0;
     switch (a) {
         case 'a':
             list_add_end(ls, ortopedic, model_name, usd, brand_model, size, length);
@@ -432,7 +410,7 @@ int main() {
         case 'b':
             list_add_begin(ls, ortopedic, model_name, usd, brand_model, size, length);
             list_show(ls, 0);
-                        test_add_begin(ls, ortopedic, model_name, usd, brand_model, size, length);
+            test_add_begin(ls, ortopedic, model_name, usd, brand_model, size, length);
             Save_In_File(ls);
             free(ls);
             break;
@@ -445,7 +423,7 @@ int main() {
             break;
         case 'd':
             k = count_list(ls);
-            list_remove(ls, 5);
+            list_remove(ls, 1);
             list_show(ls, 0);
             test_remove(ls, k-1);
             Save_In_File(ls);

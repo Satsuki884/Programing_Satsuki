@@ -1,4 +1,4 @@
-#include "StaticProject/entity.h"
+#include "list.h"
 int main() {
 
     srand(time(NULL));

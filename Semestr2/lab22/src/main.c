@@ -1,6 +1,6 @@
-#include "ShareProject/list.h"
+#include "lib.h"
 int main() {
-
+    regex_t regex;
     srand(time(NULL));
     time_t begin = clock();
 
@@ -27,7 +27,11 @@ int main() {
     list_add_end(ls, 1, tmp1, 23, tmp1, 4, 5);
     list_add_end(ls, 1, tmp1, 23, tmp1, 4, 5);
     list_add_end(ls, 1, tmp1, 23, tmp1, 4, 5);
-    Read_From_File(ls);
+    int e = Read_From_File(ls);
+    if(e == 1){
+        printf("\33[0:31m[ERROR] : Pattern not found\33[0m");
+        return 0;
+    }
     free(tmp1);
     bool ortopedic = 1;
     char model_name[30] = { "Gaw" };

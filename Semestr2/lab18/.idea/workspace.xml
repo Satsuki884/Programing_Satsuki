@@ -43,11 +43,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="lab18" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="lab18" TARGET_NAME="lab18" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="lab18" RUN_TARGET_NAME="lab18">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -74,7 +69,12 @@
       <workItem from="1617563863304" duration="5282000" />
       <workItem from="1617577155031" duration="1490000" />
       <workItem from="1617601425088" duration="1109000" />
-      <workItem from="1617604083806" duration="5366000" />
+      <workItem from="1617604083806" duration="5412000" />
+      <workItem from="1617615780403" duration="14000" />
+      <workItem from="1617634747856" duration="10000" />
+      <workItem from="1617689496901" duration="320000" />
+      <workItem from="1617692296280" duration="1115000" />
+      <workItem from="1618045660612" duration="1222000" />
     </task>
     <servers />
   </component>

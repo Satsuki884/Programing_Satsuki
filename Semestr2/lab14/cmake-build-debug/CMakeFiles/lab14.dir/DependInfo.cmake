@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/maestro/Programing_Satsuki/lab14/ex2.c" "/home/maestro/Programing_Satsuki/lab14/cmake-build-debug/CMakeFiles/lab14.dir/ex2.c.o"
-  "/home/maestro/Programing_Satsuki/lab14/ex5.c" "/home/maestro/Programing_Satsuki/lab14/cmake-build-debug/CMakeFiles/lab14.dir/ex5.c.o"
-  "/home/maestro/Programing_Satsuki/lab14/ex6.c" "/home/maestro/Programing_Satsuki/lab14/cmake-build-debug/CMakeFiles/lab14.dir/ex6.c.o"
+  "/home/maestro/Programing_Satsuki/Semestr2/lab14/ex2.c" "/home/maestro/Programing_Satsuki/Semestr2/lab14/cmake-build-debug/CMakeFiles/lab14.dir/ex2.c.o"
+  "/home/maestro/Programing_Satsuki/Semestr2/lab14/ex5.c" "/home/maestro/Programing_Satsuki/Semestr2/lab14/cmake-build-debug/CMakeFiles/lab14.dir/ex5.c.o"
+  "/home/maestro/Programing_Satsuki/Semestr2/lab14/ex6.c" "/home/maestro/Programing_Satsuki/Semestr2/lab14/cmake-build-debug/CMakeFiles/lab14.dir/ex6.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

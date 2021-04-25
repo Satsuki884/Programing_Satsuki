@@ -361,7 +361,14 @@ int reg_func(char * string1){
 int reg(char * string){
     regex_t regex;
     char *reg = "^([а-яёА-ЯЁa-wA-Z0-9]+([^а-яёА-ЯЁa-zA-Z0-9]+|$)){2,}$";
-    int return_value = regcomp(&regex,reg,REG_EXTENDED|REG_ICASE);
+    int return_value = regcomp(&regex,reg,REG_EXTENDED);
+    return_value = regexec(&regex, string, 0, NULL, 0);
+    return return_value;
+}
+int reg2(char * string){
+    regex_t regex;
+    char *reg = "(\\.\\.|  |,,|;;|::|!!|\\?\\?|--)";
+    int return_value = regcomp(&regex,reg,REG_EXTENDED);
     return_value = regexec(&regex, string, 0, NULL, 0);
     return return_value;
 }
@@ -374,7 +381,12 @@ int Read_From_File(struct List* ls) {
             fscanf(myfile, " %s", i->model_name);
             int a = reg_func(i->model_name);
             int b = reg(i->model_name);
+            int c = reg2(i->model_name);
             if (a == 0) {
+                if(c==0){
+                    printf("Pattern not foundC.\n");
+                    return 1;
+                }
                 printf("Pattern found.\n");
                 if(b==0){
                     printf("Reading from file: %s\n", i->model_name);
@@ -391,7 +403,12 @@ int Read_From_File(struct List* ls) {
             fscanf(myfile, " %s", i->brand_model);
             a = reg_func(i->brand_model);
             b = reg(i->brand_model);
+            c = reg2(i->brand_model);
             if (a == 0) {
+                if(c==0){
+                    printf("Pattern not found.\n");
+                    return 1;
+                }
                 printf("Pattern found.\n");
                 if(b==0){
                     printf("Reading from file: %s\n", i->brand_model);

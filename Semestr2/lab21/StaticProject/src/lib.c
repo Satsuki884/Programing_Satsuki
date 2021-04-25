@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lib.h"
 
 void list_show(struct List* ls, int reverse) {
     if (!reverse) {

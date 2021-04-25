@@ -326,7 +326,7 @@ int main() {
             free(ls);
             break;
         case 'c':
-            list_insert(ls, 10, ortopedic, model_name, usd, brand_model, size, length);
+            list_insert(ls, 1, ortopedic, model_name, usd, brand_model, size, length);
             list_show(ls, 0);
             Save_In_File(ls);
             free(ls);
