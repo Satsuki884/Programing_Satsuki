@@ -66,57 +66,53 @@
 
 Рисунок 5 — блок-схема програми (list_add_begin)
 
-![enter image description here](asses/test_add_begin19.png)
-
-Рисунок 6 — блок-схема програми (test_add_begin)
-
 ![enter image description here](asses/list_insert19.png)
 
-Рисунок 7 — блок-схема програми (list_insert)
+Рисунок 6 — блок-схема програми (list_insert)
 
 ![enter image description here](asses/test_insert19.png)
 
-Рисунок 8 — блок-схема програми (test_insert)
+Рисунок 7 — блок-схема програми (test_insert)
 
 ![enter image description here](asses/count_list19.png)
 
-Рисунок 9 — блок-схема програми (count_list)
+Рисунок 8 — блок-схема програми (count_list)
 
 ![enter image description here](asses/list_remove19.png)
 
-Рисунок 10 — блок-схема програми (list_remove)
+Рисунок 9 — блок-схема програми (list_remove)
 
 ![enter image description here](asses/test_remove19.png)
 
-Рисунок 11 — блок-схема програми (test_remove)
+Рисунок 10 — блок-схема програми (test_remove)
 
 ![enter image description here](asses/sort19.png)
 
-Рисунок 12 — блок-схема програми (sort)
+Рисунок 11 — блок-схема програми (sort)
 
 ![enter image description here](asses/test_size19.png)
 
-Рисунок 13 — блок-схема програми (test_sort_size)
+Рисунок 12 — блок-схема програми (test_sort_size)
 
 ![enter image description here](asses/test_length19.png)
 
-Рисунок 14 — блок-схема програми (test_sort_length)
+Рисунок 13 — блок-схема програми (test_sort_length)
 
 ![enter image description here](asses/test_usd19.png)
 
-Рисунок 15 — блок-схема програми (test_sort_usd)
+Рисунок 14 — блок-схема програми (test_sort_usd)
 
 ![enter image description here](asses/compare_size19.png)
 
-Рисунок 16 — блок-схема програми (compare_size)
+Рисунок 15 — блок-схема програми (compare_size)
 
 ![enter image description here](asses/compare_length19.png)
 
-Рисунок 17 — блок-схема програми (compare_length)
+Рисунок 16 — блок-схема програми (compare_length)
 
 ![enter image description here](asses/compare_usd19.png)
 
-Рисунок 18 — блок-схема програми (compare_usd)
+Рисунок 17 — блок-схема програми (compare_usd)
 
 - Важливі елементи програми.
     * Задання макросу 
@@ -139,11 +135,11 @@
   
   ![enter image description here](asses/Debag1.png)
   
-  Рисунок 19 — результат команди DEBAG
+  Рисунок 18 — результат команди DEBAG
 
   ![enter image description here](asses/Debag2.png)
 
-  Рисунок 20 — результат одного з тестів
+  Рисунок 19 — результат одного з тестів
 
   
 
