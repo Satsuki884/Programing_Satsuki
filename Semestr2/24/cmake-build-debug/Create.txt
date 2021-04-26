@@ -4,25 +4,21 @@
 	USD: 2990
 	Size: 37
 	Length: 24
-
 	Model: Response
 	Brand: Adidas
 	Ortopedic: No
 	USD: 2590
 	Size: 46
 	Length: 22
-
 	Model: Wearajjday
 	Brand: Rebook
 	Ortopedic: Yes
 	USD: 2730
 	Size: 40
 	Length: 26
-
 	Model: Tanjun
 	Brand: Nike
 	Ortopedic: No
 	USD: 2690
 	Size: 31
 	Length: 25
-

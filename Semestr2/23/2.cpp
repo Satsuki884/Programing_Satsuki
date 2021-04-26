@@ -1,4 +1,5 @@
 #include <string>
+#include <sstream>
 #include <iostream>
 #pragma warning (disable: 4996)
 using std::string;
@@ -73,7 +74,6 @@ public:
     Brand GetBrand() const{
         return m_brand;
     }
-
 };
 
 class ArrayShoes{
@@ -185,6 +185,50 @@ public:
         if (n == a) cout<<("Тест пройден успешно.\n")<<endl;
         else cout<<("Тест провален5.\n")<<endl;
     }
+    int size(){
+        int cout = 0;
+        for(int i =0; i < Size_array; i++) {
+            if ( (Shoes[i].GetIsOrtopedic() && (Shoes[i].GetBrand() == ShoesBase::Brand::nike)) || (Shoes[i].GetIsOrtopedic() && (Shoes[i].GetBrand() == ShoesBase::Brand::puma)) ) {
+                cout++;
+            }
+        }
+        return cout;
+    }
+    ShoesBase OrtopedicNikePuma(){
+        ShoesBase * new_array = new ShoesBase[size()];
+//        int i =0;
+        int k =0;
+        for(int i =0; i < Size_array; i++) {
+            if ( (Shoes[i].GetIsOrtopedic() && (Shoes[i].GetBrand() == ShoesBase::Brand::nike)) || (Shoes[i].GetIsOrtopedic() && (Shoes[i].GetBrand() == ShoesBase::Brand::puma)) ) {
+                new_array[k] = Shoes[i];
+                k++;
+            }
+        }
+        delete [] Shoes;
+        Shoes = new_array;
+        return *Shoes;
+    }
+    void show_OrtopedicNikePuma(){
+        for(int i =0; i<size(); i++){
+            cout << "\33[1:33mShoes #" << i+1 << ":\33[0m";
+            cout<< "\n\tModel name: "<<this->Shoes[i].GetModelName()<<endl;
+            cout<< "\tBrand name: ";
+            if (this->Shoes[i].GetBrand() == ShoesBase::Brand::nike)
+                cout << "Nike"<<endl;
+            else if (this->Shoes[i].GetBrand() == ShoesBase::Brand::rebook)
+                cout << "Rebook"<<endl;
+            else if (this->Shoes[i].GetBrand() == ShoesBase::Brand::adidas)
+                cout << "Adidas"<<endl;
+            else if (this->Shoes[i].GetBrand() == ShoesBase::Brand::puma)
+                cout << "Puma"<<endl;
+            else cout << "No brand"<<endl;
+            cout<< "\tOrtopedic: "<<(this->Shoes[i].GetIsOrtopedic() ? "Yes" : "No" )<<endl;
+            cout<< "\tUSD: "<<this->Shoes[i].GetPriceUSD()<<endl;
+            cout<< "\tSize: "<<this->Shoes[i].GetInsoleSize()<<endl;
+            cout<< "\tLength: "<<this->Shoes[i].GetInsoleLength()<<endl;
+            cout<< "\n-----------------------------------\n\n";
+        }
+    }
 };
 
 int main() {
@@ -195,7 +239,9 @@ int main() {
     int length = 20;
     ArrayShoes* arr = new ArrayShoes(4);
     ShoesBase* new_element = new ShoesBase(ortopedic, model_name, usd, ShoesBase::insole{size, length}, ShoesBase::Brand::nike);
+    cout << "\33[1:33mСоздание массива.\33[0m" <<endl;
     arr->createArrayShoes();
+    cout << "\33[1:33mДобавление елемента в массив.\33[0m" <<endl;
     arr->add_object(*new_element);
     arr->test_insert(*new_element);
     int index =2;
@@ -219,4 +265,7 @@ int main() {
     cout << "\33[1:33mУдаление элемента по индексу: \33[0m" << index <<endl;
     arr->delete_element(index);
     arr->test_remove();
+    cout << "\33[1:33mПоиск ортопедической обуви брендов Найк и Пума.\33[0m" <<endl;
+    arr->OrtopedicNikePuma();
+    arr->show_OrtopedicNikePuma();
 }

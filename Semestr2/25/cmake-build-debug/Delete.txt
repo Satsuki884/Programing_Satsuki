@@ -4,25 +4,21 @@
 	USD: 2990
 	Size: 37
 	Length: 24
-
 	Model: Response
 	Brand: Adidas
 	Ortopedic: false
 	USD: 2590
 	Size: 46
 	Length: 22
-
 	Model: Tanjun
 	Brand: Nike
 	Ortopedic: false
 	USD: 2690
 	Size: 31
 	Length: 25
-
 	Model: Gaw
 	Brand: Nike
 	Ortopedic: true
 	USD: 3000
 	Size: 35
 	Length: 20
-
