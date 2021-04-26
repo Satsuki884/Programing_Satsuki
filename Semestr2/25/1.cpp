@@ -95,23 +95,31 @@ public:
         os<<"\tModel: " << Shoes.GetModelName() << endl<<"\tBrand: " << a << "\n\tOrtopedic: " << (Shoes.GetIsOrtopedic() ? "true" : "false") <<"\n\tUSD: " << std::to_string(Shoes.GetPriceUSD()) << "\n\tSize: " << std::to_string(Shoes.GetInsoleSize()) << "\n\tLength: " << std::to_string(Shoes.GetInsoleLength()) << "\n-----------------------------------\n";
         return os;
     }
-//    friend std::istream & operator >> (std::istream& is, ShoesBase& Shoes){
-//        std::ifstream file("Saerch.txt");
-//        std::string a ;
-//        std::string brand_name;
-//        //ShoesBase::Brand brand;
-//        if (brand_name =="Nike")
-//            ShoesBase::m_brand = ShoesBase::Brand::nike;
-//        else if (brand_name =="Rebook")
-//            brand = ShoesBase::Brand::rebook;
-//        else if (brand_name =="Adidas")
-//            brand = ShoesBase::Brand::adidas;
-//        else if (brand_name =="Puma")
-//            brand = ShoesBase::Brand::puma;
-//        else brand = ShoesBase::Brand::no_brand;
-//        file >> Shoes.m_model_name >> Shoes.m_brand >>  (Shoes.m_is_ortopedic ? "true" : "false") >> (Shoes.m_price_usd)  >>(Shoes.m_insole_size.size) >> Shoes.m_insole_size.length;
-//        return is;
-//    }
+    friend std::istream & operator >> (std::istream& is, ShoesBase& Shoes){
+        std::string brand_name;
+        ShoesBase::Brand brand;
+        std::string ortopedic;
+        std::string model_name;
+        std::string usd;
+        std::string size;
+        std::string length;
+        is >> model_name >> brand_name >>  ortopedic >> usd  >>size >> length;
+        if (brand_name =="Nike")
+            Shoes.m_brand = ShoesBase::Brand::nike;
+        else if (brand_name =="Rebook")
+            Shoes.m_brand = ShoesBase::Brand::rebook;
+        else if (brand_name =="Adidas")
+            Shoes.m_brand = ShoesBase::Brand::adidas;
+        else if (brand_name =="Puma")
+            Shoes.m_brand = ShoesBase::Brand::puma;
+        else Shoes.m_brand = ShoesBase::Brand::no_brand;
+        Shoes.m_price_usd =std::stoi(usd);
+        Shoes.m_insole_size.size =std::stoi(size);
+        Shoes.m_insole_size.length =std::stoi(length);
+        Shoes.m_model_name = model_name;
+        Shoes.m_is_ortopedic = ortopedic == "Yes";
+        return is;
+    }
     ShoesBase(bool is_ortopedic, const std::string& model_name, int price_usd, const insole& insole_size, Brand brand)
             : m_is_ortopedic(is_ortopedic)
             , m_model_name(model_name)
@@ -396,4 +404,5 @@ int main() {
     outf3.close();
     cout << "\33[1:33mПоиск ортопедической обуви брендов Найк и Пума.\33[0m" <<endl;
     arr->OrtopedicNikePuma();
+
 }
