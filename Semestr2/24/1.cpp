@@ -90,7 +90,7 @@ public:
         else if (this->GetBrand() == ShoesBase::Brand::puma)
             a = "Puma";
         else a = "No brand";
-        ss<< "\tModel: " << this->GetModelName() << "\n\tBrand: " << a << "\n\tOrtopedic: " << (this->GetIsOrtopedic() ? "Yes" : "No") <<"\n\tUSD: " << std::to_string(this->GetPriceUSD()) << "\n\tSize: " << std::to_string(this->GetInsoleSize()) << "\n\tLength: " << std::to_string(this->GetInsoleLength());
+        ss<< "\n\tModel: " << this->GetModelName() << "\n\tBrand: " << a << "\n\tOrtopedic: " << (this->GetIsOrtopedic() ? "Yes" : "No") <<"\n\tUSD: " << std::to_string(this->GetPriceUSD()) << "\n\tSize: " << std::to_string(this->GetInsoleSize()) << "\n\tLength: " << std::to_string(this->GetInsoleLength());
         return ss.str();
     }
 
@@ -114,8 +114,23 @@ public:
     void ReadFromFile() {
         std::ifstream file("Saerch.txt");
         std::string line;
-        std::stringstream ss;
         int i =0;
+        if (file.is_open()) {
+            cout<<"File opened for reading!!!"<< endl;
+            while (getline(file, line)) {
+                if(!line.empty()){
+//                    cout<<"Записываем строку в Shoes["<<i<<"]"<<endl;
+                    addObjectFromLine(line);
+                }
+                i++;
+            }
+        }
+        file.close();
+    }
+
+    void addObjectFromLine(std::string line){
+        std::stringstream ss;
+//        int i =0;
         std::string ortopedic;
         std::string model_name;
         std::string brand_name;
@@ -123,34 +138,26 @@ public:
         std::string usd;
         std::string size;
         std::string length;
-        if (file.is_open()) {
-            printf("\nFile opened for reading!!!\n\n");
-            while (getline(file, line)) {
-                if(!line.empty()){
-                    cout<<"Записываем строку в Shoes["<<i<<"]"<<endl;
-                    ss<<line;
-                    getline(ss, model_name, ' ');
-                    getline(ss, brand_name, ' ');
-                    if (brand_name =="Nike")
-                        brand = ShoesBase::Brand::nike;
-                    else if (brand_name =="Rebook")
-                        brand = ShoesBase::Brand::rebook;
-                    else if (brand_name =="Adidas")
-                        brand = ShoesBase::Brand::adidas;
-                    else if (brand_name =="Puma")
-                        brand = ShoesBase::Brand::puma;
-                    else brand = ShoesBase::Brand::no_brand;
-                    getline(ss, ortopedic, ' ');
-                    getline(ss, usd, ' ');
-                    getline(ss, size, ' ');
-                    getline(ss, length, ' ');
-                    ss.clear();
-                    Shoes[i] = ShoesBase(ortopedic=="Yes", model_name, std::stoi(usd), ShoesBase::insole{std::stoi(size), std::stoi(length)}, brand);
-                }
-                i++;
-            }
-        }
-        file.close();
+            ss<<line;
+            getline(ss, model_name, ' ');
+            getline(ss, brand_name, ' ');
+            if (brand_name =="Nike")
+                brand = ShoesBase::Brand::nike;
+            else if (brand_name =="Rebook")
+                brand = ShoesBase::Brand::rebook;
+            else if (brand_name =="Adidas")
+                brand = ShoesBase::Brand::adidas;
+            else if (brand_name =="Puma")
+                brand = ShoesBase::Brand::puma;
+            else brand = ShoesBase::Brand::no_brand;
+            getline(ss, ortopedic, ' ');
+            getline(ss, usd, ' ');
+            getline(ss, size, ' ');
+            getline(ss, length, ' ');
+            ss.clear();
+            ShoesBase *new_element = new ShoesBase(ortopedic=="Yes", model_name, std::stoi(usd), ShoesBase::insole{std::stoi(size), std::stoi(length)}, brand);
+        add_object(*new_element);
+       // }
     }
     void createArrayShoes(){
 //        Shoes[0] = ShoesBase(true, "Ingnite", 2990,ShoesBase::insole{37, 24}, ShoesBase::Brand::puma);
@@ -300,7 +307,6 @@ show_array();
     }
     ShoesBase OrtopedicNikePuma(){
         ShoesBase * new_array = new ShoesBase[size()];
-//        int i =0;
         int k =0;
         for(int i =0; i < Size_array; i++) {
             if ( (Shoes[i].GetIsOrtopedic() && (Shoes[i].GetBrand() == ShoesBase::Brand::nike)) || (Shoes[i].GetIsOrtopedic() && (Shoes[i].GetBrand() == ShoesBase::Brand::puma)) ) {
@@ -334,7 +340,9 @@ int main() {
     }
     arr->createArrayShoes();
     arr->SaveInFile(outf);
-    arr->add_object(*new_element);
+    cout << "\33[1:35mДобавление со строки.\33[0m"<<endl;
+    std::string str = "Gaw Nike Yes 3000 35 20";
+    arr->addObjectFromLine(str);
     arr->show_array();
     arr->test_insert(*new_element);
     arr->SaveInFile(outf2);
