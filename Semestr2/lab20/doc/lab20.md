@@ -137,11 +137,11 @@
 ## Варіанти використання программи 1
 - Запустимо программу і переглянемо ії виконання. Программа має виводити результат тесту і нашу структуру, що ми отримали після сортування:
   
-  ![enter image description here](asses/test1.png)
+  ![enter image description here](asses/Debag1.png)
   
   Рисунок 19 — результат команди DEBAG
 
-  ![enter image description here](asses/test2.png)
+  ![enter image description here](asses/Debag2.png)
 
   Рисунок 20 — результат одного з тестів
 
