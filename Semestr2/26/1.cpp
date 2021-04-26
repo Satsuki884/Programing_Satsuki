@@ -5,10 +5,12 @@
 #include <iostream>
 
 #pragma warning (disable: 4996)
+
 using std::string;
 using std::cin;
 using std::cout;
 using std::endl;
+
 class ShoesBase
 {
 public:
@@ -275,9 +277,33 @@ public:
             file << toString(i) << endl;
         }
     }
-
+    int size(){
+        int cout = 0;
+        for(int i =0; i < Size_array; i++) {
+            if ( (Shoes[i].GetIsOrtopedic() && (Shoes[i].GetBrand() == ShoesBase::Brand::nike)) || (Shoes[i].GetIsOrtopedic() && (Shoes[i].GetBrand() == ShoesBase::Brand::puma)) ) {
+                cout++;
+            }
+        }
+        return cout;
+    }
+    ShoesBase OrtopedicNikePuma(){
+        ShoesBase * new_array = new ShoesBase[size()];
+//        int i =0;
+        int k =0;
+        for(int i =0; i < Size_array; i++) {
+            if ( (Shoes[i].GetIsOrtopedic() && (Shoes[i].GetBrand() == ShoesBase::Brand::nike)) || (Shoes[i].GetIsOrtopedic() && (Shoes[i].GetBrand() == ShoesBase::Brand::puma)) ) {
+                new_array[k] = Shoes[i];
+                cout << "\33[1:33mShoes #" << i+1 << ":\33[0m";
+                cout<<Get_object(i).toString()<<endl;
+                cout << "\n---------------------------------------\n\n";
+                k++;
+            }
+        }
+        delete [] Shoes;
+        Shoes = new_array;
+        return *Shoes;
+    }
 };
-
 
 class Sneakers : public ShoesBase
 {
@@ -309,7 +335,6 @@ public:
             , m_is_running(m_is_running)
             , m_purpose(m_purpose)
     {}
-
     bool GetIsRunning() const
     {
         return m_is_running;
@@ -318,6 +343,26 @@ public:
     Purpose GetPurpose() const
     {
         return m_purpose;
+    }
+    friend std::ostream & operator << (std::ostream& os, const Sneakers& Shoes){
+        std::string a ;
+        std::string b ;
+        if (Shoes.GetBrand() == ShoesBase::Brand::nike)
+            a = "Nike";
+        else if (Shoes.GetBrand() == ShoesBase::Brand::rebook)
+            a = "Rebook";
+        else if (Shoes.GetBrand() == ShoesBase::Brand::adidas)
+            a = "Adidas";
+        else if (Shoes.GetBrand() == ShoesBase::Brand::puma)
+            a = "Puma";
+        else a = "No brand";
+        if (Shoes.GetPurpose() == Sneakers::Purpose::sport)
+            b = "Sport";
+        else if (Shoes.GetPurpose() == Sneakers::Purpose::casual)
+            b = "Casual";
+        else b = "Undef";
+        os<< "\tModel: " << Shoes.GetModelName() << "\n\tBrand: " << a << "\n\tOrtopedic: " << (Shoes.GetIsOrtopedic() ? "Yes" : "No") <<"\n\tUSD: " << std::to_string(Shoes.GetPriceUSD()) << "\n\tSize: " << std::to_string(Shoes.GetInsoleSize()) << "\n\tLength: " << std::to_string(Shoes.GetInsoleLength()) << "\n\tPurpose: "<< b << "\n\tIs Runing: "<< (Shoes.GetIsRunning()?"Yes" : "No")<<"\n";
+        return os;
     }
     string toStringSneakers(){
         std::stringstream ss;
@@ -358,7 +403,9 @@ public:
         delete[] this->Shoes;
 //        cout<<"Вызвался деструктор ArrayShoes()"<<this;//endl;
     }
-
+    Sneakers & operator [](const int index){
+        return Shoes[index];
+    }
     void createArraySneakers(){
         Shoes[0] = Sneakers(true, "Ingnite", 2990,ShoesBase::insole{37, 24}, ShoesBase::Brand::puma, true, Sneakers::Purpose::sport);
         Shoes[1]=  Sneakers(false, "Response", 2590,ShoesBase::insole{46, 22}, ShoesBase::Brand::adidas,true, Sneakers::Purpose::casual);
@@ -369,33 +416,9 @@ public:
     };
 
     void show_arraySneakers(){
-        std::string b ;
         for(int i =0; i<Size_array; i++){
-            //\33[1:33m[INFO]\33[0m
-            cout << "\33[1:33mShoes #" << i+1 << ":\33[0m";
-            cout<< "\n\tModel name: "<<this->Shoes[i].GetModelName()<<endl;
-            cout<< "\tBrand name: ";
-            if (this->Shoes[i].GetBrand() == ShoesBase::Brand::nike)
-                cout << "Nike"<<endl;
-            else if (this->Shoes[i].GetBrand() == ShoesBase::Brand::rebook)
-                cout << "Rebook"<<endl;
-            else if (this->Shoes[i].GetBrand() == ShoesBase::Brand::adidas)
-                cout << "Adidas"<<endl;
-            else if (this->Shoes[i].GetBrand() == ShoesBase::Brand::puma)
-                cout << "Puma"<<endl;
-            else cout << "No brand"<<endl;
-            cout<< "\tOrtopedic: "<<(this->Shoes[i].GetIsOrtopedic() ? "Yes" : "No" )<<endl;
-            cout<< "\tUSD: "<<this->Shoes[i].GetPriceUSD()<<endl;
-            cout<< "\tSize: "<<this->Shoes[i].GetInsoleSize()<<endl;
-            cout<< "\tLength: "<<this->Shoes[i].GetInsoleLength()<<endl;
-            cout<< "\tPurpose: ";
-            if (this->Shoes[i].GetPurpose() == Sneakers::Purpose::sport)
-                cout<<"Sport"<<endl;
-            else if (this->Shoes[i].GetPurpose() == Sneakers::Purpose::casual)
-                cout<<"Casual"<<endl;
-            else cout<<"Undef"<<endl;
-            cout<< "\tIs Running: "<<(this->Shoes[i].GetIsRunning()?"Yes":"No")<<endl;
-            cout<< "\n-----------------------------------\n\n";
+            cout << "\33[1:33mShoes #" << i+1 << ":\33[0m\n";
+            cout << this->Shoes[i];
         }
     }
 
@@ -490,6 +513,20 @@ public:
         else cout<<("\33[1:31mТест провален5.\33[0m")<<endl;
     }
 
+    void CheapRunningShoes() {
+        int min_usd =-1;
+        int index =-1;
+        for (int i = 0; i < Size_array; i++){
+            if(Shoes[index].GetIsRunning() && (min_usd < 0 || Shoes[i].GetPriceUSD()< min_usd)) {
+                index = i;
+                min_usd = Shoes[i].GetPriceUSD();
+            }
+        }
+        if(index >= 0){
+            cout << "\33[1:33mShoes #"<<index+1<<": \33[0m" << endl;
+            cout << Shoes[index].toStringSneakers() << endl;
+        } else cout << "\33[1:31mКроссовки не найдены.\33[0m" << endl;
+    }
 //    void SaveInFile(std::ofstream &file){
 //        for(int i = 0; i< Size_array; i++){
 //            file << toString(i) << endl;
@@ -539,6 +576,28 @@ public:
     {
         return m_season;
     }
+    friend std::ostream & operator << (std::ostream& os, const Boots& Shoes){
+        std::string a ;
+        std::string b ;
+        if (Shoes.GetBrand() == ShoesBase::Brand::nike)
+            a = "Nike";
+        else if (Shoes.GetBrand() == ShoesBase::Brand::rebook)
+            a = "Rebook";
+        else if (Shoes.GetBrand() == ShoesBase::Brand::adidas)
+            a = "Adidas";
+        else if (Shoes.GetBrand() == ShoesBase::Brand::puma)
+            a = "Puma";
+        else a = "No brand";
+        if (Shoes.GetSeason() == Boots::Season::spring)
+            b ="Spring";
+        else if (Shoes.GetSeason() == Boots::Season::winter)
+            b = "Wisual";
+        else if (Shoes.GetSeason() == Boots::Season::autumn)
+            b ="Autumn";
+        else b ="Undef";
+        os<< "\tModel: " << Shoes.GetModelName() << "\n\tBrand: " << a << "\n\tOrtopedic: " << (Shoes.GetIsOrtopedic() ? "Yes" : "No") <<"\n\tUSD: " << std::to_string(Shoes.GetPriceUSD()) << "\n\tSize: " << std::to_string(Shoes.GetInsoleSize()) << "\n\tLength: " << std::to_string(Shoes.GetInsoleLength()) << "\n\tSeason: "<< b << "\n\tAnti-slip sole: "<< (Shoes.GetAntiSlipSole()?"Yes" : "No")<<"\n";
+        return os;
+    }
     string toStringBoots(){
         std::stringstream ss;
         std::string a ;
@@ -580,46 +639,22 @@ public:
         delete[] this->Shoes;
 //        cout<<"Вызвался деструктор ArrayShoes()"<<this;//endl;
     }
-
+    Boots & operator [](const int index){
+        return Shoes[index];
+    }
     void createArrayBoots(){
         Shoes[0] = Boots(true, "Ingnite", 2990,ShoesBase::insole{37, 24}, ShoesBase::Brand::puma, true, Boots::Season::autumn);
         Shoes[1]=  Boots(false, "Response", 2590,ShoesBase::insole{46, 22}, ShoesBase::Brand::adidas,true, Boots::Season::spring);
         Shoes[2]=  Boots(true, "Wearajjday", 2730,ShoesBase::insole{40, 26}, ShoesBase::Brand::rebook, false, Boots::Season::winter);
-        Shoes[3]=  Boots(false, "Tanjun", 2690, ShoesBase::insole{31, 25}, ShoesBase::Brand::nike,true,Boots::Season::spring);
+        Shoes[3]=  Boots(false, "Tanjun", 2690, ShoesBase::insole{41, 25}, ShoesBase::Brand::nike,true,Boots::Season::spring);
         //ReadFromFile();
 
     };
 
     void show_arrayBoots(){
-        std::string b ;
         for(int i =0; i<Size_array; i++){
-            //\33[1:33m[INFO]\33[0m
-            cout << "\33[1:33mShoes #" << i+1 << ":\33[0m";
-            cout<< "\n\tModel name: "<<this->Shoes[i].GetModelName()<<endl;
-            cout<< "\tBrand name: ";
-            if (this->Shoes[i].GetBrand() == ShoesBase::Brand::nike)
-                cout << "Nike"<<endl;
-            else if (this->Shoes[i].GetBrand() == ShoesBase::Brand::rebook)
-                cout << "Rebook"<<endl;
-            else if (this->Shoes[i].GetBrand() == ShoesBase::Brand::adidas)
-                cout << "Adidas"<<endl;
-            else if (this->Shoes[i].GetBrand() == ShoesBase::Brand::puma)
-                cout << "Puma"<<endl;
-            else cout << "No brand"<<endl;
-            cout<< "\tOrtopedic: "<<(this->Shoes[i].GetIsOrtopedic() ? "Yes" : "No" )<<endl;
-            cout<< "\tUSD: "<<this->Shoes[i].GetPriceUSD()<<endl;
-            cout<< "\tSize: "<<this->Shoes[i].GetInsoleSize()<<endl;
-            cout<< "\tLength: "<<this->Shoes[i].GetInsoleLength()<<endl;
-            cout<< "\tPurpose: ";
-            if (this->Shoes[i].GetSeason() == Boots::Season::spring)
-                cout<<"Spring"<<endl;
-            else if (this->Shoes[i].GetSeason() == Boots::Season::winter)
-                cout<<"Wisual"<<endl;
-            else if (this->Shoes[i].GetSeason() == Boots::Season::autumn)
-                cout<<"Autumn"<<endl;
-            else cout<<"Undef"<<endl;
-            cout<< "\tAnti-slip sole: "<<(this->Shoes[i].GetAntiSlipSole()?"Yes":"No")<<endl;
-            cout<< "\n-----------------------------------\n\n";
+            cout << "\33[1:33mShoes #" << i+1 << ":\33[0m\n";
+            cout << this->Shoes[i];
         }
     }
 
@@ -716,7 +751,25 @@ public:
         if (n == a) cout<<("\33[1:32mТест пройден успешно.\33[0m")<<endl;
         else cout<<("\33[1:31mТест провален5.\33[0m")<<endl;
     }
-
+    int size(){
+        int cout = 0;
+        for(int i =0; i < Size_array; i++) {
+            if ( Shoes[i].GetInsoleSize() >=39) {
+                cout++;
+            }
+        }
+        return cout;
+    }
+    void SizeMore39(){
+        for(int i =0; i < Size_array; i++) {
+            if ( Shoes[i].GetInsoleSize() >=39 ) {
+                //new_array[k] = Shoes[i];
+                cout << "\33[1:33mShoes #" << i+1 << ":\33[0m"<<endl;
+                cout<<Shoes[i].toStringBoots()<<endl;
+                cout<<"--------------------------------"<<endl;
+            }
+        }
+    }
 //    void SaveInFile(std::ofstream &file){
 //        for(int i = 0; i< Size_array; i++){
 //            file << toString(i) << endl;
@@ -725,6 +778,7 @@ public:
 };
 
 int main() {
+    cout << "\33[1:34mОбщий класс\33[0m" <<endl;
     bool ortopedic = true;
     std::string model_name = { "Gaw" };
     int usd = 3000;
@@ -739,63 +793,65 @@ int main() {
         std::cerr << "Uh oh, Filet.txt could not be opened for writing!" << endl;
         exit(1);
     }
-    cout << "\33[1:33mСоздание массива.\33[0m" << endl;
+    cout << "\33[1:35mСоздание массива.\33[0m" << endl;
     arr->createArrayShoes();
     arr->show_array();
     arr->SaveInFile(outf);
-    cout << "\33[1:33mДобавление объекта.\33[0m" << endl;
+    cout << "\n\33[1:35mДобавление объекта.\33[0m" << endl;
     arr->add_object(*new_element);
     arr->test_insert(*new_element);
     arr->SaveInFile(outf2);
     int index =2;
-    cout << "\33[1:33mПоиск элемента по индексу: \33[0m" << index << endl;
+    cout << "\n\33[1:35mПоиск элемента по индексу: \33[0m" << index << endl;
     cout << "\33[1:33mShoes #" << index+1 << ":\33[0m";
     cout<<"\n"<< arr/*[index]<<endl;*/->Get_object(index).toString()<< endl;
-    cout << "\33[1:33mУдаление элемента по индексу: \33[0m" << index << endl;
+    cout << "\33[1:35mУдаление элемента по индексу: \33[0m" << index << endl;
     arr->delete_element(index);
     arr->test_remove();
     arr->SaveInFile(outf3);
     outf.close();
     outf2.close();
     outf3.close();
-//    delete new_element;
-//    delete[] arr;
+    cout << "\n\33[1:35mПоиск ортопедической обуви брендов Найк и Пума.\33[0m" <<endl;
+    arr->OrtopedicNikePuma();
 
-    cout<<"\n\n\n\n"<<endl;
+    cout << "\33[1:34mКросовки\33[0m\n" <<endl;
 
     ArraySneakers* arr1 = new ArraySneakers(4);
     Sneakers* new_element1 = new Sneakers(ortopedic, model_name, usd, ShoesBase::insole{size, length}, ShoesBase::Brand::nike,true, Sneakers::Purpose::casual);
-    cout << "\33[1:33mСоздание массива.\33[0m" << endl;
+    cout << "\33[1:35mСоздание массива.\33[0m" << endl;
     arr1->createArraySneakers();
     arr1->show_arraySneakers();
-    cout << "\33[1:33mДобавление объекта.\33[0m" << endl;
+    cout << "\n\33[1:35mДобавление объекта.\33[0m" << endl;
     arr1->add_objectSneakers(*new_element1);
     arr1->test_insertSneakers(*new_element1);
     int index1 =2;
-    cout << "\33[1:33mПоиск элемента по индексу: \33[0m" << index1 << endl;
+    cout << "\n\33[1:35mПоиск элемента по индексу: \33[0m" << index1 << endl;
     cout << "\33[1:33mShoes #" << index1+1 << ":\33[0m";
     cout<<"\n"<< arr1/*[index1]<<endl;*/->Get_objectSneakers(index1).toStringSneakers()<< endl;
-    cout << "\33[1:33mУдаление элемента по индексу: \33[0m" << index1 << endl;
+    cout << "\33[1:35mУдаление элемента по индексу: \33[0m" << index1 << endl;
     arr1->delete_elementSneakers(index1);
     arr1->test_removeSneakers();
-//    delete new_element1;
-//    delete[] arr1;
+    cout << "\n\33[1:35mПоиск самых дешёвых беговых кроссовок.\33[0m" <<endl;
+    arr1->CheapRunningShoes();
+
+    cout << "\33[1:34mБотинки\33[0m\n" <<endl;
 
     ArrayBoots* arr2 = new ArrayBoots(4);
     Boots* new_element2 = new Boots(ortopedic, model_name, usd, ShoesBase::insole{size, length}, ShoesBase::Brand::nike,true, Boots::Season::spring);
-    cout << "\33[1:33mСоздание массива.\33[0m" << endl;
+    cout << "\33[1:35mСоздание массива.\33[0m" << endl;
     arr2->createArrayBoots();
     arr2->show_arrayBoots();
-    cout << "\33[1:33mДобавление объекта.\33[0m" << endl;
+    cout << "\n\33[1:35mДобавление объекта.\33[0m" << endl;
     arr2->add_objectBoots(*new_element2);
     arr2->test_insertBoots(*new_element2);
     int index2 =2;
-    cout << "\33[1:33mПоиск элемента по индексу: \33[0m" << index2 << endl;
+    cout << "\n\33[1:35mПоиск элемента по индексу: \33[0m" << index2 << endl;
     cout << "\33[1:33mShoes #" << index2+1 << ":\33[0m";
-    cout<<"\n"<< arr2/*[index2]<<endl;*/->Get_objectBoots(index2).toStringBoots()<< endl;
-    cout << "\33[1:33mУдаление элемента по индексу: \33[0m" << index2 << endl;
+    cout<<"\n"<< (*arr2)[index2]<<endl;//*/->Get_objectBoots(index2).toStringBoots()<< endl;
+    cout << "\33[1:35mУдаление элемента по индексу: \33[0m" << index2 << endl;
     arr2->delete_elementBoots(index2);
     arr2->test_removeBoots();
-//    delete new_element2;
-//    delete[] arr2;
+    cout << "\n\33[1:35mПоиск ботинок больше 39-того размера.\33[0m" <<endl;
+    arr2->SizeMore39();
 }
