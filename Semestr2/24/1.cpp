@@ -212,18 +212,18 @@ show_array();
         Test[0] = ShoesBase(true, "Gaw", 3000,ShoesBase::insole{35, 20}, ShoesBase::Brand::puma);
         if (n == a){
             if(Test->GetIsOrtopedic() != new_element.GetIsOrtopedic()){
-                cout<<"Тест провален1.\n"<<endl;
+                cout<<"\33[1:31mТест провален1.\33[0m" << endl;
             }else if (Test->GetPriceUSD() != new_element.GetPriceUSD()){
-                cout<<("Тест провален3.\n")<<endl;
+                cout<<("\33[1:31mТест провален2.\33[0m") << endl;
             }else if (Test->GetModelName() != new_element.GetModelName()){
-                cout<<("Тест провален4.\n")<<endl;
+                cout<<("\33[1:31mТест провален3.\33[0m") << endl;
             }else if (Test->GetInsoleSize() != new_element.GetInsoleSize()){
-                cout<<("Тест провален5.\n")<<endl;
+                cout<<("\33[1:31mТест провален4.\33[0m") << endl;
             }else if (Test->GetInsoleLength() != new_element.GetInsoleLength()){
-                cout<<("Тест провален6.\n")<<endl;
-            } else cout<<("Тест пройден успешно.\n")<<endl;
+                cout<<("\33[1:31mТест провален5.\33[0m") << endl;
+            } else cout<<("\33[1:32mТест пройден успешно.\33[0m") << endl;
         }
-        else cout<<("Тест провален7.\n")<<endl;
+        else cout<<("\33[1:31mТест провален6.\33[0m") << endl;
     }
 
 //    string toString(int index){
@@ -280,8 +280,8 @@ show_array();
     void test_remove() {
         int n = size_array();
         int a= Size_array;
-        if (n == a) cout<<("Тест пройден успешно.\n")<<endl;
-        else cout<<("Тест провален5.\n")<<endl;
+        if (n == a) cout<<("\33[1:32mТест пройден успешно.\33[0m")<<endl;
+        else cout<<("\33[1:31mТест провален5.\33[0m")<<endl;
     }
 
     void SaveInFile(std::ofstream &file){
