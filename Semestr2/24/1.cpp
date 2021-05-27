@@ -130,7 +130,6 @@ public:
 
     void addObjectFromLine(std::string line){
         std::stringstream ss;
-//        int i =0;
         std::string ortopedic;
         std::string model_name;
         std::string brand_name;
