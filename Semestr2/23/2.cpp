@@ -1,11 +1,11 @@
 #include <string>
-#include <sstream>
 #include <iostream>
 #pragma warning (disable: 4996)
 using std::string;
 using std::cin;
 using std::cout;
 using std::endl;
+
 class ShoesBase
 {
 public:
