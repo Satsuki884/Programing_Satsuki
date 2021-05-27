@@ -106,7 +106,7 @@ if (Count < 0) {
 ```
 
 ```
-void Task:: setSize(int arrIndex, int val) {  
+void Exersise:: setSize(int arrIndex, int val) {  
     if (arrIndex >= Count || arrIndex < 0 || val < 0){  
 	    throw out_of_range("Out of range exception");  
     }  
@@ -116,7 +116,7 @@ void Task:: setSize(int arrIndex, int val) {
 }
 ```
 ```
-void Task:: setElem(int arrIndex, int index, int val) {  
+void Exersise:: setElem(int arrIndex, int index, int val) {  
     if (arrIndex >= Count || arrIndex < 0 ){  
 	    throw out_of_range("Out of range exception:");  
     }  
@@ -131,7 +131,7 @@ void Task:: setElem(int arrIndex, int index, int val) {
 #### Метод вхідних даних для виконання індивідуального завдання
 
 ```
-int Task:: getElem(int arrIndex, int index) {  
+int Exersise:: getElem(int arrIndex, int index) {  
     if (arrIndex >= Count || arrIndex < 0){  
 	    throw out_of_range("Out of range exception");  
     }  
@@ -144,7 +144,7 @@ int Task:: getElem(int arrIndex, int index) {
 }  
 ```
 ```
-int Task:: getSize(int arrIndex) {  
+int Exersise:: getSize(int arrIndex) {  
 	if (arrIndex >= Count || arrIndex < 0){  
 	    throw out_of_range("Out of range exception");  
     }  
@@ -154,7 +154,7 @@ int Task:: getSize(int arrIndex) {
 }
 ```
 ```
-int* Task::SumArrays(int index1, int index2){  
+int* Exersise::SumArrays(int index1, int index2){  
   if (getSize(index1) != getSize(index2)) {  
 	  ResultSize = 0;  
       result = nullptr;  
