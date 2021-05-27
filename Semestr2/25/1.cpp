@@ -4,7 +4,7 @@
 #include <cstdlib>
 #include <iostream>
 
-#pragma warning (disable: 4996)
+//#pragma warning (disable: 4996)
 using std::string;
 using std::cin;
 using std::cout;
@@ -66,19 +66,21 @@ public:
     }
 
     bool operator == (const ShoesBase& other){
-        if(this->m_price_usd == other.m_price_usd){
-            return true;
-        } else if(this->m_insole_size.size == other.m_insole_size.size){
-            return true;
-        }else if(this->m_insole_size.length == other.m_insole_size.length){
-            return true;
-        }else if(this->m_is_ortopedic == other.m_is_ortopedic){
-            return true;
-        }else if(this->m_brand == other.GetBrand()){
-            return true;
+        bool result =true;
+        if(this->m_price_usd != other.m_price_usd){
+            result = false;
+        } else if(this->m_insole_size.size != other.m_insole_size.size){
+            result = false;
+        }else if(this->m_insole_size.length != other.m_insole_size.length){
+            result = false;
+        }else if(this->m_is_ortopedic != other.m_is_ortopedic){
+            result = false;
+        }else if(this->m_brand != other.GetBrand()){
+            result = false;
         }else if(this->m_model_name == other.m_model_name){
-            return true;
-        } else return false;
+            result = false;
+        }
+        return result;
     }
 
     friend std::ostream & operator << (std::ostream& os, const ShoesBase& Shoes){
