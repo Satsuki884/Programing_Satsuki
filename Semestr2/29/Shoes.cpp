@@ -263,3 +263,6 @@ void Sneakers:: Print(){
     cout <<"\n\tPurpose: "<< b;
     cout << "\n---------------------"<<endl;
 }
+Shoes* Sneakers::clone() {
+    return (Shoes*)new Sneakers(*this);
+}

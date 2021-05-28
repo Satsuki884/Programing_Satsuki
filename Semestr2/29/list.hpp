@@ -77,6 +77,14 @@ public:
 //            elements[i]
         }
     }
+    void ShowList2() const{
+        for (int i = 0; i < this->index; ++i) {
+            //cout << *elements[i] << endl;
+            elements[i]->Print();
+            cout << endl;
+//            elements[i]
+        }
+    }
 
     void SortList(){
         for(int i = 0; i < index; i++){

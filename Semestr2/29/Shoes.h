@@ -64,6 +64,7 @@ public:
     Shoes();
     Shoes(bool m_is_ortopedic,  string m_model_name, int m_price_usd, const Brand m_brand, Insole& m_insole_size);
     Shoes(const Shoes &copy);
+    virtual Shoes* clone() = 0;
     bool getOrtopedic() const;
     string getModelName() const;
     int getPrice() const;
@@ -107,6 +108,7 @@ public:
     bool getRunning() const;
     void setRunning(const bool running);
     void setPurpose(const Type Purpose);
+    Shoes* clone();
 
 };
 

@@ -17,7 +17,7 @@ int main() {
     list.addElement(&sneakers2);
     list.addElement(&sneakers3);
 
-    list.ShowList();
+    list.ShowList2();
 
     List<int> listint;
 
