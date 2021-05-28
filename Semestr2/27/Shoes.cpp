@@ -137,7 +137,6 @@ Shoes* Sneakers::clone() {
 
 void Sneakers::NikePuma(){
     if(m_is_ortopedic == 1 && ( m_brand == Brand::nike || m_brand ==Brand::puma)){
-//        return m_price_usd;
 Print();
     }
 }
@@ -235,7 +234,6 @@ void Boots::More39() {
 
 void Boots::NikePuma(){
     if(m_is_ortopedic == 1 && ( m_brand == Brand::nike || m_brand ==Brand::puma)){
-//        return m_price_usd;
         Print();
     }
 }
