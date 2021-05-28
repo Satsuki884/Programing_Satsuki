@@ -32,13 +32,13 @@ void Exersise::Run() {
             WriteToFile();
         }
         catch (out_of_range& e) {
-            cout << e.what() << endl;
+            cout << " 1 " <<e.what() << endl;
         }
         catch (std::ios_base::failure& e) {
-            cout << e.what() << endl;
+            cout << " 2 " <<e.what() << endl;
         }
         catch (std::invalid_argument& e) {
-            cout << e.what() << endl;
+            cout << " 3 " <<e.what() << endl;
         }
         cout << endl << "-----------------------------------------" << endl << endl;
         //system("pause&cls");

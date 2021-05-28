@@ -29,79 +29,79 @@ void Exersise::CallingSelectedFunction(int number){
     int i1, i2;
     switch (number) {
         case 1:
-            cout << " > Enter Input Indexes of Arrays: ";
+            cout << " > Введите входные индексы массивов: ";
             cin >> i1 >> i2;
             if (result != nullptr){
                 delete[] result;
             }
-            cout << " > Calling func(A + B)" << endl;
+            cout << " > Вызов функции(A + B)" << endl;
             result = SumArrays(i1, i2);
             break;
         case 2:
-            cout << " > Enter Input Indexes of Arrays: ";
+            cout << " > Введите входные индексы массивов: ";
             cin >> i1 >> i2;
             if (result != nullptr){
                 delete[] result;
             }
-            cout << " > Calling func(A * B)" << endl;
+            cout << " > Вызов функции(A * B)" << endl;
             result = MultiplyArrays(i1, i2);
             break;
         case 3:
             if (result != nullptr){
                 delete[] result;
             }
-            cout << " > Calling func calc average" << endl;
+            cout << " > Вызов функции func calc average" << endl;
             result = CalcAverage();
             break;
         case 4:
             if (result != nullptr){
                 delete[] result;
             }
-            cout << " > Calling func find max elem" << endl;
+            cout << " > Вызов функции нахождения максимального елемента" << endl;
             result = FindMaxElem();
             break;
         case 5:
             if (result != nullptr){
                 delete[] result;
             }
-            cout << " > Calling func find min elem" << endl;
+            cout << " > Вызов функции нахождения минимального елемента "<< endl;
             result = FindMinElem();
             break;
         case 6:
             if (result != nullptr){
                 delete[] result;
             }
-            cout << " > Calling func find positive elem" << endl;
+            cout << " > Вызов функции нахождения положительных елементов" << endl;
             result = FindPositiveNumber();
             break;
         case 7:
-            cout << " > Enter range: ";
+            cout << " > Введите диапазон: ";
             cin >> i1 >> i2;
             if (result != nullptr){
                 delete[] result;
             }
-            cout << " > Calling func find N element in range" << endl;
+            cout << " > Вызов функции поиска N элемента в диапазоне" << endl;
             result = SearchInRange(i1, i2);
             break;
         case 8:
             if (result != nullptr){
                 delete[] result;
             }
-            cout << " > Calling func find negative elem" << endl;
+            cout << " > Вызов функции нахождения негативных елементов" << endl;
             result = FindNegativeNumber();
             break;
         case 9:
             if (result != nullptr){
                 delete[] result;
             }
-            cout << " > Calling func find pos max elem" << endl;
+            cout << " > Вызов функции нахождения позиции максимального елемента" << endl;
             result = FindMaxElemPos();
             break;
         case 10:
             if (result != nullptr){
                 delete[] result;
             }
-            cout << " > Calling func find N max elem" << endl;
+            cout << " > Вызов функции нахождения кол-ва максимальных елементов" << endl;
             result = FindNMaxElem();
             break;
         default:
