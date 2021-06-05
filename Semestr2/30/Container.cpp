@@ -118,17 +118,17 @@ vector<Sneakers*>  List::CheapRunningShoes(){
     vector<Sneakers*> res;
     bool flag = true;
     auto iter = shoes.begin();
-    while (*iter) {
+    //while (*iter) {
         iter = std::find_if(iter, this->shoes.end(), predS);
         if(*iter == NULL){
-            break;
+            cout << "ERROR: Nothing found" << endl;
         }
         flag = false;
         ((Sneakers*)*iter)->Print();
         cout << endl;
         res.push_back((Sneakers*)*iter);
         iter++;
-    }
+    //}
     if (flag){
         cout << "ERROR: Nothing found" << endl;
     }

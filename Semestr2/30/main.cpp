@@ -61,12 +61,6 @@ int main() {
     cout << endl;
 
     //Метод 2
-    cout << "\33[1:34mСамые дешёвые беговые кроссовки\33[0m";
-    cout << endl;
-    list->CheapRunningShoes();
-    cout << endl;
-
-    //Метод 3
     cout << "\33[1:34mОртопедическая обувь брендов Найк и Пума\33[0m";
     cout << endl;
     list->NikePuma();
@@ -76,6 +70,12 @@ int main() {
     cout << endl;
     list->SortByPrice(true);
     list->ShowAll();
+    cout << endl;
+
+    //Метод 3
+    cout << "\33[1:34mСамые дешёвые беговые кроссовки\33[0m";
+    cout << endl;
+    list->CheapRunningShoes();
     cout << endl;
 
     cout << "\33[1:34mВставлка в список обуви list списка обуви New list\33[0m\n"<<endl;

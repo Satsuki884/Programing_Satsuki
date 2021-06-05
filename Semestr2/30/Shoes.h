@@ -61,9 +61,6 @@ class Shoes{
 public:
     virtual void Print() = 0;
     virtual Shoes* clone() = 0;
-//    virtual int CheapRunningShoes() = 0;
-//    virtual void More39() = 0;
-//    virtual void NikePuma() = 0;
     virtual ~Shoes() {}
     virtual char GetType() =0;
 };
@@ -105,9 +102,6 @@ public:
     void Print() override;
     Shoes *clone() override;
     char GetType() override;
-//    int CheapRunningShoes() override;
-//    void More39() override {};
-//    void NikePuma() override;
 
 };
 
@@ -151,9 +145,6 @@ public:
     void Print() override;
     Shoes *clone() override;
     char GetType() override;
-//    int CheapRunningShoes() override { };
-//    void More39() override;
-//    void NikePuma() override;
 
 
 };

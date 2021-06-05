@@ -7,19 +7,19 @@
 
 
 Insole::Insole() : size(), length() {
-//cout << "\ndefault constructor <Firm> " << endl;
+//cout << "\ndefault constructor <Insole> " << endl;
 }
 
 Insole::Insole(int size, int length): size(size), length(length){
-    //cout << "\nConstructor with arguments <Firm> " << endl;
+    //cout << "\nConstructor with arguments <Insole> " << endl;
 }
 
 Insole::Insole(const Insole &copy) : size(copy.size), length(copy.length) {
-    //cout << "\nCopy constructor <Firm> " << endl;
+    //cout << "\nCopy constructor <Insole> " << endl;
 }
 
 Insole::~Insole() = default; // {
-//    cout << "\nDestructor <Firm>" << endl;
+//    cout << "\nDestructor <Insole>" << endl;
 //}
 
 int Insole::getLength() const {
