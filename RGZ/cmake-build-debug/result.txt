@@ -1,0 +1,88 @@
+Model name: Rarara
+Brand name: Puma
+Ortopedic: Yes
+USD: 2990
+Size: 35
+Length: 44
+Sport
+Running: Yes
+
+-----------------------------------
+
+Model name: Response
+Brand name: Adidas
+Ortopedic: No
+USD: 2590
+Size: 36
+Length: 31
+Casual
+Running: Yes
+
+-----------------------------------
+
+Model name: Wearajjday
+Brand name: Rebook
+Ortopedic: Yes
+USD: 2730
+Size: 42
+Length: 27
+Sport
+Running: No
+
+-----------------------------------
+
+Model name: Tanjun
+Brand name: Nike
+Ortopedic: No
+USD: 1690
+Size: 39
+Length: 28
+Undef
+Running: Yes
+
+-----------------------------------
+
+Model name: Rarara
+Brand name: Puma
+Ortopedic: Yes
+USD: 1990
+Size: 37
+Length: 24
+Winter
+AntiSlip sole: Yes
+
+-----------------------------------
+
+Model name: Response
+Brand name: Nike
+Ortopedic: No
+USD: 2390
+Size: 46
+Length: 22
+Autumn
+AntiSlip sole: Yes
+
+-----------------------------------
+
+Model name: Wearajjday
+Brand name: Rebook
+Ortopedic: Yes
+USD: 5730
+Size: 40
+Length: 26
+Spring
+AntiSlip sole: No
+
+-----------------------------------
+
+Model name: Tanjun
+Brand name: Adidas
+Ortopedic: No
+USD: 2790
+Size: 31
+Length: 25
+Spring
+AntiSlip sole: No
+
+-----------------------------------
+
