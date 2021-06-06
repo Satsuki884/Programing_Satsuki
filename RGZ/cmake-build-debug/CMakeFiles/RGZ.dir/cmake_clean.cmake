@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/RGZ.dir/Menu.cpp.o"
   "CMakeFiles/RGZ.dir/Shoes.cpp.o"
   "CMakeFiles/RGZ.dir/main.cpp.o"
+  "CMakeFiles/RGZ.dir/test.cpp.o"
   "RGZ"
   "RGZ.pdb"
 )

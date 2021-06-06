@@ -271,65 +271,6 @@ bool operator==(const Boots& A, const Boots& B){
     return result;
 }
 
-void Sneakers::SearchSize(){
-    cout<<" "<<getInsole().getSize()<< " ";
-}
-
-void Boots::SearchSize(){
-    cout<<" "<<getInsole().getSize()<< " ";
-}
-
-void Sneakers::SearchLength() {
-    cout<<" "<<getInsole().getLength()<< " ";
-}
-
-void Boots::SearchLength(){
-    cout<<" "<<getInsole().getLength()<< " ";
-}
-
-void Sneakers::SearchUSD(){
-    cout<<" "<<getPrice()<< " ";
-}
-
-void Boots::SearchUSD(){
-    cout<<" "<<getPrice()<< " ";
-}
-void Sneakers::SearchOrt(){
-    cout<<"  "<<getOrtopedic()<< " ";
-}
-
-void Boots::SearchOrt(){
-    cout<<"  "<<getOrtopedic()<< " ";
-}
-
-void Sneakers::SearchBrand() {
-    std::string a ;
-
-    if (m_brand == Brand::nike)
-        cout <<"Nike ";
-    else if (m_brand == Brand::rebook)
-        cout <<"Rebook ";
-    else if (m_brand == Brand::adidas)
-        cout <<"Adidas ";
-    else if (m_brand == Brand::puma)
-        cout <<"Puma ";
-    else cout <<"No brand ";
-}
-
-void Boots::SearchBrand(){
-    std::string a ;
-
-    if (m_brand == Brand::nike)
-        cout <<"Nike ";
-    else if (m_brand == Brand::rebook)
-        cout <<"Rebook ";
-    else if (m_brand == Brand::adidas)
-        cout <<"Adidas ";
-    else if (m_brand == Brand::puma)
-        cout <<"Puma ";
-    else cout <<"No brand ";
-}
-
 void Sneakers::SaveInFile(FILE * file_out){
     fprintf(file_out, "Model name: %s", m_model_name.c_str());
         fprintf(file_out,"\nBrand name: ");

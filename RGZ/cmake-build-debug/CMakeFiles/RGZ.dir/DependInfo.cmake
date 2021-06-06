@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/maestro/Programing_Satsuki/RGZ/Menu.cpp" "/home/maestro/Programing_Satsuki/RGZ/cmake-build-debug/CMakeFiles/RGZ.dir/Menu.cpp.o"
   "/home/maestro/Programing_Satsuki/RGZ/Shoes.cpp" "/home/maestro/Programing_Satsuki/RGZ/cmake-build-debug/CMakeFiles/RGZ.dir/Shoes.cpp.o"
   "/home/maestro/Programing_Satsuki/RGZ/main.cpp" "/home/maestro/Programing_Satsuki/RGZ/cmake-build-debug/CMakeFiles/RGZ.dir/main.cpp.o"
+  "/home/maestro/Programing_Satsuki/RGZ/test.cpp" "/home/maestro/Programing_Satsuki/RGZ/cmake-build-debug/CMakeFiles/RGZ.dir/test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

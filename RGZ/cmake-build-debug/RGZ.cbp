@@ -111,6 +111,9 @@
 		<Unit filename="/home/maestro/Programing_Satsuki/RGZ/main.cpp">
 			<Option target="RGZ"/>
 		</Unit>
+		<Unit filename="/home/maestro/Programing_Satsuki/RGZ/test.cpp">
+			<Option target="RGZ"/>
+		</Unit>
 		<Unit filename="/home/maestro/Programing_Satsuki/RGZ/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

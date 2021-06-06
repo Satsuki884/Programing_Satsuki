@@ -11,7 +11,7 @@
 
 List::List() {}
 
-List::List(List &copy) :index(copy.index), shoes(copy.shoes) {}
+List::List(const List &copy) :index(copy.index), shoes(copy.shoes) {}
 
 List::~List(){
     while (!shoes.empty()){
@@ -67,15 +67,6 @@ void List::DeleteElement(int index){
     this->index--;
 }
 
-void List::InsertList(List &in) {
-    this->shoes.reserve(this->index + in.index);
-    auto iter = this->shoes.end();
-    for (int i = 0; i < in.index; ++i) {
-        this->shoes.insert(iter + i, in.shoes[i]);
-    }
-    this->index += in.index;
-
-}
 
 void print2(){
     cout.width(14);

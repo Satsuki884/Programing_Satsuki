@@ -14,4 +14,5 @@ add_executable(RGZ
         Menu.cpp
         Menu.h
         Shoes.cpp
-        Shoes.h)
+        Shoes.h
+        test.cpp)

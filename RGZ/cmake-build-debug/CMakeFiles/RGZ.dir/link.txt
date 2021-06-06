@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/RGZ.dir/Container.cpp.o CMakeFiles/RGZ.dir/Controller.cpp.o CMakeFiles/RGZ.dir/main.cpp.o CMakeFiles/RGZ.dir/Menu.cpp.o CMakeFiles/RGZ.dir/Shoes.cpp.o -o RGZ 
+/usr/bin/c++ -g CMakeFiles/RGZ.dir/Container.cpp.o CMakeFiles/RGZ.dir/Controller.cpp.o CMakeFiles/RGZ.dir/main.cpp.o CMakeFiles/RGZ.dir/Menu.cpp.o CMakeFiles/RGZ.dir/Shoes.cpp.o CMakeFiles/RGZ.dir/test.cpp.o -o RGZ 

@@ -14,16 +14,6 @@ Shoes.h
 Container.h
 /home/maestro/Programing_Satsuki/RGZ/Container.h
 
-/home/maestro/Programing_Satsuki/RGZ/Menu.cpp
-Menu.h
-/home/maestro/Programing_Satsuki/RGZ/Menu.h
-Container.h
-/home/maestro/Programing_Satsuki/RGZ/Container.h
-Menu.h
-/home/maestro/Programing_Satsuki/RGZ/Menu.h
-Controller.h
-/home/maestro/Programing_Satsuki/RGZ/Controller.h
-
 /home/maestro/Programing_Satsuki/RGZ/Menu.h
 iostream
 -
@@ -63,4 +53,10 @@ syslog.h
 -
 regex.h
 -
+
+/home/maestro/Programing_Satsuki/RGZ/test.cpp
+Controller.h
+/home/maestro/Programing_Satsuki/RGZ/Controller.h
+Menu.h
+/home/maestro/Programing_Satsuki/RGZ/Menu.h
 
