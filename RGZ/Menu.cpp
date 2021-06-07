@@ -29,7 +29,8 @@ void Menu::User_menu() {
                 "8. Ортопедичне взуття брендів найк і пума. \n"
                 "9. Сортування.\n"
                 "10. Запис у файл.\n"
-                "11. Вихід з програми"<< endl;
+                "11. Пошук за критеріями.\n"
+                "12. Вихід з програми"<< endl;
         cin >> marker;
         cout << endl;
         cout << endl;
@@ -195,6 +196,21 @@ void Menu::User_menu() {
                 break;
             }
             case 11:{
+                cout << "\33[1:34mпошук елементів за вказаними критеріями\33[0m\n"<<endl;
+                cout << endl << "Виберіть три критерія:" << endl;
+                cout << "1. Розмір чобота; \n"
+                        "2. Довжина устілки; \n"
+                        "3. Ортопедичність; \n"
+                        "4. Ціна; \n"
+                        "5. Бренд; "<< endl;
+                cout << endl << " > Your choice: ";
+                int one, two, three;
+                cin >> one;
+                cin >> two;
+                cin >> three;
+                controller.SearchByCriteria(one, two, three);
+            }
+            case 12:{
                 return;
             }
             default:

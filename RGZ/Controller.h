@@ -15,7 +15,7 @@
  * Controller class
  */
 class Controller{
-    List shoes;
+    List list;
     int index = -1;
 public:
     /**
@@ -124,6 +124,10 @@ public:
      * The method returns yes or no depending on the result of the check
      */
     int reg2(std::string * str);
+    /**
+     * A method for checking array of 3 criteria
+     */
+    void SearchByCriteria(int one, int two, int three);
 
 
 };

@@ -133,6 +133,16 @@ public:
     * Virtual method, that save array in file
     */
     virtual void SaveInFile(FILE * file_out) = 0;
+
+    virtual void SearchSize() =0;
+
+    virtual void SearchLength()=0;
+
+    virtual void SearchUSD()=0;
+
+    virtual void SearchOrt()=0;
+
+    virtual void  SearchBrand()=0;
 };
 
 //First inheritor
@@ -268,6 +278,16 @@ public:
     * Save in file method
     */
     void SaveInFile(FILE * file_out) override;
+
+    void SearchSize() override;
+
+    void SearchLength()override;
+
+    void SearchUSD()override;
+
+    void SearchOrt()override;
+
+    void SearchBrand()override;
 
 };
 /**
@@ -411,6 +431,16 @@ public:
     * Save in file method
     */
     void SaveInFile(FILE * file_out) override;
+
+    void SearchSize() override;
+
+    void SearchLength()override;
+
+    void SearchUSD()override;
+
+    void SearchOrt()override;
+
+    void SearchBrand()override;
 
 };
 

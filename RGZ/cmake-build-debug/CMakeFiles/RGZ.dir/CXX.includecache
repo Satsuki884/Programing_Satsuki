@@ -10,21 +10,13 @@
 Shoes.h
 /home/maestro/Programing_Satsuki/RGZ/Shoes.h
 
+/home/maestro/Programing_Satsuki/RGZ/Controller.cpp
+Controller.h
+/home/maestro/Programing_Satsuki/RGZ/Controller.h
+
 /home/maestro/Programing_Satsuki/RGZ/Controller.h
 Container.h
 /home/maestro/Programing_Satsuki/RGZ/Container.h
-
-/home/maestro/Programing_Satsuki/RGZ/Menu.h
-iostream
--
-string
--
-fstream
--
-stdexcept
--
-Controller.h
-/home/maestro/Programing_Satsuki/RGZ/Controller.h
 
 /home/maestro/Programing_Satsuki/RGZ/Shoes.h
 string
@@ -53,10 +45,4 @@ syslog.h
 -
 regex.h
 -
-
-/home/maestro/Programing_Satsuki/RGZ/test.cpp
-Controller.h
-/home/maestro/Programing_Satsuki/RGZ/Controller.h
-Menu.h
-/home/maestro/Programing_Satsuki/RGZ/Menu.h
 

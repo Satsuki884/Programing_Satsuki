@@ -10,7 +10,7 @@
 #include "Controller.h"
 
 List* Controller::getlist() {
-    return &shoes;
+    return &list;
 }
 
 
@@ -150,7 +150,7 @@ void Controller::addObjectFromLineSneakers(std::string line){
 
     ss.clear();
     Sneakers *sneakers = new Sneakers(ortopedic=="Yes", model_name, std::stoi(usd), brand, Insole{std::stoi(size), std::stoi(length)}, purpose, running == "Yes" );
-    shoes.addShoes(sneakers);
+    list.addShoes(sneakers);
     // }
 }
 
@@ -232,7 +232,7 @@ void Controller::addObjectFromLineBoots(std::string line) {
     getline(ss, antisole, ' ');
     ss.clear();
     Boots *boots = new Boots(ortopedic=="Yes", model_name, std::stoi(usd), brand, Insole{std::stoi(size), std::stoi(length)}, season, antisole == "Yes" );
-    shoes.addShoes(boots);
+    list.addShoes(boots);
     // }
 }
 
@@ -255,7 +255,7 @@ bool predG(Shoes *a)
 vector<Boots*> Controller::More39() {
     vector<Boots*> res;
     bool flag = true;
-    auto temp1 = shoes.getShoes();
+    auto temp1 = list.getShoes();
     auto iter = temp1.begin();
     while (true) {
         iter = std::find_if(iter, temp1.end(), predG);
@@ -302,7 +302,7 @@ bool predM(Shoes *a){
 
 void Controller::SaveInFile() {
 
-    auto temp = shoes.getShoes();
+    auto temp = list.getShoes();
 
 
     FILE* myfile = fopen("result.txt", "w");
@@ -315,7 +315,7 @@ void Controller::SaveInFile() {
 vector<Shoes*>  Controller::NikePuma() {
     vector<Shoes*> temp;
     bool flag = true;
-    auto temp1 = shoes.getShoes();
+    auto temp1 = list.getShoes();
     auto iter = temp1.begin();
     while (true) {
         iter = std::find_if(iter, temp1.end(), predM);
@@ -422,7 +422,7 @@ bool functorZ(Shoes* A, Shoes* B){
 
 void Controller::SortBySize(bool flag) {
     vector<Shoes*> temp;
-    auto temp1 = shoes.getShoes();
+    auto temp1 = list.getShoes();
     temp.reserve(temp1.size());
 
     if (flag) {
@@ -525,7 +525,7 @@ bool functorL(Shoes* A, Shoes* B){
 
 void Controller::SortByInsole(bool flag) {
     vector<Shoes*> temp;
-    auto temp1 = shoes.getShoes();
+    auto temp1 = list.getShoes();
     temp.reserve(temp1.size());
 
     if (flag) {
@@ -629,7 +629,7 @@ bool functorF(Shoes* A, Shoes* B){
 
 void Controller::SortByPrice(bool flag) {
     vector<Shoes*> temp;
-    auto temp1 = shoes.getShoes();
+    auto temp1 = list.getShoes();
     temp.reserve(temp1.size());
 
     if (flag) {
@@ -654,7 +654,7 @@ void Controller::Sort(int criterion) {
         cout << "\33[1:34mОтсортированный список обуви list за ціною\33[0m\n";
         print1();
         SortByPrice(flag);
-        shoes.ShowAll();
+        list.ShowAll();
         cout << "|-------------------------------------------------------------------------------------------------------------------------------------------|"<<endl;
         cout << endl;
     }else if(criterion == 2){
@@ -664,7 +664,7 @@ void Controller::Sort(int criterion) {
         cout << "\33[1:34mОтсортированный список обуви list за довжиною устілки\33[0m\n";
         print1();
         SortByInsole(true);
-        shoes.ShowAll();
+        list.ShowAll();
         cout << "|-------------------------------------------------------------------------------------------------------------------------------------------|"<<endl;
         cout << endl;
     }else if(criterion == 3){
@@ -674,7 +674,7 @@ void Controller::Sort(int criterion) {
         cout << "\33[1:34mОтсортированный список обуви list за розміром взуття\33[0m\n";
         print1();
         SortBySize(true);
-        shoes.ShowAll();
+        list.ShowAll();
         cout << "|-------------------------------------------------------------------------------------------------------------------------------------------|"<<endl;
         cout << endl;
     } else cout << "\33[1:31mТакого сортування не існує\33[0m";
@@ -684,7 +684,7 @@ void Controller::Sort(int criterion) {
 vector<Sneakers*>  Controller::CheapRunningShoes() {
     vector<Sneakers *> res;
     bool flag = true;
-    auto temp1 = shoes.getShoes();
+    auto temp1 = list.getShoes();
     auto iter = temp1.begin();
     while (true) {
         iter = std::find_if(iter, temp1.end(), predS);
@@ -727,8 +727,16 @@ vector<Sneakers*>  Controller::CheapRunningShoes() {
 //    return res;
 //}
 
-/*
+
 void Controller::SearchByCriteria(int one, int two, int three){
+    auto temp = list.getShoes();
+//    print1();
+//    list.getShoes()[1]->Print();
+//    temp[1]->SearchSize();
+//    cout<<endl;
+//    for(auto &shoes : temp){
+//        shoes->SearchSize();
+//    }
 
     if((one == 1 && two == 2 && three == 3) ||
        (one == 1 && two == 3 && three == 2) ||
@@ -739,32 +747,32 @@ void Controller::SearchByCriteria(int one, int two, int three){
     {
         cout << "\33[1:36mВи обрали розмір взуття, розмір устілки і чи є взуття ортопедичним.\n\33[0m"<<endl;
         cout << "Взуття під номером                             ";
-        for(int i = 0; i <= this->index; ++i){
+        for(int i =0; i < temp.size(); i++){
             cout.width(5);
             cout << i<< "   ";
         }
         cout <<"\nУ наявності є взуття таких розмірів:          ";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(5);
-            shoes[i]->SearchSize();
+            shoes->SearchSize();//SearchSize();
         }
         cout << "\nУ наявності є взуття з такою довжиною устілки:";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(5);
-            shoes[i]->SearchLength();
+            shoes->SearchLength();
         }
         cout << "\nОртопедичність:                               ";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(6);
-            shoes[i]->SearchOrt();
+            shoes->SearchOrt();
         }
         cout << "\n\n\33[1:36mВиберіть пару взуття яка вам найбільш сподобалась.\33[0m";
         cout << "\nВведіть номер пари.\n";
         int number = -1;
         cin>> number;
-        if( number < this->index && number >=0){
+        if( number < temp.size() && number >=0){
             print1();
-            shoes[number]->Print();
+            list.getShoes()[number]->Print();
             cout << "\n|-------------------------------------------------------------------------------------------------------------------------------------------|"<<endl;
         }
         else cout << "\33[1:31mТакої пари не існує\33[0m";
@@ -778,34 +786,34 @@ void Controller::SearchByCriteria(int one, int two, int three){
     {
         cout << "\33[1:36mВи обрали розмір взуття, розмір устілки і ціна взуття.\n\33[0m"<<endl;
         cout << "Взуття під номером                             ";
-        for(int i = 0; i <= this->index; ++i){
+        for(int i =0; i < temp.size(); i++){
             cout.width(5);
             cout << i<< "     ";
         }
         cout <<"\nУ наявності є взуття таких розмірів:          ";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(5);
-            shoes[i]->SearchSize();
+            shoes->SearchSize();
             cout << "  ";
         }
         cout << "\nУ наявності є взуття з такою довжиною устілки:";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(5);
-            shoes[i]->SearchLength();
+            shoes->SearchLength();
             cout << "  ";
         }
         cout << "\nУ наявності є взуття з такою ціною:           ";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(5);
-            shoes[i]->SearchUSD();
+            shoes->SearchUSD();
         }
         cout << "\n\n\33[1:36mВиберіть пару взуття яка вам найбільш сподобалась.\33[0m";
         cout << "\nВведіть номер пари.\n";
         int number = -1;
         cin>> number;
-        if( number < this->index && number >=0){
+        if( number < temp.size() && number >=0){
             print1();
-            shoes[number]->Print();
+            list.getShoes()[number]->Print();
             cout << "\n|-------------------------------------------------------------------------------------------------------------------------------------------|"<<endl;
         }
         else cout << "\33[1:31mТакої пари не існує\33[0m";
@@ -819,34 +827,34 @@ void Controller::SearchByCriteria(int one, int two, int three){
     {
         cout << "\33[1:36mВи обрали розмір взуття, ціну взуття і чи є взуття ортопедичним.\n\33[0m"<<endl;
         cout << "Взуття під номером                              ";
-        for(int i = 0; i <= this->index; ++i){
+        for(int i =0; i < temp.size(); i++){
             cout.width(5);
             cout << i<< "     ";
         }
         cout <<"\nУ наявності є взуття таких розмірів:           ";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(5);
-            shoes[i]->SearchSize();
+            shoes->SearchSize();
             cout << "  ";
         }
         cout << "\nОртопедичність:                               ";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(6);
-            shoes[i]->SearchOrt();
+            shoes->SearchOrt();
             cout << "  ";
         }
         cout << "\nУ наявності є взуття з такою ціною:           ";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(5);
-            shoes[i]->SearchUSD();
+            shoes->SearchUSD();
         }
         cout << "\n\n\33[1:36mВиберіть пару взуття яка вам найбільш сподобалась.\33[0m";
         cout << "\nВведіть номер пари.\n";
         int number = -1;
         cin>> number;
-        if( number < this->index && number >=0){
+        if( number < temp.size() && number >=0){
             print1();
-            shoes[number]->Print();
+            list.getShoes()[number]->Print();
             cout << "\n|-------------------------------------------------------------------------------------------------------------------------------------------|"<<endl;
         }
         else cout << "\33[1:31mТакої пари не існує\33[0m";
@@ -860,34 +868,34 @@ void Controller::SearchByCriteria(int one, int two, int three){
     {
         cout << "\33[1:36mВи обрали розмір взуття, довжину устілки взуття і бренд взуття.\n\33[0m"<<endl;
         cout << "Взуття під номером                              ";
-        for(int i = 0; i <= this->index; ++i){
+        for(int i =0; i < temp.size(); i++){
             cout.width(5);
             cout << i<< "     ";
         }
         cout <<"\nУ наявності є взуття таких розмірів:           ";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(5);
-            shoes[i]->SearchSize();
+            shoes->SearchSize();
             cout << "  ";
         }
         cout << "\nУ наявності є взуття з такою довжиною устілки: ";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(5);
-            shoes[i]->SearchLength();
+            shoes->SearchLength();
             cout << "  ";
         }
         cout << "\nУ наявності є взуття таких брендів:            ";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(10);
-            shoes[i]->SearchBrand();
+            shoes->SearchBrand();
         }
         cout << "\n\n\33[1:36mВиберіть пару взуття яка вам найбільш сподобалась.\33[0m";
         cout << "\nВведіть номер пари.\n";
         int number = -1;
         cin>> number;
-        if( number < this->index && number >=0){
+        if( number < temp.size() && number >=0){
             print1();
-            shoes[number]->Print();
+            list.getShoes()[number]->Print();
             cout << "\n|-------------------------------------------------------------------------------------------------------------------------------------------|"<<endl;
         }
         else cout << "\33[1:31mТакої пари не існує\33[0m";
@@ -901,34 +909,34 @@ void Controller::SearchByCriteria(int one, int two, int three){
     {
         cout << "\33[1:36mВи обрали розмір взуття, чи є взуття ортопедичним і бренд взуття.\n\33[0m"<<endl;
         cout << "Взуття під номером                              ";
-        for(int i = 0; i <= this->index; ++i){
+        for(int i =0; i < temp.size(); i++){
             cout.width(5);
             cout << i<< "     ";
         }
         cout <<"\nУ наявності є взуття таких розмірів:           ";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(5);
-            shoes[i]->SearchSize();
+            shoes->SearchSize();
             cout << "  ";
         }
         cout << "\nОртопедичність:                               ";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(6);
-            shoes[i]->SearchOrt();
+            shoes->SearchOrt();
             cout << "  ";
         }
         cout << "\nУ наявності є взуття таких брендів:            ";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(10);
-            shoes[i]->SearchBrand();
+            shoes->SearchBrand();
         }
         cout << "\n\n\33[1:36mВиберіть пару взуття яка вам найбільш сподобалась.\33[0m";
         cout << "\nВведіть номер пари.\n";
         int number = -1;
         cin>> number;
-        if( number < this->index && number >=0){
+        if( number < temp.size() && number >=0){
             print1();
-            shoes[number]->Print();
+            list.getShoes()[number]->Print();
             cout << "\n|-------------------------------------------------------------------------------------------------------------------------------------------|"<<endl;
         }
         else cout << "\33[1:31mТакої пари не існує\33[0m";
@@ -942,33 +950,33 @@ void Controller::SearchByCriteria(int one, int two, int three){
     {
         cout << "\33[1:36mВи обрали розмір взуття, ціну взуття і бренд взуття.\n\33[0m"<<endl;
         cout << "Взуття під номером                              ";
-        for(int i = 0; i <= this->index; ++i){
+        for(int i =0; i < temp.size(); i++){
             cout.width(5);
             cout << i<< "     ";
         }
         cout <<"\nУ наявності є взуття таких розмірів:           ";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(5);
-            shoes[i]->SearchSize();
+            shoes->SearchSize();
             cout << "  ";
         }
         cout << "\nУ наявності є взуття з такою ціною:           ";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(5);
-            shoes[i]->SearchUSD();
+            shoes->SearchUSD();
         }
         cout << "\nУ наявності є взуття таких брендів:            ";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(10);
-            shoes[i]->SearchBrand();
+            shoes->SearchBrand();
         }
         cout << "\n\n\33[1:36mВиберіть пару взуття яка вам найбільш сподобалась.\33[0m";
         cout << "\nВведіть номер пари.\n";
         int number = -1;
         cin>> number;
-        if( number < this->index && number >=0){
+        if( number < temp.size() && number >=0){
             print1();
-            shoes[number]->Print();
+            list.getShoes()[number]->Print();
             cout << "\n|-------------------------------------------------------------------------------------------------------------------------------------------|"<<endl;
         }
         else cout << "\33[1:31mТакої пари не існує\33[0m";
@@ -982,34 +990,34 @@ void Controller::SearchByCriteria(int one, int two, int three){
     {
         cout << "\33[1:36mВи обрали довжину устілки взуття, ціну взуття і чи є взуття ортопедичним.\n\33[0m"<<endl;
         cout << "Взуття під номером                              ";
-        for(int i = 0; i <= this->index; ++i){
+        for(int i =0; i < temp.size(); i++){
             cout.width(5);
             cout << i<< "     ";
         }
         cout << "\nУ наявності є взуття з такою довжиною устілки:";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(5);
-            shoes[i]->SearchLength();
+            shoes->SearchLength();
             cout << "  ";
         }
         cout << "\nОртопедичність:                               ";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(6);
-            shoes[i]->SearchOrt();
+            shoes->SearchOrt();
             cout << "  ";
         }
         cout << "\nУ наявності є взуття з такою ціною:           ";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(5);
-            shoes[i]->SearchUSD();
+            shoes->SearchUSD();
         }
         cout << "\n\n\33[1:36mВиберіть пару взуття яка вам найбільш сподобалась.\33[0m";
         cout << "\nВведіть номер пари.\n";
         int number = -1;
         cin>> number;
-        if( number < this->index && number >=0){
+        if( number < temp.size() && number >=0){
             print1();
-            shoes[number]->Print();
+            list.getShoes()[number]->Print();
             cout << "\n|-------------------------------------------------------------------------------------------------------------------------------------------|"<<endl;
         }
         else cout << "\33[1:31mТакої пари не існує\33[0m";
@@ -1023,33 +1031,33 @@ void Controller::SearchByCriteria(int one, int two, int three){
     {
         cout << "\33[1:36mВи обрали довжину устілки взуття, ціну взуття і бренд взуття.\n\33[0m"<<endl;
         cout << "Взуття під номером                              ";
-        for(int i = 0; i <= this->index; ++i){
+        for(int i =0; i < temp.size(); i++){
             cout.width(5);
             cout << i<< "     ";
         }
         cout << "\nУ наявності є взуття з такою довжиною устілки:";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(5);
-            shoes[i]->SearchLength();
+            shoes->SearchLength();
             cout << "  ";
         }
         cout << "\nУ наявності є взуття з такою ціною:           ";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(5);
-            shoes[i]->SearchUSD();
+            shoes->SearchUSD();
         }
         cout << "\nУ наявності є взуття таких брендів:            ";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(10);
-            shoes[i]->SearchBrand();
+            shoes->SearchBrand();
         }
         cout << "\n\n\33[1:36mВиберіть пару взуття яка вам найбільш сподобалась.\33[0m";
         cout << "\nВведіть номер пари.\n";
         int number = -1;
         cin>> number;
-        if( number < this->index && number >=0){
+        if( number < temp.size() && number >=0){
             print1();
-            shoes[number]->Print();
+            list.getShoes()[number]->Print();
             cout << "\n|-------------------------------------------------------------------------------------------------------------------------------------------|"<<endl;
         }
         else cout << "\33[1:31mТакої пари не існує\33[0m";
@@ -1063,34 +1071,34 @@ void Controller::SearchByCriteria(int one, int two, int three){
     {
         cout << "\33[1:36mВи обрали довжину устілки взуття, чи є взуття ортопедичним і бренд взуття.\n\33[0m"<<endl;
         cout << "Взуття під номером                              ";
-        for(int i = 0; i <= this->index; ++i){
+        for(int i =0; i < temp.size(); i++){
             cout.width(5);
             cout << i<< "     ";
         }
         cout << "\nУ наявності є взуття з такою довжиною устілки:";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(5);
-            shoes[i]->SearchLength();
+            shoes->SearchLength();
             cout << "  ";
         }
         cout << "\nОртопедичність:                               ";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(6);
-            shoes[i]->SearchOrt();
+            shoes->SearchOrt();
             cout << "  ";
         }
         cout << "\nУ наявності є взуття таких брендів:            ";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(10);
-            shoes[i]->SearchBrand();
+            shoes->SearchBrand();
         }
         cout << "\n\n\33[1:36mВиберіть пару взуття яка вам найбільш сподобалась.\33[0m";
         cout << "\nВведіть номер пари.\n";
         int number = -1;
         cin>> number;
-        if( number < this->index && number >=0){
+        if( number < temp.size() && number >=0){
             print1();
-            shoes[number]->Print();
+            list.getShoes()[number]->Print();
             cout << "\n|-------------------------------------------------------------------------------------------------------------------------------------------|"<<endl;
         }
         else cout << "\33[1:31mТакої пари не існує\33[0m";
@@ -1104,33 +1112,33 @@ void Controller::SearchByCriteria(int one, int two, int three){
     {
         cout << "\33[1:36mВи обрали чи є взуття ортопедичним, ціну взуття і бренд взуття.\n\33[0m"<<endl;
         cout << "Взуття під номером                              ";
-        for(int i = 0; i <= this->index; ++i){
+        for(int i =0; i < temp.size(); i++){
             cout.width(5);
             cout << i<< "     ";
         }
         cout << "\nОртопедичність:                               ";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(6);
-            shoes[i]->SearchOrt();
+            shoes->SearchOrt();
             cout << "  ";
         }
         cout << "\nУ наявності є взуття з такою ціною:           ";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(5);
-            shoes[i]->SearchUSD();
+            shoes->SearchUSD();
         }
         cout << "\nУ наявності є взуття таких брендів:            ";
-        for(int i = 0; i <= this->index; ++i){
+        for(auto &shoes : temp){
             cout.width(10);
-            shoes[i]->SearchBrand();
+            shoes->SearchBrand();
         }
         cout << "\n\n\33[1:36mВиберіть пару взуття яка вам найбільш сподобалась.\33[0m";
         cout << "\nВведіть номер пари.\n";
         int number = -1;
         cin>> number;
-        if( number < this->index && number >=0){
+        if( number < temp.size() && number >=0){
             print1();
-            shoes[number]->Print();
+            list.getShoes()[number]->Print();
             cout << "\n|-------------------------------------------------------------------------------------------------------------------------------------------|"<<endl;
         }
         else cout << "\33[1:31mТакої пари не існує\33[0m";
@@ -1141,5 +1149,6 @@ void Controller::SearchByCriteria(int one, int two, int three){
               (one != 5 && two != 5 && three != 5))
     {
         cout << "\33[1:31mТакого критерія не існує\33[0m";
-    }}
-    */
+    }
+    return;
+}

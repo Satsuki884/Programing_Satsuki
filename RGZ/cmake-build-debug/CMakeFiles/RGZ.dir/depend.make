@@ -19,11 +19,11 @@ CMakeFiles/RGZ.dir/Menu.cpp.o: ../Shoes.h
 CMakeFiles/RGZ.dir/Shoes.cpp.o: ../Shoes.cpp
 CMakeFiles/RGZ.dir/Shoes.cpp.o: ../Shoes.h
 
+CMakeFiles/RGZ.dir/main.cpp.o: ../Container.h
+CMakeFiles/RGZ.dir/main.cpp.o: ../Controller.h
+CMakeFiles/RGZ.dir/main.cpp.o: ../Menu.h
+CMakeFiles/RGZ.dir/main.cpp.o: ../Shoes.h
 CMakeFiles/RGZ.dir/main.cpp.o: ../main.cpp
 
-CMakeFiles/RGZ.dir/test.cpp.o: ../Container.h
-CMakeFiles/RGZ.dir/test.cpp.o: ../Controller.h
-CMakeFiles/RGZ.dir/test.cpp.o: ../Menu.h
-CMakeFiles/RGZ.dir/test.cpp.o: ../Shoes.h
 CMakeFiles/RGZ.dir/test.cpp.o: ../test.cpp
 
